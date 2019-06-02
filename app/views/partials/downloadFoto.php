@@ -1,5 +1,5 @@
 <?php
-namespace App\Controllers;
+//namespace App\Controllers;
 
 use App\Models\User;
 
@@ -43,10 +43,42 @@ function make_upload($file, $userId){
 		return 'Максимальное количество фотографий 5! Удалите одно из фото чтобы загрузить новое';
 	}
 	else {
-		$name2 = $foto.$_SESSION['userId']."_".($fileCount);
+		if(!file_exists('public/img/'."$userId".'/'.$foto.$_SESSION['userId']."_".'1.png'))
+		{
+			$name2 = $foto.$_SESSION['userId']."_1";
+		}
+		if(!file_exists('public/img/'."$userId".'/'.$foto.$_SESSION['userId']."_".'2.png'))
+		{
+			$name2 = $foto.$_SESSION['userId']."_2";
+		}
+		if(!file_exists('public/img/'."$userId".'/'.$foto.$_SESSION['userId']."_".'3.png'))
+		{
+			$name2 = $foto.$_SESSION['userId']."_3";
+		}
+		if(!file_exists('public/img/'."$userId".'/'.$foto.$_SESSION['userId']."_".'4.png'))
+		{
+			$name2 = $foto.$_SESSION['userId']."_4";
+		}
+		if(!file_exists('public/img/'."$userId".'/'.$foto.$_SESSION['userId']."_".'5.png'))
+		{
+			$name2 = $foto.$_SESSION['userId']."_5";
+		}
+
+//		$name2 = $foto.$_SESSION['userId']."_".($fileCount);
 		User::addFoto($name2, $userId, ($name2.'.png'));
 		copy($file['tmp_name'],  'public/img/'."$userId".'/'.$name2.'.png');
 		copy($file['tmp_name'],  'public/img/avatar/'.$name.'.png');
 	}
 	return 'Файл успешно загружен';
+}
+
+$foto = User::userFoto($_SESSION['userId']);
+
+function checkStatus($userid) {
+	if (User::notificationStatus($userid) == 1) {
+		return 0;
+	}
+	else {
+		return 1;
+	}
 }

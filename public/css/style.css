@@ -183,7 +183,7 @@ h1 {
 .form_container{
 	float:left;
 	width:20em;
-	height: 50em;
+	height: 5em;
 	padding-top:23px}
 .form_container .search_row{float:left; width:290px; padding-bottom:8px}
 .form_container .search_row.last{float:left; width:290px; padding:5px 0 0 0; background:none}
@@ -221,6 +221,27 @@ h1 {
 .form_container select.date{float:left; width:174px;}
 .form_container select.dob{float:left; width:56px; font-size:10px; margin:0 3px 0 0}
 
+.delete{
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	margin-top: 10px;
+	left: 24em;
+}
+.delete:hover{
+	transform: scale(1.4) !important;
+	transition: 1s;
+}
+.accaunt_foto{
+	top: 50em;
+	height: 25em;
+	width: 25em;
+	border: #F5F5F5;
+	border-radius: 5%;
+}
+.sendEmailActiv {
+	background: gold;
+}
 
 @media (max-width: 645px) {
 	.openMenu {

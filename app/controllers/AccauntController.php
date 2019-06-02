@@ -2,10 +2,21 @@
 
 namespace App\Controllers;
 
+use App\Core\App;
 use App\Models\User;
 
 class AccountController
 {
+	protected $db;
+
+	/**
+	 * User constructor.
+	 * @throws \Exception
+	 */
+	public function __construct()
+	{
+		$this->db = App::get('database');
+	}
 	//выводим страничку юзера
 	public function	personalArea()
 	{
@@ -13,7 +24,12 @@ class AccountController
 		{
 			redirect('login');
 		}
-
+//		if (User::notificationStatus($_SESSION['userId']) == 1) {
+//			dd( 1);
+//		}
+//		else {
+//			dd( 0);
+//		}
 		return view('accaunt');
 	}
 

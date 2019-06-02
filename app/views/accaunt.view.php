@@ -1,6 +1,6 @@
 <?php require('partials/head.php'); ?>
 <?php require('partials/downloadFoto.php'); ?>
-<?php //require('partials/userInfo.php'); ?>
+
     <div id="error">
 		<?php if (isset($errors) && !empty($errors)): ?>
             <ul>
@@ -52,22 +52,9 @@
 	</div>
 			<div>
 				<form action="personalArea/notifications" method="post">
-					<input type="submit" value="Уведомления на email" />
+					<input class="<?php if(checkStatus($_SESSION['userId']) == 1) {echo "sendEmailActiv";} ?>" type="submit" value="Уведомления на email" />
 				</form>
 			</div>
-	<section class="wrap">
-		<div class="foto_ac" >
-			<?php if (!empty($foto)): ?>
-				<?php foreach ($foto as $foto_list): ?>
-
-					<div class="flex_acc">
-						<img class="accaunt_foto" src="/public/img/gallery/<?php echo $foto_list['img']?>">
-						<img name="delete"  class="delete" id="<?php echo $foto_list['id'] ?>" src="/public/img/dell_foto.png">
-					</div>
-				<?php endforeach; ?>
-			<?php endif; ?>
-		</div>
-	</section>
     <div style="height: 100%">
         <iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=50.4691,30.4664&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=50.4691,30.4664&amp;output=embed"></iframe>
     </div>
@@ -100,8 +87,6 @@
                     <div class="search_column_2">
                         <input type="data" name="age" value="" />
                     </div>
-<!--                    <label for="date">Дата рождения: </label>-->
-<!--                    <input type="date" id="date" name="date"/>-->
                 </div>
                 <div class="search_row">
                     <div class="search_column_1">
@@ -119,12 +104,28 @@
             </fieldset>
         </form>
     </div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <section class="wrap">
+        <div class="foto_ac" >
+			<?php if (!empty($foto)): ?>
+				<?php foreach ($foto as $foto_list): ?>
 
+                    <div class="flex_acc">
+                        <img class="accaunt_foto" src="/public/img/<?php echo $_SESSION['userId'].'/'.$foto_list['img']?>">
+                        <img name="delete"  class="delete" id="<?php echo $foto_list['id'] ?>" src="/public/img/dell_foto.png">
+                    </div>
+				<?php endforeach; ?>
+			<?php endif; ?>
+        </div>
+    </section>
     <script>
             navigat.onclick = function() {
             if(navigator.geolocation) {
+
                 navigator.geolocation.getCurrentPosition(function(position) {
+                    // alert(11);
                     var latitude = position.coords.latitude;
+                    // alert(111);
                     var longitude = position.coords.longitude;
                     alert(latitude+' '+longitude);
                     var res;
@@ -148,4 +149,5 @@
             }
         };
     </script>
+    <script type="text/javascript" src="../../../public/js/deleteImg.js"></script>
 <?php //require('partials/footer.php'); ?>

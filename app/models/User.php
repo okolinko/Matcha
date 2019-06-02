@@ -21,6 +21,7 @@ class User {
 
 		$admin = 0;
 		$act_email = 0;
+		$notification = 0;
 		$hash_email = hash('whirlpool', $name);
 		$password = hash('whirlpool', $password);
 
@@ -32,6 +33,7 @@ class User {
 			'act_email' => $act_email,
 			'email' => $email,
 			'hash_email' => $hash_email,
+			'notification' => $notification,
 		]);
 
 		mail($email, "Активация email на сайте Matcha", 'Для активации вашей учетной записи '.$name.' 
@@ -41,7 +43,13 @@ class User {
 	}
 
 	public static function addFoto($name, $userId, $img) {
-		;
+		$sql = new self();
+		$sql->db->insert('photo', [
+			'name' => $name,
+			'user_id' => $userId,
+			'img' => $img,
+		]);
+
 	}
 
 	/*
@@ -92,11 +100,9 @@ class User {
 
 	public static function userFoto(string $id)
 	{
-
 			 $user = new self();
-			$response = $user->db->selectAll('foto');
+			$response = $user->db->selectAll('photo');
 			if (!$response) {
-
 				return null;
 			}
 		$userFoto = array();
@@ -180,9 +186,12 @@ class User {
 		$id = intval($foto);
 		$sql = new self();
 
-		$sql->db->delete('foto', $id);
-		$sql->db->delete2('like_photo', $id);
-		$sql->db->delete2('comment', $id);
+		$response = $sql->db->selectOne('photo', 'id', $id);
+		$img = $response->img;
+		unlink('public/img/'.$_SESSION['userId'].'/'."$img");
+		$sql->db->delete('photo', $id);
+//		$sql->db->delete2('like_photo', $id);
+//		$sql->db->delete2('comment', $id);
 
 		return true;
 	}
@@ -259,7 +268,9 @@ class User {
 
 
 	public static function notificationStatus(string $userId) {
+
 		$userId = intval($userId);
+//		dd($response);
 		$sql = new self();
 		$response = $sql->db->selectOne('users', 'id', $userId);
 
