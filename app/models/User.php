@@ -40,6 +40,9 @@ class User {
 
 	}
 
+	public static function addFoto($name, $userId, $img) {
+		;
+	}
 
 	/*
 	 * Get user by credentials
@@ -301,6 +304,14 @@ class User {
 		return true;
 	}
 
+	public static function age(string $age) : bool {
+
+		$age = intval($age);
+		if ($age < 18 or $age > 80) {
+			return false;
+		}
+		return true;
+	}
 
 
 }

@@ -52,7 +52,7 @@ class Auth {
 	}
 
 	public static function checkName($name){
-		if (strlen($name) >= 5 && strlen($name) <= 12) {
+		if (strlen($name) >= 5 && strlen($name) <= 18) {
 			if (preg_match("#^[A-Z]{1,}[A-Za-z0-9_-]+$#", $name))
 
 				return true;

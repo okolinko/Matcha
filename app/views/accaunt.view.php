@@ -1,6 +1,15 @@
 <?php require('partials/head.php'); ?>
 <?php require('partials/downloadFoto.php'); ?>
-<?php require('partials/userInfo.php'); ?>
+<?php //require('partials/userInfo.php'); ?>
+    <div id="error">
+		<?php if (isset($errors) && !empty($errors)): ?>
+            <ul>
+				<?php foreach ($errors as $error): ?>
+					<?php echo "<script>alert(\"$error\");</script>"; ?>
+				<?php endforeach; ?>
+            </ul>
+		<?php endif; ?>
+    </div>
 	<div class="info_flex">
 		<div class="email">
 			<form action="/personalArea/edit/" method="post">
@@ -30,7 +39,8 @@
 
 			if($check === true){
 				// загружаем изображение на сервер
-				make_upload($_FILES['file']);
+				$res =  make_upload($_FILES['file'], $_SESSION['userId'] );
+				echo "<script>alert(\"$res!\");</script>";
 				echo "<script>alert(\"Файл успешно загружен!\");</script>";
 			}
 			else{
@@ -103,10 +113,39 @@
                     </div>
                 </div>
                 <div class="search_row last">
-                        <input type="submit" value="Отправить" >
+                        <input id="navigat" name="submit" type="submit" value="Отправить" >
                     </div>
                 </div>
             </fieldset>
         </form>
     </div>
+
+    <script>
+            navigat.onclick = function() {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+                    alert(latitude+' '+longitude);
+                    var res;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "profile", false);
+
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            if ( xhr.responseText.indexOf("true") == -1)
+                                res = false;
+                            else
+                                res = true;
+                        }
+                    }
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                    xhr.send('location=' + (latitude+' '+longitude));
+                });
+
+            } else {
+                alert("Geolocation API не поддерживается в вашем браузере");
+            }
+        };
+    </script>
 <?php //require('partials/footer.php'); ?>
