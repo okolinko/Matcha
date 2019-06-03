@@ -56,7 +56,7 @@
 				</form>
 			</div>
     <div style="height: 100%">
-        <iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=50.4691,30.4664&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=50.4691,30.4664&amp;output=embed"></iframe>
+        <iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
     <div class="form_container">
         <form action="/profile" method="post">
@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="search_row last">
-                        <input id="navigat" name="submit" type="submit" value="Отправить" >
+                        <input name="submit" type="submit" value="Отправить" >
                     </div>
                 </div>
             </fieldset>
@@ -118,36 +118,5 @@
 			<?php endif; ?>
         </div>
     </section>
-    <script>
-            navigat.onclick = function() {
-            if(navigator.geolocation) {
-
-                navigator.geolocation.getCurrentPosition(function(position) {
-                    // alert(11);
-                    var latitude = position.coords.latitude;
-                    // alert(111);
-                    var longitude = position.coords.longitude;
-                    alert(latitude+' '+longitude);
-                    var res;
-                    var xhr = new XMLHttpRequest();
-                    xhr.open("POST", "profile", false);
-
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState == 4 && xhr.status == 200) {
-                            if ( xhr.responseText.indexOf("true") == -1)
-                                res = false;
-                            else
-                                res = true;
-                        }
-                    }
-                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                    xhr.send('location=' + (latitude+' '+longitude));
-                });
-
-            } else {
-                alert("Geolocation API не поддерживается в вашем браузере");
-            }
-        };
-    </script>
     <script type="text/javascript" src="../../../public/js/deleteImg.js"></script>
 <?php //require('partials/footer.php'); ?>

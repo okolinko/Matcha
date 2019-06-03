@@ -24,12 +24,10 @@ class AccountController
 		{
 			redirect('login');
 		}
-//		if (User::notificationStatus($_SESSION['userId']) == 1) {
-//			dd( 1);
-//		}
-//		else {
-//			dd( 0);
-//		}
+//		$sql = new self();
+//		$response = $sql->db->selectOne('questionary', 'id_user', $_SESSION['userId']);
+//		$location = explode(" ", strval($response->location));
+
 		return view('accaunt');
 	}
 

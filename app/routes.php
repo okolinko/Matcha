@@ -33,6 +33,8 @@ $router->post('personalArea/delimg', 'AccountController@dellUserImage');
  $router->post('personalArea/notifications', 'AccountController@notifications');
 
  $router->post('profile', 'UserController@userProfile');
+ $router->post('geolocation', 'UserController@usergeolocation');
+
 
 $router->get('page-not-found', 'MainController@page404');
 

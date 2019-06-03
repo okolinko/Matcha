@@ -58,12 +58,12 @@ class UserController{
 		{
 			return redirect('login');
 		}
-		if(!$_POST['location']) {
-			$location = "50.469013 30.462357";
-		}
-		else {
-			$location = strval($_POST['location']);
-		}
+//		if(!$_POST['location']) {
+//			$location = "50.469013 30.462357";
+//		}
+//		else {
+//			$location = strval($_POST['location']);
+//		}
         if (isset($_POST['submit'])) {
 //        	file_put_contents("/Users/akolinko/lol", json_encode($_POST), FILE_APPEND);
 			$name = ($_POST['name']);
@@ -82,9 +82,8 @@ class UserController{
 
 				return view('accaunt', ['errors' => $this->errors]);
 			}
-			if (!Auth::checkName($name)) {
-				$this->errors[] = 'Неправильное длина или формат имени!      
-				 (Имя должно начинаться с большой буквы и иметь длину от 5 до 18 символов)';
+			if (!Auth::checkName(strval($name))) {
+				$this->errors[] = 'Имя должно начинаться с большой буквы и иметь длину от 5 до 18 символов';
 
 				return view('accaunt', ['errors' => $this->errors]);
 			}
@@ -108,14 +107,18 @@ class UserController{
 			else {
 				$orientation = "LGBT";
 			}
-//			if(!$_POST['location']) {
-//				$location = "50.469013 30.462357";
-//			}
-//			else {
-//				$location = strval($_POST['location']);
-//			}
+				$location = "50.4690 30.4623";
 			User::writeFormDatabase($_SESSION['userId'], $name, $age, $gender, $orientation, $location);
 			redirect('personalArea');
         }
+	}
+
+	public function usergeolocation() {
+		$location = explode(" ", strval($_POST['location']));
+		$location[0] = substr($location[0], 0, 7)." ";
+		$location[1] = substr($location[1], 0, 7);
+
+		User::addGeolocation($_SESSION['userId'], $location);
+//		file_put_contents("/Users/akolinko/lol", $location[1], FILE_APPEND);
 	}
 }

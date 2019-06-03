@@ -82,3 +82,6 @@ function checkStatus($userid) {
 		return 1;
 	}
 }
+
+
+$location = User::parseLocation($_SESSION['userId']);

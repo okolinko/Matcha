@@ -308,7 +308,7 @@ class User {
 				'name' => $name,
 				'gender' => $gender,
 				'orientation' => $orientation,
-				'location' => $location,
+				'location' => $response->location,
 				'age' => $age,
 			]);
 		}
@@ -324,6 +324,35 @@ class User {
 		return true;
 	}
 
+	public static function parseLocation($userId) {
+		$sql = new self();
+
+		$response = $sql->db->selectOne('questionary', 'id_user', $_SESSION['userId']);
+		$location = explode(" ", strval($response->location));
+		return $location;
+	}
+	public static function addGeolocation($userId, $loc) {
+
+		$sql = new self();
+		$userId = intval($userId);
+		$table = "questionary";
+		$location = $loc[0].$loc[1];
+		$location = strval($location);
+		$response = $sql->db->selectOne('questionary', 'id_user', $userId);
+		if (!$response) {
+			return false;
+		}
+		else {
+			$sql->db->update2($table, $userId, [
+				'id_user' => $userId,
+				'name' => $response->name,
+				'gender' => $response->gender,
+				'orientation' => $response->orientation,
+				'location' => $location,
+				'age' => $response->age,
+			]);
+		}
+	}
 
 }
 
