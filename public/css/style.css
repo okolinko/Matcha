@@ -1,4 +1,5 @@
 body{
+	background: url("../img/background-3.jpg");
 	background-color: #F5F5F5;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -179,47 +180,57 @@ h1 {
 	height: 400px;
 	margin: 0 auto;
 }
+.wrap{
+	margin-top: 5em;
+}
 
-.form_container{
-	float:left;
-	width:20em;
-	height: 5em;
-	padding-top:23px}
-.form_container .search_row{float:left; width:290px; padding-bottom:8px}
-.form_container .search_row.last{float:left; width:290px; padding:5px 0 0 0; background:none}
-.form_container .search_row .search_column_1{float:left; width:94px; padding:0 0 0 0}
-.form_container .search_row .search_column_2{float:left; width:196px}
+/*.form_container{*/
+/*	float:left;*/
+/*	width:30em;*/
+/*	height: 5em;*/
+/*	padding-top:23px*/
+/*}*/
 
-.form_container form{float:left; width:290px;}
 .form_container fieldset {
+	background: antiquewhite;
 	float:left;
 	width:5em;
-	height: 2em;
-	border:none;
-	padding:0 0 24px 0
+	height: 12em;
+	border: thick double #32a1ce;
+	padding:0  24px 0
 }
 .form_container label {
 	float:left;
 	width:auto;
 	color:dimgrey;
-	padding:5px 0 0 23px
+	padding:5px 15px 3px 5px;
 }
-.form_container label.seeking{float:left; width:auto; color:dimgrey; padding:5px 13px 0 8px}
-.form_container label.check{float:left; width:auto; font-size:9px; line-height:11px; color:#fff; padding:4px 10px 0 9px; margin:0}
 .form_container input {
-	float:left;
-	width:90px;
+	/*float:left;*/
+	/*width:90px;*/
 	font-size:11px;
 	line-height:13px;
 	color:white;
 	margin:0;
-	padding:0}
-.form_container input.checkbox{float:left; width:auto; border:none; height:15px; padding:0; margin:2px 0 0 0}
+	padding:0
+}
 .form_container input.search_btn{float:left; width:auto; padding:0; margin:0 0 0 0}
-.form_container select{float:left; width:60px; height:19px; font-size:9px}
-.form_container select.gender{float:left; width:56px;}
-.form_container select.date{float:left; width:174px;}
-.form_container select.dob{float:left; width:56px; font-size:10px; margin:0 3px 0 0}
+.form_container select{
+	float:left;
+	width:5em;
+	height:2em;
+	font-size:11px}
+.form_container select.gender{
+	width:8em;
+}
+.search_row_last{
+	margin-top: 0.5em;
+}
+.test{
+	margin-left: -16.2em;
+}
+
+
 
 .delete{
 	height: 15px;
@@ -264,10 +275,10 @@ h1 {
 }
 .flex-elem{
 	/*flex: 0 1 100%;*/
-	height: 10em;
-	width: 20em;
+	height: 19em;
+	width: 10em;
 	margin: 2px;
-	background: darkslateblue;
+	background:url("../img/1.png");
 	color: gold;
 	border-radius: 10px;
 	align-self: center;
@@ -275,30 +286,69 @@ h1 {
 	border: thick double #32a1ce;
 	z-index: 1;
 	display: flex;
-	/*flex-direction: row;*/
+
 	flex-wrap: wrap;
-	/*justify-content: space-around;*/
+
 
 }
 .foto-form{
-	width: 8em;
-	height: 9.5em;
+	width: 9.5em;
+	height: 10.5em;
 	border-radius: 1em;
-	border: 1mm ridge rgba(148, 43, 43, 1);
-	/*align-self: center;*/
-
+	border: 1mm ridge burlywood;
 }
 .name-form{
-	z-index: 2;
-	color: gold;
-	/*width: 2.7em;*/
-	height: 1.2em;
-	align-self: start;
-	margin-top: 1em;
-	margin-left: 0.8em;
-	/*background: powderblue;*/
-	border-radius: 0.5em;
+	margin-top: -1em;
+	margin-left: 2.5em;
+	color: black;
+	text-shadow: 0 1px black, 0 0 20px rgba(255, 255, 255, 0.5);
 }
+.city-form{
+	margin-top: -1em;
+	margin-left: 2.5em;
+	color: black;
+	text-shadow: 0 1px black, 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.form-help{
+	width: 8em;
+	height: 2em;
+	margin-top: 0.2em;
+}
+.button {
+	margin-top: -1em;
+	margin-left: 1.5em;
+	width: 6em;
+	height: 2em;
+	display: inline-block;
+	color: #777674;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: rgba(255,255,255,.5) 1px 1px, rgba(100,100,100,.3) 3px 7px 3px;
+	user-select: none;
+	padding: 1px 2px;
+	outline: none;
+	border-radius: 3px / 100%;
+	background-image:
+			linear-gradient(45deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.8), rgba(255,255,255,.0) 70%),
+			linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0) 20%, rgba(255,255,255,0) 90%, rgba(255,255,255,.3)),
+			linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+			linear-gradient(to right, rgba(125,125,125,1), rgba(255,255,255,.9) 45%, rgba(125,125,125,.5)),
+			linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5)),
+			linear-gradient(to right, rgba(223,190,170,1), rgba(255,255,255,.9) 45%, rgba(223,190,170,.5));
+	background-repeat: no-repeat;
+	background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+	background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+	box-shadow: rgba(0,0,0,.5) 3px 10px 10px -10px;
+}
+.button:hover {
+	transition: .5s linear;
+	background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+}
+.button:active {
+	top: 1px;
+}
+
+
 @media (max-width: 645px) {
 	.openMenu {
 		display: block;

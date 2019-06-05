@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Июн 02 2019 г., 09:43
+-- Время создания: Июн 05 2019 г., 10:39
 -- Версия сервера: 5.7.24
 -- Версия PHP: 7.1.26
 
@@ -66,7 +66,11 @@ CREATE TABLE `photo` (
 --
 
 INSERT INTO `photo` (`id`, `name`, `user_id`, `img`) VALUES
-(1, 'foto1_5', 1, 'foto1_5.png');
+(4, 'foto1_4', 1, 'foto1_4.png'),
+(5, 'foto1_3', 1, 'foto1_3.png'),
+(6, 'foto1_2', 1, 'foto1_2.png'),
+(8, 'foto1_5', 1, 'foto1_5.png'),
+(9, 'foto1_1', 1, 'foto1_1.png');
 
 -- --------------------------------------------------------
 
@@ -81,8 +85,17 @@ CREATE TABLE `questionary` (
   `gender` varchar(20) NOT NULL,
   `orientation` varchar(20) NOT NULL,
   `location` varchar(25) NOT NULL,
-  `age` varchar(20) NOT NULL
+  `age` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Дамп данных таблицы `questionary`
+--
+
+INSERT INTO `questionary` (`id`, `id_user`, `name`, `gender`, `orientation`, `location`, `age`, `city`) VALUES
+(6, 1, 'Sania', 'male', 'heterosexual', '50.4705 30.4642', '27', 'Kyiv'),
+(7, 2, 'User', 'man', 'getero', '30.5 40.5', '18', 'Chernihiv');
 
 -- --------------------------------------------------------
 
@@ -106,7 +119,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `password`, `admin`, `act_email`, `email`, `hash_email`, `notification`) VALUES
-(1, 'Admin', 'cf09c171997917f5271ac2af9205e9d89333e127fcadfecf434399e9e127b645778bd0c36b8661f395af73b2b904d2f25287ec800e404c8e4118bc31521757de', 1, 1, 'virussania@gmail.com', '61547a0d', 0);
+(1, 'Admin', 'cf09c171997917f5271ac2af9205e9d89333e127fcadfecf434399e9e127b645778bd0c36b8661f395af73b2b904d2f25287ec800e404c8e4118bc31521757de', 1, 1, 'virussania@gmail.com', '61547a0d', 1);
 
 --
 -- Индексы сохранённых таблиц
@@ -162,13 +175,13 @@ ALTER TABLE `like_photo`
 -- AUTO_INCREMENT для таблицы `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблицы `questionary`
 --
 ALTER TABLE `questionary`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

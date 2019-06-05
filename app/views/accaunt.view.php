@@ -71,7 +71,7 @@
                             <option>Парень</option>
                             <option>Девушка</option>
                         </select>
-                        <label class="seeking">Ищю</label>
+                        <label class="seeking">Ищу</label>
                         <select class="gender" name="search">
                             <option>Девушку</option>
                             <option>Парня</option>
@@ -82,7 +82,7 @@
             <br>
                 <div class="search_row">
                     <div class="search_column_1">
-                        <label>Укажите ваш полный возраст</label>
+                        <label class="test">Полный возраст</label>
                     </div>
                     <div class="search_column_2">
                         <input type="data" name="age" value="" />
@@ -94,10 +94,16 @@
                     </div>
                     <div class="search_column_2">
                         <input type="text" name="name" value="" />
-
+                    </div>
+                    <div class="search_row">
+                        <div class="search_column_1">
+                        <label>Место проживания</label>
+                    </div>
+                    <div class="search_column_2">
+                        <input type="text" name="city" value="" />
                     </div>
                 </div>
-                <div class="search_row last">
+                <div class="search_row_last">
                         <input name="submit" type="submit" value="Отправить" >
                     </div>
                 </div>

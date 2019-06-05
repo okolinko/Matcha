@@ -16,6 +16,7 @@
 	</head>
 	<body>
 		<?php require('avatar.php'); ?>
+<!--        -->
 <!--        <script>-->
 <!--            function position(pos){-->
 <!--// масив який містить назву міст та їх довготу і широту-->

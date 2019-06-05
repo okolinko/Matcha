@@ -285,7 +285,7 @@ class User {
 
 	public static function writeFormDatabase(string $userId, string $name, string $age,
 
-											 string $gender, string $orientation, string $location) : bool {
+											 string $gender, string $orientation, string $location, string  $city) : bool {
 
 
 		$sql = new self();
@@ -300,6 +300,7 @@ class User {
 			'orientation' => $orientation,
 			'age' => $age,
 			'location' => $location,
+			'city' => $city,
 		]);
 		}
 		else {
@@ -310,6 +311,7 @@ class User {
 				'orientation' => $orientation,
 				'location' => $response->location,
 				'age' => $age,
+				'city' => $city,
 			]);
 		}
 		return true;
@@ -350,8 +352,31 @@ class User {
 				'orientation' => $response->orientation,
 				'location' => $location,
 				'age' => $response->age,
+				'city' => $response->city,
 			]);
 		}
+	}
+	public static function loadUserForm() {
+		$sql = new self();
+
+		$response = $sql->db->selectAll('questionary');
+		if (!$response) {
+
+			return null;
+		}
+		$userAcaunt = array();
+		$i = 0;
+		while($response[$i]) {
+			$userAcaunt[$i]['userId'] = $response[$i]->id_user;
+			$userAcaunt[$i]['name'] = $response[$i]->name;
+			$userAcaunt[$i]['gender'] = $response[$i]->gender;
+			$userAcaunt[$i]['orientation'] = $response[$i]->orientation;
+			$userAcaunt[$i]['location'] = $response[$i]->location;
+			$userAcaunt[$i]['age'] = $response[$i]->age;
+			$userAcaunt[$i]['city'] = $response[$i]->city;
+			$i++;
+		}
+		return $userAcaunt;
 	}
 
 }

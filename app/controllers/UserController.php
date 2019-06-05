@@ -58,20 +58,15 @@ class UserController{
 		{
 			return redirect('login');
 		}
-//		if(!$_POST['location']) {
-//			$location = "50.469013 30.462357";
-//		}
-//		else {
-//			$location = strval($_POST['location']);
-//		}
         if (isset($_POST['submit'])) {
 //        	file_put_contents("/Users/akolinko/lol", json_encode($_POST), FILE_APPEND);
 			$name = ($_POST['name']);
             $age = ($_POST['age']);
             $im = ($_POST['im']);
             $search = ($_POST['search']);
+            $city = ($_POST['city']);
 
-            if (empty($name) or empty($age)){
+            if (empty($name) or empty($age) or empty($city)){
 				$this->errors[] = 'Все поля должны быть заполнены!';
 
 				return view('accaunt', ['errors' => $this->errors]);
@@ -108,7 +103,7 @@ class UserController{
 				$orientation = "LGBT";
 			}
 				$location = "50.4690 30.4623";
-			User::writeFormDatabase($_SESSION['userId'], $name, $age, $gender, $orientation, $location);
+			User::writeFormDatabase($_SESSION['userId'], $name, $age, $gender, $orientation, $location, $city);
 			redirect('personalArea');
         }
 	}
