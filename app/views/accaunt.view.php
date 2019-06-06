@@ -104,13 +104,13 @@
                     </div>
                 </div>
                 <div class="search_row_last">
-                        <input name="submit" type="submit" value="Отправить" >
+                        <input class="button2" name="submit" type="submit" value="Отправить" >
                     </div>
                 </div>
             </fieldset>
         </form>
     </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br>
     <section class="wrap">
         <div class="foto_ac" >
 			<?php if (!empty($foto)): ?>

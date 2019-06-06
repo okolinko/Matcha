@@ -22,6 +22,7 @@ class ComposerStaticInita91edb2983d61d85c8275d27f786119d
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'App\\Models\\Auth' => __DIR__ . '/../..' . '/app/models/Auth.php',
+        'App\\Models\\Dating' => __DIR__ . '/../..' . '/app/models/Dating.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',
         'ComposerAutoloaderInita91edb2983d61d85c8275d27f786119d' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',

@@ -17,6 +17,7 @@ return array(
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
     'App\\Models\\Auth' => $baseDir . '/app/models/Auth.php',
+    'App\\Models\\Dating' => $baseDir . '/app/models/Dating.php',
     'App\\Models\\User' => $baseDir . '/app/models/User.php',
     'ComposerAutoloaderInita91edb2983d61d85c8275d27f786119d' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
