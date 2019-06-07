@@ -18,11 +18,9 @@ class DatingController
 	public function dating()
 	{
 
-//		return view("dating");
 		$acaunt = array();
 		$acaunt = User::loadUserForm();
 
-//		dd($acaunt);
 		require_once('app/views/dating.view.php');
 	}
 
@@ -33,6 +31,9 @@ class DatingController
 		}
 		$acaunt = array();
 		$acaunt = User::loadUserForm();
+
+		$user_location = User::parseLocation($_SESSION['userId']);
+
 		if (isset($_POST['submit'])) {
 //        	file_put_contents("/Users/akolinko/lol", json_encode($_POST), FILE_APPEND);
 			$search = ($_POST['search']);
@@ -44,25 +45,44 @@ class DatingController
 
 				return view('dating', ['errors' => $this->errors]);
 			}
-			if (!Dating::searchAge($age, $acaunt)) {
-//				file_put_contents("/Users/akolinko/lol", "1111", FILE_APPEND);
+			$dating_age =  Dating::searchAge($age, $acaunt);
+			if (empty($dating_age)) {
 				$this->errors[] = 'Пользователей в данной возрастной категории не найдено';
+
 				return view('dating', ['errors' => $this->errors]);
 			}
-			if (!Dating::searchGender($search, $acaunt)) {
+
+			$dating_gender = Dating::searchGender($search, $dating_age);
+			if (empty($dating_gender)) {
 				$this->errors[] = 'Пользователей c такими данными не найдено';
 
 				return view('dating', ['errors' => $this->errors]);
 			}
 
-			if (!Dating::searchOrientation($orientation, $acaunt)) {
+			$dating_orientation = Dating::searchOrientation($orientation, $dating_gender);
+			if (empty($dating_orientation)) {
 				$this->errors[] = 'Пользователей c данной ориентацией не найдено';
 
 				return view('dating', ['errors' => $this->errors]);
 			}
-			return view("dating");
+
+			$dating_location = Dating::searchLocation($radius, $dating_orientation, $user_location);
+			if (empty($dating_location)) {
+				$this->errors[] = "Пользователей по близости не найдено, попробуйте увеличить радиус поиска";
+
+				return view('dating', ['errors' => $this->errors]);
+			}
+
+			echo '<pre>';
+			print_r($dating_location);
+			echo '</pre>';
+//			return view("dating");
+			$acaunt = $dating_orientation;
 		}
 //		return view("dating");
+
+
+		require_once('app/views/dating.view.php');
 	}
 
 }
