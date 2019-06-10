@@ -14,7 +14,7 @@
         <div class="form_container">
             <form action="/searchUser" method="post">
                 <div><h2>Анкета</h2></div>
-                <fieldset>
+                <fieldset style="height: 180px">
                     <div class="search_row">
                         <div class="search_column_2">
                             <label class="seeking">Ищу</label>

@@ -22,10 +22,9 @@ class Dating
 
 		foreach ($acaunt as $key => &$res) {
 			if (($res['age']) >= $ageMin and  $res['age'] <= $ageMax) {
-				echo "true";
+				;
 			}
 			else {
-				echo "false";
 				unset($acaunt[$key]);
 			}
 		}
@@ -40,12 +39,9 @@ class Dating
 		}
 		foreach($acaunt as $key => &$res) {
 			if(strval($res['gender']) == strval($gender)) {
-
-				echo "true2";
+				;
 			}
 			else {
-
-				echo "false2";
 				unset($acaunt[$key]);
 			}
 		}
@@ -62,11 +58,9 @@ class Dating
 		}
 		foreach($acaunt as $key => &$acaunt_list) {
 			if(strval($acaunt_list['orientation']) == strval($orientation)) {
-
-				echo "true3";
+				;
 			}
 			else {
-				echo "false3";
 				unset($acaunt[$key]);
 			}
 		}
@@ -79,26 +73,48 @@ class Dating
 
 
 	public static function searchLocation($radius, $acaunt, $user_location) {
+		if ($radius == "Без разницы") {
+			return $acaunt;
+		}
+
 		$res = explode(" ", $radius);
 		$radius = explode("-", $res[0]);
-		$radiusMin = intval($radius[0]);
-		$radiusMax = intval($radius[1]);
+		$radiusMin = (float)($radius[0]);
+		$radiusMax = (float)($radius[1]);
 		$lon1 = (float)($user_location[0]);
 		$lat1 = (float)($user_location[1]);
-
+		$lat1 *= M_PI / 180;
+		$lon1 *= M_PI / 180;
 
 		foreach($acaunt as $key => &$acaunt_list) {
+			$loc = explode(" ", $acaunt_list['location']);
+			$lon2 = (float)($loc[0]);
+			$lat2 = (float)($loc[1]);
 
+			$lat2 *= M_PI / 180;
+			$lon2 *= M_PI / 180;
+
+			$d_lon = $lon1 - $lon2;
+			$slat1 = sin($lat1);
+			$slat2 = sin($lat2);
+			$clat1 = cos($lat1);
+			$clat2 = cos($lat2);
+			$sdelt = sin($d_lon);
+			$cdelt = cos($d_lon);
+
+			$y = pow($clat2 * $sdelt, 2) + pow($clat1 * $slat2 - $slat1 * $clat2 * $cdelt, 2);
+
+			$x = $slat1 * $slat2 + $clat1 * $clat2 * $cdelt;
+
+			$metr = atan2(sqrt($y), $x) * 6372795;
+			$km = round(($metr / 1000), 4);
 		}
-		$lon2 = 50.5212;
-		$lat2 = 30.4503;
-		$theta = $lon1 - $lon2;
-		$dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-		$dist = acos($dist);
-		$dist = rad2deg($dist);
-		$miles = $dist * 60 * 1.1515;
-		$res = $miles * 1.609344;
-
+			if ($km >= $radiusMin and  $km <= $radiusMax) {
+				;
+			}
+			else {
+				unset($acaunt[$key]);
+			}
 
 		return $acaunt;
 	}

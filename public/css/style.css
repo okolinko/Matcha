@@ -30,7 +30,16 @@ nav ul{
 	border-radius: 5px;
 }
 nav a:hover{
-	background-color: #ffd700;
+	/*background-color: #ffd700;*/
+	background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+	animation: line 1.5s;
+	color: #d94f5c;
+
+}
+@keyframes line {
+	0% {
+		background-position-x: 320px;
+	}
 }
 nav ul li{
 	display: inline-block;
@@ -188,7 +197,7 @@ h1 {
 	background: antiquewhite;
 	float:left;
 	width:5em;
-	height: 12em;
+	height: 18em;
 	border: thick double #32a1ce;
 	padding:0  24px 0
 }
@@ -282,7 +291,6 @@ h1 {
 	border: thick double #32a1ce;
 	z-index: 1;
 	display: flex;
-
 	flex-wrap: wrap;
 
 
@@ -358,7 +366,74 @@ h1 {
 	margin-top: 5em;
 }
 
+.comment_foto{
+	padding-top: -2em;
+	/*padding-left: %;*/
+}
 
+#addComment{
+	padding-top: 1em;
+	padding-left: -4em;
+	width: 200%;
+}
+
+textarea{
+	width:25.5em;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0.3);
+	outline: none;
+	padding: 10px;
+	font-size: 13px;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 7px;
+	resize: none;
+}
+textarea:focus {
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2);
+}
+.name {
+	color: #d94f5c;
+	font-weight: 600;
+	font-family: 'fantasy', cursive;
+}
+
+.flex_user {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	margin-top: 2em;
+}
+
+.user_foto {
+}
+#user_avatar{
+	width: 65%;
+	border-radius: 50%;
+}
+
+.flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 2em;
+}
+.flex-itm {
+	margin: 5px;
+	padding: 15px;
+
+}
+.foto_us{
+	height: 5em;
+	width: 5em;
+	margin-left: -100%;
+}
+.foto_us:hover{
+	border-radius: 50%;
+	transition: 0.4s;
+}
 
 @media (max-width: 645px) {
 	.openMenu {

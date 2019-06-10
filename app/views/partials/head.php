@@ -12,7 +12,6 @@
 
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
 
-<!--        <script type="text/javascript" src="../../../public/js/test.js"></script>-->
 	</head>
 	<body>
 		<?php require('avatar.php'); ?>
@@ -100,7 +99,8 @@
 			<ul id="menu">
 				<li><a href="/">Главная</a></li>
 				<li><a href="/datingUser">Поиск анкет</a></li>
-				<li><a href="#">####</a></li>
+				<li><a href="#">Понравившиеся</a></li>
+<!--                <li><a href="#">####</a></li>-->
 				<?php if ($_SESSION['userId']): ?>
 					<li><a href="/logout">Выход</a></li>
 					<li><a href="/personalArea">Кабинет</a> </li>

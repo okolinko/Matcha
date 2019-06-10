@@ -21,6 +21,7 @@ $router->get('personalArea/delimg', 'AccountController@dellUserImage');
 
  $router->get('profile', 'UserController@userProfile');
  $router->get('searchUser', 'DatingController@searchUser');
+ $router->get('accauntUser', 'AccountController@userAccaunt');
 
 $router->post('login', 'AuthController@login');
  $router->post('login/restore', 'AuthController@restoreLogin');
@@ -36,6 +37,7 @@ $router->post('personalArea/delimg', 'AccountController@dellUserImage');
  $router->post('profile', 'UserController@userProfile');
  $router->post('geolocation', 'UserController@usergeolocation');
  $router->post('searchUser', 'DatingController@searchUser');
+ $router->post('accauntUser', 'AccountController@userAccaunt');
 
 
 $router->get('page-not-found', 'MainController@page404');

@@ -24,20 +24,6 @@ class AccountController
 		{
 			redirect('login');
 		}
-//		$sql = new self();
-//		$response = $sql->db->selectOne('questionary', 'id_user', $_SESSION['userId']);
-//		$location = explode(" ", strval($response->location));
-		$lon1 = 50.4705;
-		$lat1 = 30.4642;
-		$lon2 = 50.5212;
-		$lat2 = 30.4503;
-		$theta = $lon1 - $lon2;
-		$dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +  cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
-		$dist = acos($dist);
-		$dist = rad2deg($dist);
-		$miles = $dist * 60 * 1.1515;
-		$res = $miles * 1.609344;
-		echo $res;
 		return view('accaunt');
 	}
 
@@ -71,5 +57,19 @@ class AccountController
 		User::offNotifications($userId);
 
 		redirect('personalArea');
+	}
+
+	public function userAccaunt() {
+		if (!$_SESSION['userId'])
+		{
+			redirect('login');
+		}
+//		$userId	= intval($_GET['id']);
+		$userId = 1;
+
+		$questionary = User::loadUserInfo($userId, "questionary", "id_user");
+		$userInfo = User::loadUser($userId);
+		$userFoto = User::userFoto($userId);
+		require_once('app/views/accauntUser.view.php');
 	}
 }

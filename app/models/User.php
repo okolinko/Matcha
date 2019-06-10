@@ -379,6 +379,26 @@ class User {
 		return $userAcaunt;
 	}
 
+	public static function loadUserInfo($userId, $table, $id) {
+		$sql = new self();
+
+		$response = $sql->db->selectOne($table, $id, $userId);
+		if (!$response) {
+			return 0;
+		}
+		return $response;
+	}
+
+	public static function loadUser($userId)
+	{
+		$sql = new self();
+
+		$response = $sql->db->selectOne('users', 'id', $userId);
+		if(!$response) {
+			return false;
+		}
+		return $response;
+	}
 
 }
 

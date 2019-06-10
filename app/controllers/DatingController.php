@@ -73,14 +73,8 @@ class DatingController
 				return view('dating', ['errors' => $this->errors]);
 			}
 
-			echo '<pre>';
-			print_r($dating_location);
-			echo '</pre>';
-//			return view("dating");
-			$acaunt = $dating_orientation;
+			$acaunt = $dating_location;
 		}
-//		return view("dating");
-
 
 		require_once('app/views/dating.view.php');
 	}

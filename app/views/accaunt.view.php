@@ -102,6 +102,11 @@
                     <div class="search_column_2">
                         <input type="text" name="city" value="" />
                     </div>
+                        <div class="comment_foto" >
+                            <div id="addComment">
+                                <textarea type="text" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
+                            </div>
+                        </div>
                 </div>
                 <div class="search_row_last">
                         <input class="button2" name="submit" type="submit" value="Отправить" >
