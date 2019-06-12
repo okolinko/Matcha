@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Июн 05 2019 г., 10:39
+-- Время создания: Июн 12 2019 г., 09:14
 -- Версия сервера: 5.7.24
 -- Версия PHP: 7.1.26
 
@@ -35,6 +35,13 @@ CREATE TABLE `comment` (
   `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `comment`
+--
+
+INSERT INTO `comment` (`id`, `user_id`, `foto_id`, `comment`) VALUES
+(1, 1, 1, 'блондин');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +54,25 @@ CREATE TABLE `like_photo` (
   `foto_id` int(11) NOT NULL,
   `status` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `like_users`
+--
+
+CREATE TABLE `like_users` (
+  `id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `likeUsers` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `like_users`
+--
+
+INSERT INTO `like_users` (`id`, `user_id`, `likeUsers`) VALUES
+(1, 1, '1,2,3,5,6,8,1,1,1');
 
 -- --------------------------------------------------------
 
@@ -86,16 +112,18 @@ CREATE TABLE `questionary` (
   `orientation` varchar(20) NOT NULL,
   `location` varchar(25) NOT NULL,
   `age` varchar(20) NOT NULL,
-  `city` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `city` varchar(20) NOT NULL,
+  `info` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Дамп данных таблицы `questionary`
 --
 
-INSERT INTO `questionary` (`id`, `id_user`, `name`, `gender`, `orientation`, `location`, `age`, `city`) VALUES
-(6, 1, 'Sania', 'male', 'heterosexual', '50.4705 30.4642', '27', 'Kyiv'),
-(7, 2, 'User', 'man', 'getero', '30.5 40.5', '18', 'Chernihiv');
+INSERT INTO `questionary` (`id`, `id_user`, `name`, `gender`, `orientation`, `location`, `age`, `city`, `info`) VALUES
+(6, 1, 'Sania', 'male', 'heterosexual', '50.4705 30.4642', '27', 'Kyiv', 'Блондин, люблю гулять и путешествувать) Веду активный образ жизни'),
+(7, 2, 'User', 'male', 'heterosexual', '50.5125 30.4507', '28', 'Chernihiv', 'ewufh'),
+(8, 3, 'User2', 'male', 'heterosexual', '50.4048 30.6568', '30', 'Vishorod', '1111');
 
 -- --------------------------------------------------------
 
@@ -138,6 +166,12 @@ ALTER TABLE `like_photo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `like_users`
+--
+ALTER TABLE `like_users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `photo`
 --
 ALTER TABLE `photo`
@@ -163,13 +197,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `comment`
 --
 ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `like_photo`
 --
 ALTER TABLE `like_photo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `like_users`
+--
+ALTER TABLE `like_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблицы `photo`
@@ -181,7 +221,7 @@ ALTER TABLE `photo`
 -- AUTO_INCREMENT для таблицы `questionary`
 --
 ALTER TABLE `questionary`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `users`

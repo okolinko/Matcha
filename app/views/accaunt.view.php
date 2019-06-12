@@ -102,9 +102,9 @@
                     <div class="search_column_2">
                         <input type="text" name="city" value="" />
                     </div>
-                        <div class="comment_foto" >
+                        <div class="info" >
                             <div id="addComment">
-                                <textarea type="text" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
+                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
                             </div>
                         </div>
                 </div>

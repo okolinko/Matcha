@@ -65,6 +65,7 @@ class UserController{
             $im = ($_POST['im']);
             $search = ($_POST['search']);
             $city = ($_POST['city']);
+            $info = ($_POST['info']);
 
             if (empty($name) or empty($age) or empty($city)){
 				$this->errors[] = 'Все поля должны быть заполнены!';
@@ -79,6 +80,12 @@ class UserController{
 			}
 			if (!Auth::checkName(strval($name))) {
 				$this->errors[] = 'Имя должно начинаться с большой буквы и иметь длину от 5 до 18 символов';
+
+				return view('accaunt', ['errors' => $this->errors]);
+			}
+
+			if (!User::infoUser(strval($info))) {
+				$this->errors[] = 'Информация про себя не должна превышать 120 символов';
 
 				return view('accaunt', ['errors' => $this->errors]);
 			}
@@ -103,7 +110,9 @@ class UserController{
 				$orientation = "LGBT";
 			}
 				$location = "50.4690 30.4623";
-			User::writeFormDatabase($_SESSION['userId'], $name, $age, $gender, $orientation, $location, $city);
+
+
+			User::writeFormDatabase($_SESSION['userId'], $name, $age, $gender, $orientation, $location, $city, $info);
 			redirect('personalArea');
         }
 	}

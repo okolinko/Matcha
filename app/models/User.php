@@ -270,7 +270,6 @@ class User {
 	public static function notificationStatus(string $userId) {
 
 		$userId = intval($userId);
-//		dd($response);
 		$sql = new self();
 		$response = $sql->db->selectOne('users', 'id', $userId);
 
@@ -285,7 +284,7 @@ class User {
 
 	public static function writeFormDatabase(string $userId, string $name, string $age,
 
-											 string $gender, string $orientation, string $location, string  $city) : bool {
+											 string $gender, string $orientation, string $location, string  $city, string $info) : bool {
 
 
 		$sql = new self();
@@ -301,6 +300,7 @@ class User {
 			'age' => $age,
 			'location' => $location,
 			'city' => $city,
+			'info' => $info,
 		]);
 		}
 		else {
@@ -312,6 +312,7 @@ class User {
 				'location' => $response->location,
 				'age' => $age,
 				'city' => $city,
+				'info' => $info,
 			]);
 		}
 		return true;
@@ -353,6 +354,7 @@ class User {
 				'location' => $location,
 				'age' => $response->age,
 				'city' => $response->city,
+				'info' => $response->info,
 			]);
 		}
 	}
@@ -374,6 +376,7 @@ class User {
 			$userAcaunt[$i]['location'] = $response[$i]->location;
 			$userAcaunt[$i]['age'] = $response[$i]->age;
 			$userAcaunt[$i]['city'] = $response[$i]->city;
+			$userAcaunt[$i]['info'] = $response[$i]->info;
 			$i++;
 		}
 		return $userAcaunt;
@@ -398,6 +401,63 @@ class User {
 			return false;
 		}
 		return $response;
+	}
+	public static function infoUser($info) {
+
+		$len = iconv_strlen($info);
+
+		if($len > 120) {
+			return false;
+		}
+		return true;
+	}
+
+	public static function addLikeUser($userLikeId, $userId) {
+		$sql = new self();
+		$userId = intval($userId);
+		$table = "like_users";
+		$response = $sql->db->selectOne($table, 'user_id', $userId);
+		if (!$response) {
+			$sql->db->insert('like_users', [
+				'user_id' => $userId,
+				'likeUsers' => $userLikeId,
+			]);
+		}
+		else {
+			$res = explode(",", $response->likeUsers);
+			foreach ($res as $key => &$r) {
+				if($r == $userLikeId) {
+					;
+				}
+				else{
+					$newUser = $response->likeUsers.",".$userLikeId;
+					$sql->db->update3($table, $userId, [
+					'user_id' => $userId,
+					'likeUsers' => $newUser,
+					]);
+				}
+			}
+		}
+	}
+
+	public static function dellLikeUser($userLikeId, $userId) {
+		$sql = new self();
+
+		$userId = intval($userId);
+		$table = "like_users";
+		$response = $sql->db->selectOne($table, 'user_id', $userId);
+		$res = explode(",", $response->likeUsers);
+		foreach ($res as $key => &$r) {
+			if($r == $userLikeId) {
+				unset($res[$key]);
+			}
+		}
+		$strId = implode(",", $res);
+		$sql->db->insert('like_users', [
+			'user_id' => $userId,
+			'likeUsers' => $strId,
+		]);
+
 	}
 
 }

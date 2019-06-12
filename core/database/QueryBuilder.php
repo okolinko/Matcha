@@ -86,6 +86,23 @@ class QueryBuilder
 		$statement->execute($data);
 	}
 
+	public function update3($table, $id, $data)
+	{
+		$sqlString = "UPDATE {$table} SET ";
+		$counter = 0;
+		foreach ($data as $param => $value) {
+			if ($counter){
+				$sqlString .= ", ";
+			}
+			$sqlString .= "$param = ".'"'."{$value}".'"';
+			$counter++;
+		}
+		$sqlString .= " WHERE user_id = ". $id;
+		$data['id'] = $id;
+		$statement = $this->pdo->prepare($sqlString);
+		$statement->execute($data);
+	}
+
 	public function update2($table, $id, $data)
 	{
 		$sqlString = "UPDATE {$table} SET ";

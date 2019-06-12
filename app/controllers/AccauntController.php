@@ -70,6 +70,41 @@ class AccountController
 		$questionary = User::loadUserInfo($userId, "questionary", "id_user");
 		$userInfo = User::loadUser($userId);
 		$userFoto = User::userFoto($userId);
+		$location = explode(" ", strval($questionary->location));
+		$location[0] = substr($location[0], 0, 7)." ";
+		$location[1] = substr($location[1], 0, 7);
 		require_once('app/views/accauntUser.view.php');
+	}
+	public function acauntLikeAdd(){
+		$userLikeId    = $_POST['id'];
+//		$userLikeId    = 8;
+
+		$userId = $_SESSION['userId'];
+
+		if ($userId == false)
+		{
+			echo "false";
+		}
+		else{
+			User::addLikeUser($userLikeId, $userId);
+
+			echo "true";
+		}
+	}
+
+	public function acauntLikeDel(){
+		$userLikeId    = $_POST['id'];
+//		$userLikeId    = 8;
+		$userId = $_SESSION['userId'];
+
+		if ($userId == false)
+		{
+			echo "false";
+		}
+		else{
+			User::dellLikeUser($userLikeId, $userId);
+
+			echo "true";
+		}
 	}
 }
