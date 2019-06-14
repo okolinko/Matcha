@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Июн 12 2019 г., 09:14
+-- Время создания: Июн 14 2019 г., 03:07
 -- Версия сервера: 5.7.24
 -- Версия PHP: 7.1.26
 
@@ -72,7 +72,9 @@ CREATE TABLE `like_users` (
 --
 
 INSERT INTO `like_users` (`id`, `user_id`, `likeUsers`) VALUES
-(1, 1, '1,2,3,5,6,8,1,1,1');
+(1, 1, '2,3'),
+(2, 2, '3'),
+(4, 3, '1,2');
 
 -- --------------------------------------------------------
 
@@ -96,7 +98,7 @@ INSERT INTO `photo` (`id`, `name`, `user_id`, `img`) VALUES
 (5, 'foto1_3', 1, 'foto1_3.png'),
 (6, 'foto1_2', 1, 'foto1_2.png'),
 (8, 'foto1_5', 1, 'foto1_5.png'),
-(9, 'foto1_1', 1, 'foto1_1.png');
+(9, 'foto1_1', 2, 'foto1_1.png');
 
 -- --------------------------------------------------------
 
@@ -209,7 +211,7 @@ ALTER TABLE `like_photo`
 -- AUTO_INCREMENT для таблицы `like_users`
 --
 ALTER TABLE `like_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT для таблицы `photo`

@@ -24,6 +24,7 @@ $router->get('searchUser', 'DatingController@searchUser');
 $router->get('accauntUser', 'AccountController@userAccaunt');
  $router->get('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->get('acauntLike/del', 'AccountController@acauntLikeDel');
+ $router->get('likedUser', 'UserController@likedUser');
 
 $router->post('login', 'AuthController@login');
 $router->post('login/restore', 'AuthController@restoreLogin');
@@ -42,6 +43,7 @@ $router->post('searchUser', 'DatingController@searchUser');
 $router->post('accauntUser', 'AccountController@userAccaunt');
 $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('acauntLike/del', 'AccountController@acauntLikeDel');
+ $router->get('likedUser', 'UserController@likedUser');
 
 
 $router->get('page-not-found', 'MainController@page404');

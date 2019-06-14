@@ -64,8 +64,7 @@ class AccountController
 		{
 			redirect('login');
 		}
-//		$userId	= intval($_GET['id']);
-		$userId = 1;
+		$userId	= intval($_GET['id']);
 
 		$questionary = User::loadUserInfo($userId, "questionary", "id_user");
 		$userInfo = User::loadUser($userId);
@@ -73,11 +72,14 @@ class AccountController
 		$location = explode(" ", strval($questionary->location));
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
+
+		$status = User::statusLike($userId, $_SESSION['userId']);
 		require_once('app/views/accauntUser.view.php');
 	}
+
+
 	public function acauntLikeAdd(){
 		$userLikeId    = $_POST['id'];
-//		$userLikeId    = 8;
 
 		$userId = $_SESSION['userId'];
 

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\Dating;
 use App\Models\User;
 use App\Models\Auth;
 
@@ -124,5 +125,21 @@ class UserController{
 
 		User::addGeolocation($_SESSION['userId'], $location);
 //		file_put_contents("/Users/akolinko/lol", $location[1], FILE_APPEND);
+	}
+
+	public static function likedUser() {
+		if (!$_SESSION['userId'])
+		{
+			redirect('login');
+		}
+		$userId = $_SESSION['userId'];
+		$arrayUserLikeId = User::LikedUserInfo($userId);
+
+		$id = Dating::searchLiked($userId, $arrayUserLikeId);
+
+		$acaunt = Dating::viewLikedUser($id);
+		dd($acaunt);
+
+		require_once('app/views/likedUser.view.php');
 	}
 }

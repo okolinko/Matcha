@@ -425,9 +425,11 @@ class User {
 		}
 		else {
 			$res = explode(",", $response->likeUsers);
+//			dd($res);
 			foreach ($res as $key => &$r) {
-				if($r == $userLikeId) {
-					;
+				var_dump($userLikeId);
+				if(intval($r) == $userLikeId) {
+					return ;
 				}
 				else{
 					$newUser = $response->likeUsers.",".$userLikeId;
@@ -448,16 +450,46 @@ class User {
 		$response = $sql->db->selectOne($table, 'user_id', $userId);
 		$res = explode(",", $response->likeUsers);
 		foreach ($res as $key => &$r) {
-			if($r == $userLikeId) {
+			if(intval($r) == $userLikeId) {
 				unset($res[$key]);
 			}
 		}
 		$strId = implode(",", $res);
-		$sql->db->insert('like_users', [
+		$sql->db->update3($table, $userId, [
 			'user_id' => $userId,
 			'likeUsers' => $strId,
 		]);
 
+	}
+
+	public static function statusLike($userLikeId, $userId) {
+		$sql = new self();
+
+		$userId = intval($userId);
+		$table = "like_users";
+		$response = $sql->db->selectOne($table, 'user_id', $userId);
+		$res = explode(",", $response->likeUsers);
+		foreach ($res as $key => &$r) {
+			if(intval($r) == $userLikeId) {
+				return 1;
+			}
+		}
+		return 0;
+	}
+
+	public static function LikedUserInfo($userId) {
+		$sql = new self();
+
+		$userId = intval($userId);
+		$table = "like_users";
+		$response = $sql->db->selectOne($table, 'user_id', $userId);
+		if (!$response) {
+			return 0;
+		}
+		else {
+			$res = explode(",", $response->likeUsers);
+			return $res;
+		}
 	}
 
 }

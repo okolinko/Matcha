@@ -118,4 +118,48 @@ class Dating
 
 		return $acaunt;
 	}
+
+	public static function searchLiked($userId, $userLikeId) {
+		$result = array();
+		foreach($userLikeId as $key => &$list) {
+			$id = User::LikedUserInfo($list);
+			if (Dating::helpSearch($id, $userId) == 1)
+			{
+				array_push($result, $userLikeId[$key]);
+			}
+		}
+
+		return $result;
+	}
+
+	private function helpSearch($id, $userId){
+		foreach($id as $key => &$user) {
+				if(strval($user) == strval($userId)) {
+					return 1;
+				}
+			}
+
+		return 0;
+	}
+
+	public static function viewLikedUser($id) {
+		$id = 2;
+		$sql = new self();
+			$acaunt = $sql->db->selectAll('questionary');
+			if (!$acaunt) {
+				return null;
+			}
+
+		foreach($acaunt as $key => &$acaunt_list) {
+			if(strval($acaunt_list->id_user)  == strval($id)) {
+				;
+			}
+			else {
+				unset($acaunt[$key]);
+			}
+		}
+		return $acaunt;
+
+
+	}
 }
