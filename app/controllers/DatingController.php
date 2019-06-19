@@ -74,8 +74,8 @@ class DatingController
 			}
 
 			$acaunt = $dating_location;
-		}
 
+		}
 		require_once('app/views/dating.view.php');
 	}
 

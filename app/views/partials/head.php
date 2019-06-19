@@ -8,9 +8,11 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Averia+Sans+Libre' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
 		<link rel="stylesheet" href="../../../public/css/style.css">
 
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
+        <script type="text/javascript" src="../../../public/js/chat.js"></script>
 
 	</head>
 	<body>
@@ -98,7 +100,7 @@
 			<ul id="menu">
 				<li><a href="/">Главная</a></li>
 				<li><a href="/datingUser">Поиск анкет</a></li>
-				<li><a href="#">Понравившиеся</a></li>
+				<li><a href="/likedUser">Понравившиеся</a></li>
 <!--                <li><a href="#">####</a></li>-->
 				<?php if ($_SESSION['userId']): ?>
 					<li><a href="/logout">Выход</a></li>

@@ -135,11 +135,26 @@ class UserController{
 		$userId = $_SESSION['userId'];
 		$arrayUserLikeId = User::LikedUserInfo($userId);
 
-		$id = Dating::searchLiked($userId, $arrayUserLikeId);
 
-		$acaunt = Dating::viewLikedUser($id);
-		dd($acaunt);
+		$id = Dating::searchLiked($userId, $arrayUserLikeId);
+		sort($id);
+		reset($id);
+
+		$array = Dating::viewLikedUser($id);
+		$acaunt = json_decode(json_encode($array), True);
 
 		require_once('app/views/likedUser.view.php');
+	}
+
+	public static function sendMassage() {
+		 $res = $_POST['comment'];
+		 $id = $_POST['id'];
+		define('TIMEZONE', 'Europe/Kiev');
+		date_default_timezone_set(TIMEZONE);
+		$date_today = date("m.d.y");
+		$today[1] = date("H:i:s");
+		$time = ("Текущее время:".  $today[1] ." и дата:" . $date_today ."." );
+//	$time = date(DATE_RFC822);
+		file_put_contents("/Users/akolinko/lol", $time, FILE_APPEND);
 	}
 }

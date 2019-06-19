@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="../../public/css/style_reg.css">
 </head>
 <body>
-<div class="reg_but"><p><a href="/" ><img id="button" src="/public/img/home.png" alt="На главную"></a></p></div>
+<div class="reg_but"><p><a href="/" ><img style="width: 60px" src="/public/img/home.png" alt="На главную"></a></p></div>
 <div class="login">
 	<h1>Изменение пароля</h1>
 	<?php if (isset($errors) && !empty($errors)): ?>

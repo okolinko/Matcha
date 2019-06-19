@@ -10,7 +10,63 @@
             </ul>
 		<?php endif; ?>
     </div>
-	<div class="info_flex">
+    <div class="form_flex">
+        <form action="/profile" method="post">
+            <div><h2>Анкета</h2></div>
+            <fieldset class="fon">
+                <div class="search_row">
+                    <div class="search_column_1">
+                        <label>Я</label>
+                    </div>
+                    <div class="search_column_2">
+                        <select class="gender" name="im">
+                            <option>Парень</option>
+                            <option>Девушка</option>
+                        </select>
+                        <label class="seeking">Ищу</label>
+                        <select class="gender" name="search">
+                            <option>Девушку</option>
+                            <option>Парня</option>
+                            <option>Без разницы</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <div class="search_row">
+<!--                    <div class="search_column_1">-->
+<!--                        <label class="test">Полный возраст</label>-->
+<!--                    </div>-->
+                    <div class="search_column_2">
+                        <input type="data" placeholder="Полный возраст" name="age" value="" />
+                    </div>
+                </div>
+                <div class="search_row">
+<!--                    <div class="search_column_1">-->
+<!--                        <label>Ваше имя</label>-->
+<!--                    </div>-->
+                    <div class="search_column_2">
+                        <input type="text" placeholder="Ваше имя" name="name" value="" />
+                    </div>
+                    <div class="search_row">
+<!--                        <div class="search_column_1">-->
+<!--                            <label>Место проживания</label>-->
+<!--                        </div>-->
+                        <div class="search_column_2">
+                            <input type="text" placeholder="Место проживания" name="city" value="" />
+                        </div>
+                        <div class="info" >
+                            <div id="addComment">
+                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="search_row_last">
+                        <input class="button2" name="submit" type="submit" value="Отправить" >
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
 		<div class="email">
 			<form action="/personalArea/edit/" method="post">
 				<input class="edit_password" type="submit" value="Изменить пароль" />
@@ -58,63 +114,64 @@
     <div style="height: 100%">
         <iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
-    <div class="form_container">
-        <form action="/profile" method="post">
-            <div><h2>Анкета</h2></div>
-            <fieldset>
-                <div class="search_row">
-                    <div class="search_column_1">
-                        <label>Я</label>
-                    </div>
-                    <div class="search_column_2">
-                        <select class="gender" name="im">
-                            <option>Парень</option>
-                            <option>Девушка</option>
-                        </select>
-                        <label class="seeking">Ищу</label>
-                        <select class="gender" name="search">
-                            <option>Девушку</option>
-                            <option>Парня</option>
-                            <option>Без разницы</option>
-                        </select>
-                    </div>
-                </div>
-            <br>
-                <div class="search_row">
-                    <div class="search_column_1">
-                        <label class="test">Полный возраст</label>
-                    </div>
-                    <div class="search_column_2">
-                        <input type="data" name="age" value="" />
-                    </div>
-                </div>
-                <div class="search_row">
-                    <div class="search_column_1">
-                        <label>Ваше имя</label>
-                    </div>
-                    <div class="search_column_2">
-                        <input type="text" name="name" value="" />
-                    </div>
-                    <div class="search_row">
-                        <div class="search_column_1">
-                        <label>Место проживания</label>
-                    </div>
-                    <div class="search_column_2">
-                        <input type="text" name="city" value="" />
-                    </div>
-                        <div class="info" >
-                            <div id="addComment">
-                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
-                            </div>
-                        </div>
-                </div>
-                <div class="search_row_last">
-                        <input class="button2" name="submit" type="submit" value="Отправить" >
-                    </div>
-                </div>
-            </fieldset>
-        </form>
-    </div>
+<!--    <div class="form_container">-->
+<!--        <form action="/profile" method="post">-->
+<!--            <div><h2>Анкета</h2></div>-->
+<!--            <fieldset>-->
+<!--                <div class="search_row">-->
+<!--                    <div class="search_column_1">-->
+<!--                        <label>Я</label>-->
+<!--                    </div>-->
+<!--                    <div class="search_column_2">-->
+<!--                        <select class="gender" name="im">-->
+<!--                            <option>Парень</option>-->
+<!--                            <option>Девушка</option>-->
+<!--                        </select>-->
+<!--                        <label class="seeking">Ищу</label>-->
+<!--                        <select class="gender" name="search">-->
+<!--                            <option>Девушку</option>-->
+<!--                            <option>Парня</option>-->
+<!--                            <option>Без разницы</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            <br>-->
+<!--                <div class="search_row">-->
+<!--                    <div class="search_column_1">-->
+<!--                        <label class="test">Полный возраст</label>-->
+<!--                    </div>-->
+<!--                    <div class="search_column_2">-->
+<!--                        <input type="data" name="age" value="" />-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="search_row">-->
+<!--                    <div class="search_column_1">-->
+<!--                        <label>Ваше имя</label>-->
+<!--                    </div>-->
+<!--                    <div class="search_column_2">-->
+<!--                        <input type="text" name="name" value="" />-->
+<!--                    </div>-->
+<!--                    <div class="search_row">-->
+<!--                        <div class="search_column_1">-->
+<!--                        <label>Место проживания</label>-->
+<!--                    </div>-->
+<!--                    <div class="search_column_2">-->
+<!--                        <input type="text" name="city" value="" />-->
+<!--                    </div>-->
+<!--                        <div class="info" >-->
+<!--                            <div id="addComment">-->
+<!--                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                </div>-->
+<!--                <div class="search_row_last">-->
+<!--                        <input class="button2" name="submit" type="submit" value="Отправить" >-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </fieldset>-->
+<!--        </form>-->
+<!--    </div>-->
+<?php require('partials/chat.php'); ?>
 <br><br>
     <section class="wrap">
         <div class="foto_ac" >

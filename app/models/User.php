@@ -109,7 +109,7 @@ class User {
 		$i = 0;
 		while($response[$i])
 			{
-				if (intval($_SESSION['userId']) == intval($response[$i]->user_id)){
+				if (intval($id) == intval($response[$i]->user_id)){
 					$userFoto[$i]['id'] = $response[$i]->id;
 					$userFoto[$i]['user_id'] = $response[$i]->user_id;
 					$userFoto[$i]['img'] = $response[$i]->img;
@@ -119,6 +119,7 @@ class User {
 
 			return($userFoto);
 	}
+
 	public static function avtorFoto($fotoId) {
 		$user = new self();
 		$response = $user->db->selectOne('comment', 'user_id', $fotoId);
@@ -490,6 +491,26 @@ class User {
 			$res = explode(",", $response->likeUsers);
 			return $res;
 		}
+	}
+	public static function ipUser() {
+		$ipaddress = '';
+		if (isset($_SERVER['HTTP_CLIENT_IP']))
+			$ipaddress = $_SERVER['HTTP_CLIENT_IP'];
+		else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
+			$ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		else if(isset($_SERVER['HTTP_X_FORWARDED']))
+			$ipaddress = $_SERVER['HTTP_X_FORWARDED'];
+		else if(isset($_SERVER['HTTP_X_CLUSTER_CLIENT_IP']))
+			$ipaddress = $_SERVER['HTTP_X_CLUSTER_CLIENT_IP'];
+		else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
+			$ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
+		else if(isset($_SERVER['HTTP_FORWARDED']))
+			$ipaddress = $_SERVER['HTTP_FORWARDED'];
+		else if(isset($_SERVER['REMOTE_ADDR']))
+			$ipaddress = $_SERVER['REMOTE_ADDR'];
+		else
+			$ipaddress = 'UNKNOWN';
+		return $ipaddress;
 	}
 
 }

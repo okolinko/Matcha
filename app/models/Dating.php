@@ -143,20 +143,24 @@ class Dating
 	}
 
 	public static function viewLikedUser($id) {
-		$id = 2;
-		$sql = new self();
-			$acaunt = $sql->db->selectAll('questionary');
-			if (!$acaunt) {
-				return null;
-			}
 
-		foreach($acaunt as $key => &$acaunt_list) {
-			if(strval($acaunt_list->id_user)  == strval($id)) {
-				;
+		$sql = new self();
+		$acaunt = $sql->db->selectAll('questionary');
+		if (!$acaunt) {
+			return null;
+		}
+		$i = 0;
+		$j = 0;
+		$sizeArray = count($acaunt);
+		while ($i < $sizeArray)
+		{
+			if ($acaunt[$i]->id_user == $id[$j]) {
+				$j++;
 			}
 			else {
-				unset($acaunt[$key]);
+				unset($acaunt[$i]);
 			}
+			$i++;
 		}
 		return $acaunt;
 

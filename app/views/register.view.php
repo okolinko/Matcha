@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<div class="reg_but"><p><a href="/" ><img id="button" src="/public/img/home.png" alt="На главную"></a></p></div>
+	<div class="reg_but"><p><a href="/" ><img style="width: 60px" src="/public/img/home.png" alt="На главную"></a></p></div>
 <div id="reg_h1"><h1>Пройдите форму регистрации</h1></div>
 	<div class="regist">
 		<div id="error">

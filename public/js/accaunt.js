@@ -19,7 +19,10 @@ if (im4) {
 if (im5) {
     document.getElementById("min5").addEventListener("click", test5);
 }
-document.getElementById("like").addEventListener("click", like);
+
+
+document.getElementById("user_like").addEventListener("click", like);
+
 test1();
 
 

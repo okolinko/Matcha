@@ -69,6 +69,7 @@ class AccountController
 		$questionary = User::loadUserInfo($userId, "questionary", "id_user");
 		$userInfo = User::loadUser($userId);
 		$userFoto = User::userFoto($userId);
+
 		$location = explode(" ", strval($questionary->location));
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
