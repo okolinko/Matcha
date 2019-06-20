@@ -73,7 +73,6 @@ class AccountController
 		$location = explode(" ", strval($questionary->location));
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
-
 		$status = User::statusLike($userId, $_SESSION['userId']);
 		require_once('app/views/accauntUser.view.php');
 	}
@@ -97,7 +96,6 @@ class AccountController
 
 	public function acauntLikeDel(){
 		$userLikeId    = $_POST['id'];
-//		$userLikeId    = 8;
 		$userId = $_SESSION['userId'];
 
 		if ($userId == false)

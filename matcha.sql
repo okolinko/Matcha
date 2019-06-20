@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Июн 14 2019 г., 03:07
+-- Время создания: Июн 20 2019 г., 03:48
 -- Версия сервера: 5.7.24
 -- Версия PHP: 7.1.26
 
@@ -25,39 +25,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `comment`
---
-
-CREATE TABLE `comment` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `foto_id` int(11) NOT NULL,
-  `comment` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `comment`
---
-
-INSERT INTO `comment` (`id`, `user_id`, `foto_id`, `comment`) VALUES
-(1, 1, 1, 'блондин');
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `like_photo`
---
-
-CREATE TABLE `like_photo` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `foto_id` int(11) NOT NULL,
-  `status` int(1) NOT NULL DEFAULT '0'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Структура таблицы `like_users`
 --
 
@@ -72,9 +39,25 @@ CREATE TABLE `like_users` (
 --
 
 INSERT INTO `like_users` (`id`, `user_id`, `likeUsers`) VALUES
-(1, 1, '2,3'),
-(2, 2, '3'),
+(1, 1, '3,2'),
+(2, 2, '1,3'),
 (4, 3, '1,2');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `massege`
+--
+
+CREATE TABLE `massege` (
+  `id` int(11) NOT NULL,
+  `chat_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `time` text NOT NULL,
+  `date` text NOT NULL,
+  `status` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -95,10 +78,10 @@ CREATE TABLE `photo` (
 
 INSERT INTO `photo` (`id`, `name`, `user_id`, `img`) VALUES
 (4, 'foto1_4', 1, 'foto1_4.png'),
-(5, 'foto1_3', 1, 'foto1_3.png'),
 (6, 'foto1_2', 1, 'foto1_2.png'),
-(8, 'foto1_5', 1, 'foto1_5.png'),
-(9, 'foto1_1', 2, 'foto1_1.png');
+(9, 'foto1_1', 1, 'foto1_1.png'),
+(10, 'foto2_2', 2, 'foto2_2.png'),
+(11, 'foto3_2', 3, 'foto3_2.png');
 
 -- --------------------------------------------------------
 
@@ -154,17 +137,10 @@ INSERT INTO `users` (`id`, `user_name`, `password`, `admin`, `act_email`, `email
 --
 -- Индексы сохранённых таблиц
 --
-
 --
--- Индексы таблицы `comment`
+-- Индексы таблицы `massege`
 --
-ALTER TABLE `comment`
-  ADD PRIMARY KEY (`id`);
-
---
--- Индексы таблицы `like_photo`
---
-ALTER TABLE `like_photo`
+ALTER TABLE `massege`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -194,18 +170,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+--
+-- AUTO_INCREMENT для таблицы `massege`
+--
+ALTER TABLE `massege`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
---
--- AUTO_INCREMENT для таблицы `comment`
---
-ALTER TABLE `comment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT для таблицы `like_photo`
---
-ALTER TABLE `like_photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT для таблицы `like_users`
@@ -217,7 +187,7 @@ ALTER TABLE `like_users`
 -- AUTO_INCREMENT для таблицы `photo`
 --
 ALTER TABLE `photo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT для таблицы `questionary`

@@ -209,4 +209,13 @@ class QueryBuilder
 		$statement->execute($parameters);
 	}
 
+	public function insertMassage($chatId, $myId, $text, $status) {
+		$sql = "INSERT INTO `massege`( `chat_id`, `user_id`, `text`, `time`, `date`, `status`)
+ 			VALUES ({$chatId}, {$myId}, \"{$text}\", CURTIME(), CURDATE(),{$status})";
+		$statement = $this->pdo->prepare($sql);
+		$statement->execute();
+	}
+
+
+
 }

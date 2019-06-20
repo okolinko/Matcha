@@ -12,7 +12,7 @@
 		<?php endif; ?>
 	</div>
     <div class="container">
-        <a class="open">Открыть чат</a>
+        <a id="open" class="open">Открыть чат</a>
     </div>
 <!--	--><?php //require('partials/chat.php'); ?>
     <div class="backpopup"></div>
@@ -20,14 +20,16 @@
         <p class="close">x</p>
         <div class="shoutbox">
             <h1>Matcha chat <img src='../../../public/img/refresh.png'/></h1>
-            <ul class="shoutbox-content"></ul>
+            <ul id="ma" class="shoutbox-content">
+                <li class="massage">Hello!</li>
+                <li class="massage">hi</li>
+            </ul>
             <div class="shoutbox-form">
-                <h2 class="hh2">Написать сообщение <span>×</span></h2>
-                <form action="/sendMassage" method="post">
-                    <textarea class="none"  name="id"><?php echo $userId?></textarea>
-                    <textarea placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240'></textarea>
-                    <input type="submit" value="Отправить!"/>
-                </form>
+<!--                    <form>-->
+                        <textarea class="none" id="userId" name="id"><?php echo $userId?></textarea>
+                        <textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240'></textarea>
+                        <input id="submit-massage" type="submit" value="Отправить!" required/>
+<!--                    </form>-->
             </div>
         </div>
     </div>

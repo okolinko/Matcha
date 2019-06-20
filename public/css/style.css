@@ -683,7 +683,7 @@ h1 img {
 }
 
 .hh2 span {
-	display: none;
+	display: inline-block;
 	position: absolute;
 	float: right;
 	right: 13px;
@@ -695,7 +695,7 @@ h1 img {
 }
 
 .shoutbox-form form {
-	display: none;
+	display: inline-block;
 	background-color:  #f9fafb;
 	box-shadow: 0px 2px 0px 0.00px #e2e8eb;
 	max-width: 100%;
@@ -763,11 +763,7 @@ h1 img {
 	-moz-border-radius: 5px!important;
 	border-radius: 5px!important;
 }
-/*.open{*/
-/*	text-decoration: underline;*/
-/*	cursor: pointer;*/
-/*	background-image: linear-gradient(to right, #84fab0 0%, #8fd3f4 51%, #84fab0 100%);*/
-/*}*/
+
 .backpopup{
 	display: none;
 	width: 100%;
@@ -791,7 +787,12 @@ h1 img {
 .none {
 	display: none;
 }
-
+.massage{
+	color: #9aa1a7;
+}
+.massage-activ{
+	color: #32a1ce;
+}
 @media (max-width: 645px) {
 	.openMenu {
 		display: block;
