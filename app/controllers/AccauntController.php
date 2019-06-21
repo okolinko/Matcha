@@ -70,6 +70,13 @@ class AccountController
 		$userInfo = User::loadUser($userId);
 		$userFoto = User::userFoto($userId);
 
+		if (intval($_SESSION['userId']) < intval($userId)) {
+			$chatId = $_SESSION['userId'] . $userId;
+		}
+		else {
+			$chatId = $userId. $_SESSION['userId'];
+		}
+
 		$location = explode(" ", strval($questionary->location));
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);

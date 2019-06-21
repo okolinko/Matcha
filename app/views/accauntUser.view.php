@@ -21,15 +21,12 @@
         <div class="shoutbox">
             <h1>Matcha chat <img src='../../../public/img/refresh.png'/></h1>
             <ul id="ma" class="shoutbox-content">
-                <li class="massage">Hello!</li>
-                <li class="massage">hi</li>
             </ul>
             <div class="shoutbox-form">
-<!--                    <form>-->
-                        <textarea class="none" id="userId" name="id"><?php echo $userId?></textarea>
-                        <textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240'></textarea>
-                        <input id="submit-massage" type="submit" value="Отправить!" required/>
-<!--                    </form>-->
+                <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
+                <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
+                <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
+                <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
             </div>
         </div>
     </div>
@@ -44,4 +41,4 @@
 
 
 <script type="text/javascript" src="../../../public/js/accaunt.js"></script>
-<?php //require('partials/footer.php'); ?>
+<?php require('partials/footer.php'); ?>

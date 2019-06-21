@@ -581,6 +581,7 @@ textarea:focus {
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
+
 }
 
 h1 {
@@ -615,54 +616,59 @@ h1 img {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	color:  #df377a;
+	/*color:  #df377a;*/
 	font-size: 14px;
 	font-weight: 700;
 	text-align: left;
+	overflow: auto;
+	height: 200px;
 }
 
+ul{
+	background: url("../img/vibrant-pink-watercolor-painting-background_53876-58930.jpg");
+}
 .shoutbox-content li {
-	padding: 20px;
-	border-bottom: 1px solid #d5dbe1;
+	padding: 15px;
+	border-bottom: 1px solid goldenrod;
 }
 
-.shoutbox-comment {
-	display: inline;
-	color:  #717c87;
-	font-size: 14px;
-	font-weight: 400;
-	line-height: 21px;
-	text-align: left;
-}
+/*.shoutbox-comment {*/
+/*	display: inline;*/
+/*	color:  #717c87;*/
+/*	font-size: 14px;*/
+/*	font-weight: 400;*/
+/*	line-height: 21px;*/
+/*	text-align: left;*/
+/*}*/
 
-.shoutbox-comment-details {
-	width: 100%;
-	margin: 5px auto;
-	height: 11px;
-}
+/*.shoutbox-comment-details {*/
+/*	width: 100%;*/
+/*	margin: 5px auto;*/
+/*	height: 11px;*/
+/*}*/
 
-.shoutbox-comment-reply {
-	display: inline-block;
-	float: left;
-	color:  #5896cb;
-	font-size: 12px;
-	font-weight: bold;
-	line-height: 20px;
-	text-align: left;
-	height: 9px;
-	cursor: pointer;
-}
+/*.shoutbox-comment-reply {*/
+/*	display: inline-block;*/
+/*	float: left;*/
+/*	color:  #5896cb;*/
+/*	font-size: 12px;*/
+/*	font-weight: bold;*/
+/*	line-height: 20px;*/
+/*	text-align: left;*/
+/*	height: 9px;*/
+/*	cursor: pointer;*/
+/*}*/
 
-.shoutbox-comment-ago {
-	display: inline-block;
-	float: right;
-	color:  #9aa1a7;
-	font-size: 11px;
-	font-weight: normal;
-	line-height: 20px;
-	text-align: right;
-	height: 11px;
-}
+/*.shoutbox-comment-ago {*/
+/*	display: inline-block;*/
+/*	float: right;*/
+/*	color:  #9aa1a7;*/
+/*	font-size: 11px;*/
+/*	font-weight: normal;*/
+/*	line-height: 20px;*/
+/*	text-align: right;*/
+/*	height: 11px;*/
+/*}*/
 
 
 /* ------- Writing a new comment form ------- */
@@ -716,40 +722,40 @@ h1 img {
 }
 
 
-.shoutbox-form form #shoutbox-comment {
-	background-color: #ffffff;
-	box-shadow: 1px 3px 0px 0.00px rgba(0, 0, 0, 0.04);
-	border: 1px solid #bfcdda;
-	outline: none;
-	max-width: 320px;
-	width: 100%;
-	height: 76px;
-	margin-bottom: 20px;
-	resize: none;
-	font-weight: normal;
-	font: inherit;
-	font-size: 14px;
-	padding: 10px;
-	box-sizing: border-box;
-	color:inherit;
-}
+/*.shoutbox-form form #shoutbox-comment {*/
+/*	background-color: #ffffff;*/
+/*	box-shadow: 1px 3px 0px 0.00px rgba(0, 0, 0, 0.04);*/
+/*	border: 1px solid #bfcdda;*/
+/*	outline: none;*/
+/*	max-width: 320px;*/
+/*	width: 100%;*/
+/*	height: 76px;*/
+/*	margin-bottom: 20px;*/
+/*	resize: none;*/
+/*	font-weight: normal;*/
+/*	font: inherit;*/
+/*	font-size: 14px;*/
+/*	padding: 10px;*/
+/*	box-sizing: border-box;*/
+/*	color:inherit;*/
+/*}*/
 
-.shoutbox-form form input[type=submit] {
-	background-color: #87bfef;
-	border: 1px solid #e6e7e8;
-	padding: 10px;
-	box-shadow: 0px 1px 2px 0.00px rgba(0, 0, 0, 0.1);
-	width: 110px;
-	height: 41px;
-	color: #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	text-align: center;
-	/*line-height: 38px;*/
-	outline: none;
-	margin-left: 25%;
-	cursor: pointer;
-}
+/*.shoutbox-form form input[type=submit] {*/
+/*	background-color: #87bfef;*/
+/*	border: 1px solid #e6e7e8;*/
+/*	padding: 10px;*/
+/*	box-shadow: 0px 1px 2px 0.00px rgba(0, 0, 0, 0.1);*/
+/*	width: 110px;*/
+/*	height: 41px;*/
+/*	color: #ffffff;*/
+/*	font-size: 14px;*/
+/*	font-weight: bold;*/
+/*	text-align: center;*/
+/*	!*line-height: 38px;*!*/
+/*	outline: none;*/
+/*	margin-left: 25%;*/
+/*	cursor: pointer;*/
+/*}*/
 
 .popup-window{
 	display: none;
@@ -788,10 +794,21 @@ h1 img {
 	display: none;
 }
 .massage{
-	color: #9aa1a7;
+	font-size: 17px;
+	color:dimgrey;
+	text-align: right;
+	list-style: none;
+	padding: 1em 0;
 }
-.massage-activ{
-	color: #32a1ce;
+
+.massage2{
+	color: #6b85ff;
+	font-size: 17px;
+}
+.time{
+	/*background: #8fd3f4;*/
+	color: gray(20%);
+	font-size: 10px;
 }
 @media (max-width: 645px) {
 	.openMenu {

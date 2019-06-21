@@ -21,24 +21,25 @@ $.fn.popup = function() { 	//функция для открытия всплыв
 
 }
 
+
 $(document).ready(function () {
-    document.getElementById('submit-massage').addEventListener('click', function () {
+        document.getElementById('submit-massage').addEventListener('click', function () {
         var text = document.getElementById('shoutbox-comment').value;
 
         if (text.length > 0 && text.length < 100) {
             var userId = document.getElementById("userId").value;
-var mass = document.getElementById("ma");
+             var mass = document.getElementById("ma");
             var xhr = new XMLHttpRequest();
 
             xhr.open("POST", "sendMassage", false);
             xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     if (xhr.responseText) {
-                        console.log(xhr.responseText);
+                        // console.log(xhr.responseText);
 
                         var li = document.createElement('li');
                         li.className = "massage";
-                        li.innerHTML = 'text';
+                        li.innerHTML = text;
                         mass.appendChild(li);
                     }
                 }
@@ -49,20 +50,63 @@ var mass = document.getElementById("ma");
             }
         }
         else{
-            alert("Коментарий не может быть пустым, или быть длинее 100 символов")
+            alert("Коментарий не может быть пустым, или быть длинее 240 символов")
         }
 
     });
 });
+    $(document).ready(function () {
+        var el = document.getElementById('open');
+        if (el) {
+            el.addEventListener('click', function () {
+                var massegeReload = document.getElementById("ma");
+                var userId = document.getElementById("userId").value;
+                var sesionId = document.getElementById("sesionId").value;
+                var now = new Date();
+                var year = now.getFullYear();
+                var month = now.getMonth() + 1;
+                var day = now.getDate();
 
-   // $('.submit-massage').click(function () {
-   //      var text = $('.shoutbox-comment').value;
-   //
-   //      if (text.length > 0 && text.length < 240) {
-   //
-   //          alert("Коментарий не может быть пустым, или быть длинее 240 символов");
-   //      } else {
-   //          // alert("Всё хорошо!");
-   //      }
+                setInterval(function () {
+                    var massegeReload = document.getElementById("ma");
+                    var userId = document.getElementById("userId").value;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "reloadMassage", true);
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState == 4 && xhr.status == 200) {
+                            if (xhr.responseText) {
+                                var comment = new Object();
+                                comment = JSON.parse(xhr.responseText);
+                                var str =  comment[1]['date'];
+                                var date = str.split('-',3);
+                                // console.log(date[1]);
+
+                                $('.massage').remove();
+                                $('.massage2').remove();
+                                for (i = 0; i < comment.length; i++) {
+                                    var li = document.createElement('li');
+                                    if(comment[i]['user_id'] == sesionId){
+                                        li.className = "massage2";
+                                        li.innerHTML = comment[i]['text'] + '   ' + '<span class="time">' + comment[i]['time'] + '</span>';
+                                    }
+                                    else {
+                                        li.className = "massage";
+                                        li.innerHTML = '<span class="time">' + comment[i]['time'] + '</span>' + '   ' + comment[i]['text'];
+                                    }
+                                    massegeReload.appendChild(li);
+                                }
+
+                            }
+                        }
+                    }
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+                    xhr.send('id=' + userId);
+                }, 500);
+            });
+        }
+    });
+
+
+
 
 

@@ -27,6 +27,8 @@ $router->get('accauntUser', 'AccountController@userAccaunt');
  $router->get('likedUser', 'UserController@likedUser');
  $router->get('sendMassage', 'MassegeController@sendMassage');
 
+ $router->get('reloadMassage', 'MassegeController@reloadMassage');
+
 $router->post('login', 'AuthController@login');
 $router->post('login/restore', 'AuthController@restoreLogin');
 
@@ -45,6 +47,7 @@ $router->post('accauntUser', 'AccountController@userAccaunt');
 $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('acauntLike/del', 'AccountController@acauntLikeDel');
  $router->post('sendMassage', 'MassegeController@sendMassage');
+ $router->post('reloadMassage', 'MassegeController@reloadMassage');
 
 
 $router->get('page-not-found', 'MainController@page404');
