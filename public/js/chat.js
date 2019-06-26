@@ -55,10 +55,14 @@ $(document).ready(function () {
 
     });
 });
+
     $(document).ready(function () {
+
+
         var el = document.getElementById('open');
         if (el) {
             el.addEventListener('click', function () {
+
                 var massegeReload = document.getElementById("ma");
                 var userId = document.getElementById("userId").value;
                 var sesionId = document.getElementById("sesionId").value;
@@ -77,21 +81,45 @@ $(document).ready(function () {
                             if (xhr.responseText) {
                                 var comment = new Object();
                                 comment = JSON.parse(xhr.responseText);
-                                var str =  comment[1]['date'];
-                                var date = str.split('-',3);
-                                // console.log(date[1]);
 
                                 $('.massage').remove();
                                 $('.massage2').remove();
+                                $('.date').remove();
+
                                 for (i = 0; i < comment.length; i++) {
                                     var li = document.createElement('li');
+
+                                    if (i == 0){
+                                        var li3 = document.createElement('li');
+                                        li3.className = "date";
+                                        li3.innerHTML = comment[0]['date'];
+                                        massegeReload.appendChild(li3);
+                                    }
+
+                                    var cla;
+                                    if (i > 0 ) {
+                                        if (comment[i]['date'] != comment[i - 1]['date']) {
+                                            var li2 = document.createElement('li');
+                                            li2.className = "date";
+                                            li2.innerHTML = comment[i]['date'];
+                                            massegeReload.appendChild(li2);
+                                        }
+                                    }
                                     if(comment[i]['user_id'] == sesionId){
+                                        if (comment[i]['status'] == 0)
+                                        {
+                                            cla = 'class="unread"';
+
+                                        }
+                                        else {
+                                            cla = 'class="chatIm"';
+                                        }
                                         li.className = "massage2";
-                                        li.innerHTML = comment[i]['text'] + '   ' + '<span class="time">' + comment[i]['time'] + '</span>';
+                                        li.innerHTML = '<span ' + cla + '>' + comment[i]['text'] + '</span>   ' + '<span class="time" >' + comment[i]['time'] + '</span>';
                                     }
                                     else {
                                         li.className = "massage";
-                                        li.innerHTML = '<span class="time">' + comment[i]['time'] + '</span>' + '   ' + comment[i]['text'];
+                                        li.innerHTML = '<span class="time" >' + comment[i]['time'] + '</span>' + '   ' + '<span class="chat_u" >' + comment[i]['text'] + '</span>';
                                     }
                                     massegeReload.appendChild(li);
                                 }
@@ -99,9 +127,9 @@ $(document).ready(function () {
                             }
                         }
                     }
-                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
+                    xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
                     xhr.send('id=' + userId);
-                }, 500);
+                }, 1000);
             });
         }
     });

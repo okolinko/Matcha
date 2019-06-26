@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Europe/Kiev');
 require_once 'config/setup.php';
 require 'vendor/autoload.php';
 require 'core/bootstrap.php';

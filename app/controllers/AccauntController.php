@@ -24,6 +24,7 @@ class AccountController
 		{
 			redirect('login');
 		}
+
 		return view('accaunt');
 	}
 
@@ -64,6 +65,7 @@ class AccountController
 		{
 			redirect('login');
 		}
+
 		$userId	= intval($_GET['id']);
 
 		$questionary = User::loadUserInfo($userId, "questionary", "id_user");
@@ -81,23 +83,31 @@ class AccountController
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
 		$status = User::statusLike($userId, $_SESSION['userId']);
+
 		require_once('app/views/accauntUser.view.php');
 	}
 
 
 	public function acauntLikeAdd(){
-		$userLikeId    = $_POST['id'];
+		$userLikeId   = $_POST['id'];
 
 		$userId = $_SESSION['userId'];
 
+		if ($userLikeId == $userId)
+		{
+			echo "false";
+			return ;
+		}
 		if ($userId == false)
 		{
 			echo "false";
+			return ;
 		}
 		else{
 			User::addLikeUser($userLikeId, $userId);
 
 			echo "true";
+			return ;
 		}
 	}
 

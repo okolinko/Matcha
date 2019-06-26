@@ -48,6 +48,10 @@ $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('acauntLike/del', 'AccountController@acauntLikeDel');
  $router->post('sendMassage', 'MassegeController@sendMassage');
  $router->post('reloadMassage', 'MassegeController@reloadMassage');
+ $router->post('statusMassage', 'MassegeController@statusMassage');
+
+
+
 
 
 $router->get('page-not-found', 'MainController@page404');

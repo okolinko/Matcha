@@ -20,7 +20,7 @@ class DatingController
 
 		$acaunt = array();
 		$acaunt = User::loadUserForm();
-
+		$acaunt = Dating::searchIm($acaunt, $_SESSION['userId']);
 		require_once('app/views/dating.view.php');
 	}
 
@@ -40,6 +40,9 @@ class DatingController
 			$age = $_POST['age'];
 			$orientation = $_POST['orientation'];
 			$radius = $_POST['radius'];
+			$glory = $_POST['glory'];
+
+//			file_put_contents("/Users/akolinko/lol", $glory, FILE_APPEND);
 			if (empty($acaunt)) {
 				$this->errors[] = 'Нету зарегистрированых пользователей';
 
@@ -73,7 +76,19 @@ class DatingController
 				return view('dating', ['errors' => $this->errors]);
 			}
 
-			$acaunt = $dating_location;
+			$dating_glory = Dating::searchGlory($dating_location, $glory);
+			if (empty($dating_glory)) {
+				$this->errors[] = "Пользователей з данной славой не найдено";
+
+				return view('dating', ['errors' => $this->errors]);
+			}
+
+			$acaunt = Dating::searchIm($dating_glory, $_SESSION['userId']);
+			if (empty($acaunt)) {
+				$this->errors[] = "Пользователей в данной категории не найдено";
+
+				return view('dating', ['errors' => $this->errors]);
+			}
 
 		}
 		require_once('app/views/dating.view.php');

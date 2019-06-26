@@ -47,11 +47,11 @@ class MassegeController {
 			$chatID = $id . $_SESSION['userId'];
 		}
 
-//		file_put_contents("/Users/akolinko/lol", $id, FILE_APPEND);
-
 		$massegeList = array();
 		$massegeList = Chat::arrayMassege($chatID);
 		$massegeList = array_reverse($massegeList);
+//		dd($massegeList);
+		Chat::statusMassage($massegeList, $chatID, $id);
 		$mass = array();
 		foreach($massegeList as $massege) {
 			array_push($mass, $massege);
@@ -59,5 +59,6 @@ class MassegeController {
 
 		print json_encode($mass);
 	}
+
 
 }

@@ -11,19 +11,19 @@
 <br>
 <div class="flex-container">
     <div class="flex-form">
-        <div class="form_container">
+       <center><div class="form_container">
             <form action="/searchUser" method="post">
                 <div><h2>Анкета</h2></div>
                 <fieldset style="height: 180px">
                     <div class="search_row">
-                        <div class="search_column_2">
+                        <div>
                             <label class="seeking">Ищу</label>
                             <select class="gender" name="search">
                                 <option>Девушку</option>
-                                <option>Парня</option>
+                                <option>Парня </option>
                             </select>
                         </div>
-                        <div class="search_column_2">
+                        <div>
                             <label class="seeking">Возраст</label>
                             <select class="gender" name="age">
                                 <option>18-21</option>
@@ -36,7 +36,7 @@
                                 <option>55-60</option>
                             </select>
                         </div>
-                        <div class="search_column_2">
+                        <div>
                             <label>Ориентация</label>
                             <select class="gender" name="orientation">
                                 <option>Гетеро</option>
@@ -44,7 +44,7 @@
                                 <option>ЛГБТ</option>
                             </select>
                         </div>
-                        <div class="search_column_2">
+                        <div>
                             <label>Радиус поиска</label>
                             <select class="gender" name="radius">
                                 <option>2-5 км.</option>
@@ -54,30 +54,22 @@
                                 <option>Без разницы</option>
                             </select>
                         </div>
+                        <div>
+                            <label>Уровень славы</label>
+                            <select class="glory" name="glory">
+                                <option>&#9733;</option>
+                                <option>&#9733; &#9733;</option>
+                                <option>&#9733; &#9733; &#9733;</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="search_row">
-<!--                        <div class="search_column_1">-->
-<!--                            <label>Ваше имя</label>-->
-<!--                        </div>-->
-<!--                        <div class="search_column_2">-->
-<!--                            <input type="text" name="name" value="" />-->
-<!--                        </div>-->
-<!--                        <div class="search_row">-->
-<!--                            <div class="search_column_1">-->
-<!--                                <label>Место проживания</label>-->
-<!--                            </div>-->
-<!--                            <div class="search_column_2">-->
-<!--                                <input type="text" name="city" value="" />-->
-<!--                            </div>-->
-<!--                        </div>-->
-                        <div class="search_row_last">
+                    <div class="top">
                             <input class="button2" name="submit" type="submit" value="Отправить" >
-                        </div>
                     </div>
                 </fieldset>
             </form>
-        </div>
+           </div></center>
     </div>
 	<?php if (!empty($acaunt)): ?>
 	<?php foreach ($acaunt as $acaunt_list): ?>

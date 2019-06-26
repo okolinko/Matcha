@@ -48,6 +48,29 @@ class Dating
 		return $acaunt;
 	}
 
+	public static function searchGlory($acaunt, $glory){
+
+
+		if ($glory == "★"){
+			$glory = 1;
+		}
+		elseif (strval($glory) == "★ ★"){
+			$glory = 2;
+		}
+		elseif (strval($glory) == "★ ★ ★"){
+			$glory = 3;
+		}
+		foreach($acaunt as $key => &$acaunt_list) {
+			if((User::getGlory($acaunt_list['userId']) == $glory)) {
+				;
+			}
+			else {
+				unset($acaunt[$key]);
+			}
+		}
+		return $acaunt;
+	}
+
 	public static function searchOrientation($orientation, $acaunt) {
 		if($orientation == "Гетеро") {
 			$orientation = "heterosexual";
@@ -70,6 +93,18 @@ class Dating
 	/*
 	 * Доделать поиск по радиусу
 	 */
+	public static function searchIm($acaunt, $id){
+
+		foreach($acaunt as $key => &$acaunt_list) {
+			if(strval($acaunt_list['userId']) != strval($id)) {
+				;
+			}
+			else {
+				unset($acaunt[$key]);
+			}
+		}
+		return $acaunt;
+	}
 
 
 	public static function searchLocation($radius, $acaunt, $user_location) {

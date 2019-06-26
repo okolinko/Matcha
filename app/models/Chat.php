@@ -49,4 +49,16 @@ class Chat {
 		}
 		return ($com_arr);
 	}
+
+	public static function statusMassage($massegeList, $chatId, $userId) {
+
+		$id = $massegeList[0]['id'];
+		$sql = new self();
+		file_put_contents("/Users/akolinko/lol", $userId, FILE_APPEND);
+		$response = $sql->db->updateStatus($id, $chatId, $userId);
+
+//		dd($response);
+
+
+	}
 }

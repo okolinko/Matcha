@@ -142,7 +142,7 @@ class UserController{
 
 		$array = Dating::viewLikedUser($id);
 		$acaunt = json_decode(json_encode($array), True);
-
+//dd($arrayUserLikeId);
 		require_once('app/views/likedUser.view.php');
 	}
 

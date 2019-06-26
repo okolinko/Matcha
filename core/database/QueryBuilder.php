@@ -120,6 +120,13 @@ class QueryBuilder
 		$statement->execute($data);
 	}
 
+	public function updateStatus($id, $chatId, $userId) {
+
+		$sqlString = "UPDATE `massege` SET `status` = 1 WHERE `id` <= {$id} AND `chat_id` = {$chatId} AND `user_id` = {$userId}";
+		$statement = $this->pdo->prepare($sqlString);
+		$statement->execute();
+	}
+
 
 	/**
 	 * Подсчёт количества елементов в таблице

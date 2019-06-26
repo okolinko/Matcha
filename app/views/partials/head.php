@@ -78,6 +78,7 @@
                 navigator.geolocation.getCurrentPosition(position, function(e){
 
                         alert('Error.code: '+e.code+' Error.message: '+e.message);
+
                     }
                 );
 
@@ -96,14 +97,15 @@
 			<?php endif; ?>
 		</div>
 		<br>
-		<nav class="">
+		<nav class="menu">
 			<div class="openMenu" id="openMenu">MENU</div>
 			<ul id="menu">
 				<li><a href="/">Главная</a></li>
+				<?php if ($_SESSION['userId']): ?>
 				<li><a href="/datingUser">Поиск анкет</a></li>
 				<li><a href="/likedUser">Понравившиеся</a></li>
 <!--                <li><a href="#">####</a></li>-->
-				<?php if ($_SESSION['userId']): ?>
+<!--				--><?php //if ($_SESSION['userId']): ?>
 					<li><a href="/logout">Выход</a></li>
 					<li><a href="/personalArea">Кабинет</a> </li>
 				<?php else: ?>

@@ -479,6 +479,7 @@ class User {
 	}
 
 	public static function LikedUserInfo($userId) {
+
 		$sql = new self();
 
 		$userId = intval($userId);
@@ -492,25 +493,33 @@ class User {
 			return $res;
 		}
 	}
-	public static function ipUser() {
-		$ipaddress = '';
-		if (isset($_SERVER['HTTP_CLIENT_IP']))
-			$ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-		else if(isset($_SERVER['HTTP_X_FORWARDED_FOR']))
-			$ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-		else if(isset($_SERVER['HTTP_X_FORWARDED']))
-			$ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-		else if(isset($_SERVER['HTTP_X_CLUSTER_CLIENT_IP']))
-			$ipaddress = $_SERVER['HTTP_X_CLUSTER_CLIENT_IP'];
-		else if(isset($_SERVER['HTTP_FORWARDED_FOR']))
-			$ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-		else if(isset($_SERVER['HTTP_FORWARDED']))
-			$ipaddress = $_SERVER['HTTP_FORWARDED'];
-		else if(isset($_SERVER['REMOTE_ADDR']))
-			$ipaddress = $_SERVER['REMOTE_ADDR'];
-		else
-			$ipaddress = 'UNKNOWN';
-		return $ipaddress;
+
+	public static function getGlory($userId) {
+
+		$sql = new self();
+		$response = $sql->db->selectAll('like_users');
+
+		$response = json_decode(json_encode($response),TRUE);
+
+		$i = 0;
+		$j = 0;
+		$sizeArray = count($response);
+		while ($i < $sizeArray)
+		{
+			if (strpbrk($response[$i]['likeUsers'], strval($userId))) {
+				$j++;
+			}
+			$i++;
+		}
+		if ($j >= 0 and $j <= 1){
+			return 1;
+		}
+		elseif($j > 1 and $j <= 2){
+			return 2;
+		}
+		elseif($j > 2){
+			return 3;
+		}
 	}
 
 }

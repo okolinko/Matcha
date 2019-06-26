@@ -1,7 +1,7 @@
 <?php require('partials/head.php'); ?>
 <div><span class="name"><?php echo $userInfo->user_name?></span></div>
 <div class="flex_user">
-	<div id="img" class="user_foto" userId="<?php echo $userId; ?>"><img id="user_avatar" src="../../../public/img/avatar/avatar<?php echo $userId; ?>.png"</div>
+     <div id="img" class="user_foto" userId="<?php echo $userId; ?>"><img id="user_avatar" src="../../../public/img/avatar/avatar<?php echo $userId; ?>.png"</div>
     <div id="like" ><img id="user_like" src="../../../public/img/<?php if($status == 1 ){echo "like_activ.png";}else{echo "like.png";}?>"</div>
     <div class="flex">
 		<?php if (!empty($userFoto)): ?>

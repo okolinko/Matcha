@@ -10,171 +10,108 @@
             </ul>
 		<?php endif; ?>
     </div>
+<div class="flex-cab">
     <div class="form_flex">
         <form action="/profile" method="post">
-            <div><h2>Анкета</h2></div>
+            <div><h2 style="margin-left: 30%">Моя анкета</h2></div>
             <fieldset class="fon">
                 <div class="search_row">
-                    <div class="search_column_1">
-                        <label>Я</label>
-                    </div>
-                    <div class="search_column_2">
-                        <select class="gender" name="im">
-                            <option>Парень</option>
-                            <option>Девушка</option>
+         <div>
+                    <label>Я</label>
+                        <div class="styled-select black rounded">
+
+                        <select  name="im">
+                            <option class="m">Парень</option>
+                            <option class="m">Девушка</option>
                         </select>
-                        <label class="seeking">Ищу</label>
-                        <select class="gender" name="search">
+                        </div>
+         </div>
+                    <div class="left_left">
+                    <label class="seeking">Ищу</label>
+                            <div class="styled-select black rounded">
+                        <select  name="search">
                             <option>Девушку</option>
                             <option>Парня</option>
                             <option>Без разницы</option>
                         </select>
                     </div>
+                    </div>
                 </div>
                 <br>
-                <div class="search_row">
-<!--                    <div class="search_column_1">-->
-<!--                        <label class="test">Полный возраст</label>-->
-<!--                    </div>-->
                     <div class="search_column_2">
                         <input type="data" placeholder="Полный возраст" name="age" value="" />
                     </div>
-                </div>
-                <div class="search_row">
-<!--                    <div class="search_column_1">-->
-<!--                        <label>Ваше имя</label>-->
-<!--                    </div>-->
                     <div class="search_column_2">
                         <input type="text" placeholder="Ваше имя" name="name" value="" />
                     </div>
-                    <div class="search_row">
-<!--                        <div class="search_column_1">-->
-<!--                            <label>Место проживания</label>-->
-<!--                        </div>-->
                         <div class="search_column_2">
                             <input type="text" placeholder="Место проживания" name="city" value="" />
                         </div>
-                        <div class="info" >
                             <div id="addComment">
-                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>
+                                <center><textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea></center>
                             </div>
-                        </div>
-                    </div>
                     <div class="search_row_last">
                         <input class="button2" name="submit" type="submit" value="Отправить" >
                     </div>
-                </div>
             </fieldset>
         </form>
     </div>
-		<div class="email">
-			<form action="/personalArea/edit/" method="post">
-				<input class="edit_password" type="submit" value="Изменить пароль" />
-			</form>
-		</div>
-        <div class="email">
-            <form action="/personalArea/edit/email" method="post">
-                <input class="edit_password" type="submit" value="Изменить email" />
+        <div class="down_im">
+            <form method="post" enctype="multipart/form-data">
+                <input class="down_avatar" type="file" name="file" multiple accept="image/*">
+                <input class="down_avatar2" id="down_av" type="submit" value="Загрузить фото!">
             </form>
-        </div>
-		<div class="email">
-			<form action="/personalArea/delete/" method="post">
-				<input class="dell_acc" type="submit" value="Удалить аккаунт" />
-			</form>
-		</div>
-	</div>
-	<div class="down_im">
-		<form method="post" enctype="multipart/form-data">
-			<input class="down_avatar" type="file" name="file" multiple accept="image/*">
-			<input class="down_avatar" id="down_av" type="submit" value="Загрузить аватар!">
-		</form>
-		<?php
-		if(isset($_FILES['file'])) {
-			// проверяем, можно ли загружать изображение
-			$check = can_upload($_FILES['file']);
+			<?php
+			if(isset($_FILES['file'])) {
+				// проверяем, можно ли загружать изображение
+				$check = can_upload($_FILES['file']);
 
-			if($check === true){
-				// загружаем изображение на сервер
-				$res =  make_upload($_FILES['file'], $_SESSION['userId'] );
-				echo "<script>alert(\"$res!\");</script>";
-				echo "<script>alert(\"Файл успешно загружен!\");</script>";
+				if($check === true){
+					// загружаем изображение на сервер
+					$res =  make_upload($_FILES['file'], $_SESSION['userId'] );
+					echo "<script>alert(\"$res!\");</script>";
+					echo "<script>alert(\"Файл успешно загружен!\");</script>";
+				}
+				else{
+					// выводим сообщение об ошибке
+					echo "<script>alert(\"$check!\");</script>";
+				}
 			}
-			else{
-				// выводим сообщение об ошибке
-				echo "<script>alert(\"$check!\");</script>";
-			}
-		}
-		?>
-	</div>
-			<div>
-				<form action="personalArea/notifications" method="post">
-					<input class="<?php if(checkStatus($_SESSION['userId']) == 1) {echo "sendEmailActiv";} ?>" type="submit" value="Уведомления на email" />
-				</form>
-			</div>
-    <div style="height: 100%">
-        <iframe width="619" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
+			?>
+        </div>
+        <div class="change">
+            <div class="passw">
+                <form action="/personalArea/edit/" method="post">
+                    <input class="edit_password" type="submit" value="Изменить пароль" />
+                </form>
+            </div>
+            <div class="email">
+                <form action="/personalArea/edit/email" method="post">
+                    <input class="edit_password" type="submit" value="Изменить email" />
+                </form>
+            </div>
+            <div class="notif">
+                <form action="personalArea/notifications" method="post">
+                    <input class="<?php if(checkStatus($_SESSION['userId']) == 1) {echo "sendEmailActiv";} ?>" type="submit" value="Уведомления на email" />
+                </form>
+            </div>
+            <div class="dell">
+                <form action="/personalArea/delete/" method="post">
+                    <input class="dell_acc" type="submit" value="Удалить аккаунт!" />
+                </form>
+            </div>
+
+        </div>
+</div>
+    <div class="map_user">
+        <iframe id="inlineFrameExample"
+                title="Inline Frame Example"
+                width="100%"
+                height="230"  src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
-<!--    <div class="form_container">-->
-<!--        <form action="/profile" method="post">-->
-<!--            <div><h2>Анкета</h2></div>-->
-<!--            <fieldset>-->
-<!--                <div class="search_row">-->
-<!--                    <div class="search_column_1">-->
-<!--                        <label>Я</label>-->
-<!--                    </div>-->
-<!--                    <div class="search_column_2">-->
-<!--                        <select class="gender" name="im">-->
-<!--                            <option>Парень</option>-->
-<!--                            <option>Девушка</option>-->
-<!--                        </select>-->
-<!--                        <label class="seeking">Ищу</label>-->
-<!--                        <select class="gender" name="search">-->
-<!--                            <option>Девушку</option>-->
-<!--                            <option>Парня</option>-->
-<!--                            <option>Без разницы</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            <br>-->
-<!--                <div class="search_row">-->
-<!--                    <div class="search_column_1">-->
-<!--                        <label class="test">Полный возраст</label>-->
-<!--                    </div>-->
-<!--                    <div class="search_column_2">-->
-<!--                        <input type="data" name="age" value="" />-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--                <div class="search_row">-->
-<!--                    <div class="search_column_1">-->
-<!--                        <label>Ваше имя</label>-->
-<!--                    </div>-->
-<!--                    <div class="search_column_2">-->
-<!--                        <input type="text" name="name" value="" />-->
-<!--                    </div>-->
-<!--                    <div class="search_row">-->
-<!--                        <div class="search_column_1">-->
-<!--                        <label>Место проживания</label>-->
-<!--                    </div>-->
-<!--                    <div class="search_column_2">-->
-<!--                        <input type="text" name="city" value="" />-->
-<!--                    </div>-->
-<!--                        <div class="info" >-->
-<!--                            <div id="addComment">-->
-<!--                                <textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                </div>-->
-<!--                <div class="search_row_last">-->
-<!--                        <input class="button2" name="submit" type="submit" value="Отправить" >-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </fieldset>-->
-<!--        </form>-->
-<!--    </div>-->
-<?php require('partials/chat.php'); ?>
-<br><br>
+
     <section class="wrap">
-        <div class="foto_ac" >
+        <center><div class="foto_ac" >
 			<?php if (!empty($foto)): ?>
 				<?php foreach ($foto as $foto_list): ?>
 
@@ -184,7 +121,7 @@
                     </div>
 				<?php endforeach; ?>
 			<?php endif; ?>
-        </div>
+            </div></center>
     </section>
     <script type="text/javascript" src="../../../public/js/deleteImg.js"></script>
 <?php //require('partials/footer.php'); ?>

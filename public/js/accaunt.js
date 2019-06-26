@@ -81,7 +81,6 @@ var AJAXLike = function(pathLine, id)
             {
                 res = true;
             }
-            console.log(xhr.responseText);
         }
     }
 
@@ -112,7 +111,7 @@ function like() {
             like.setAttribute("src", active_like);
         }
         else
-            alert("Войдите в аккаунт чтобы поставить лайк!");
+            alert("Вы не можете лайкнуть данного пользователя!");
 
     }
     else{
