@@ -24,7 +24,6 @@ class AccountController
 		{
 			redirect('login');
 		}
-
 		return view('accaunt');
 	}
 

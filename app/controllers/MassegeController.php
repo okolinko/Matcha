@@ -26,11 +26,12 @@ class MassegeController {
 			else {
 				$chatID = $id . $_SESSION['userId'];
 			}
-
+			$massage = "Вам пришло новое сообщение от пользователя с ником ".$_SESSION['userName']."!".'  Перейдите по ссылке и зайдите в чат чтобы посмотреть http://localhost:8080/accauntUser?id='.$id;
 			if (!Chat::insertMassegeDatabase($chatID, $id, $text, $_SESSION['userId'])) {
 				echo "False";
 			}
 			else {
+				Chat::alertEmail($id, $massage);
 				echo "True";
 			}
 
@@ -50,7 +51,6 @@ class MassegeController {
 		$massegeList = array();
 		$massegeList = Chat::arrayMassege($chatID);
 		$massegeList = array_reverse($massegeList);
-//		dd($massegeList);
 		Chat::statusMassage($massegeList, $chatID, $id);
 		$mass = array();
 		foreach($massegeList as $massege) {
@@ -58,6 +58,16 @@ class MassegeController {
 		}
 
 		print json_encode($mass);
+	}
+
+	public static function checkNewMassege() {
+//		$id = json_decode($_POST['id']);
+//		$id = intval(htmlentities($id));
+		$id = 1;
+
+		$arrChat = Chat::arrayChat($id);
+
+
 	}
 
 

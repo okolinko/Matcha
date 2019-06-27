@@ -41,6 +41,22 @@ class QueryBuilder
 	}
 
 	/**
+	 * Возвращает поисковую графу по заданому параметру
+	 *
+	 * @param строка $table
+	 * @param строка $search
+	 * @param строка $param
+	 *
+	 * @return array
+	 */
+	public function selectAllParam($table, $search, $param) {
+		$statement = $this->pdo->prepare("select {$search} from {$table} where {$param}");
+		$statement->execute();
+		return $statement->fetchObject();
+	}
+
+
+	/**
 	 * Select one record from a database table.
 	 *
 	 * @param string $table
@@ -61,6 +77,7 @@ class QueryBuilder
 		$statement->execute();
 		return $statement->fetchObject();
 	}
+
 
 	/**
 	 * Update one record from a database table.

@@ -23,10 +23,12 @@
             <ul id="ma" class="shoutbox-content">
             </ul>
             <div class="shoutbox-form">
+                <form>
                 <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
                 <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
                 <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
                 <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
+                </form>
             </div>
         </div>
     </div>

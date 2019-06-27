@@ -120,6 +120,7 @@ class UserController{
 
 	public function usergeolocation() {
 		$location = explode(" ", strval($_POST['location']));
+//		file_put_contents("/Users/akolinko/lol", $location, FILE_APPEND);
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
 
@@ -142,7 +143,7 @@ class UserController{
 
 		$array = Dating::viewLikedUser($id);
 		$acaunt = json_decode(json_encode($array), True);
-//dd($arrayUserLikeId);
+
 		require_once('app/views/likedUser.view.php');
 	}
 

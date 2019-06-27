@@ -54,11 +54,25 @@ class Chat {
 
 		$id = $massegeList[0]['id'];
 		$sql = new self();
-		file_put_contents("/Users/akolinko/lol", $userId, FILE_APPEND);
+//		file_put_contents("/Users/akolinko/lol", $userId, FILE_APPEND);
 		$response = $sql->db->updateStatus($id, $chatId, $userId);
 
-//		dd($response);
+	}
 
+	public static function alertEmail($id, $massage) {
 
+		$sql = new self();
+		$response = $sql->db->selectOne('users', 'id', $id);
+		$email = $response->email;
+		if ($response->notification == 1) {
+			mail($email, "Новое действие", $massage);
+		}
+	}
+
+	public static function arrayChat($id) {
+		$sql = new self();
+
+		$response = $sql->db->selectOne('massege', 'user_id', $id);
+		dd($response);
 	}
 }
