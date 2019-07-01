@@ -280,6 +280,16 @@ class AuthController {
 		return true;
 	}
 
+	private function userComparePassword(string $password, string $password2) : bool
+	{
+		if ($password !== $password2) {
+			$this->errors[] = 'Пароли не совпадают';
+			return false;
+		}
+
+		return true;
+	}
+
 
 	/*
 	 * Logout user from app

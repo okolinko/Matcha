@@ -61,12 +61,17 @@ class MassegeController {
 	}
 
 	public static function checkNewMassege() {
-//		$id = json_decode($_POST['id']);
-//		$id = intval(htmlentities($id));
-		$id = 1;
+		$id = json_decode($_POST['id']);
+		$id = intval(htmlentities($id));
+//		$id = 1;
 
 		$arrChat = Chat::arrayChat($id);
+		$arr = array();
+		foreach($arrChat as $value) {
+			array_push($arr, $value);
+		}
 
+		print json_encode($arr);
 
 	}
 

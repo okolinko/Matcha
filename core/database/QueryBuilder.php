@@ -51,8 +51,9 @@ class QueryBuilder
 	 */
 	public function selectAllParam($table, $search, $param) {
 		$statement = $this->pdo->prepare("select {$search} from {$table} where {$param}");
+//		dd($statement);
 		$statement->execute();
-		return $statement->fetchObject();
+		return $statement->fetchAll(PDO::FETCH_CLASS);
 	}
 
 

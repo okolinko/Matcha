@@ -71,8 +71,36 @@ class Chat {
 
 	public static function arrayChat($id) {
 		$sql = new self();
+		$param = "user_id = ".$id;
+		$response = $sql->db->selectAllParam('massege', 'chat_id', $param);
+		$response = json_decode(json_encode($response),TRUE);
+		$res = array();
+		$i = 0;
+		$sizeArray = count($response);
+		while($i < $sizeArray){
+			$res[$i] = $response[$i]['chat_id'];
+			$i++;
+		}
+		$res = array_values(array_unique($res));
+		$j = 0;
+		$countMassege = array();
+		$sizeArray2 = count($res);
+		while($j < $sizeArray2){
+			$countMassege[$j]['chat_id'] = $res[$j];
+			$countMassege[$j]['count'] = Chat::countMassege($res[$j]);
 
-		$response = $sql->db->selectOne('massege', 'user_id', $id);
-		dd($response);
+			$j++;
+		}
+		return $countMassege;
+
+	}
+
+	public static function countMassege($chatId) {
+		$sql = new self();
+		$param = "user_id != ".$_SESSION['userId']." AND chat_id = ".$chatId ;
+		$return = "chat_id";
+		$response = $sql->db->selectAllParam('massege', $return, $param);
+		$response = json_decode(json_encode($response),TRUE);
+		return  count($response);
 	}
 }
