@@ -48,7 +48,7 @@
                             <input type="text" placeholder="Место проживания" name="city" value="" />
                         </div>
                             <div id="addComment">
-                                <center><textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе" class="textbox"></textarea></center>
+                                <center><textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе  # " class="textbox"></textarea></center>
                             </div>
                     <div class="search_row_last">
                         <input class="button2" name="submit" type="submit" value="Отправить" >
@@ -112,6 +112,12 @@
 
     <section class="wrap">
         <center><div class="foto_ac" >
+				<?php $structure = 'public/img/'."$userId";
+				$fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+				$fileCount = iterator_count($fi);
+				if ($fileCount < 1) {
+					echo '<span class="down_foto" >'."Загрузите своё фото чтобы иметь возможность общаться с другими пользователями!".'</span>';
+				}?>
 			<?php if (!empty($foto)): ?>
 				<?php foreach ($foto as $foto_list): ?>
 

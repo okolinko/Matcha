@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     var userId = $('.avat').length;
-    console.log(userId);
+    // console.log(userId);
 
     setInterval(function () {
         var xhr = new XMLHttpRequest();
@@ -12,7 +12,7 @@ $(document).ready(function () {
                 if (xhr.responseText) {
                     var chat = new Object();
                     chat = JSON.parse(xhr.responseText);
-                    console.log(chat2);
+                    // console.log(chat2);
 
 
                 }

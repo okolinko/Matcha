@@ -67,10 +67,6 @@ $(document).ready(function () {
                 var massegeReload = document.getElementById("ma");
                 var userId = document.getElementById("userId").value;
                 var sesionId = document.getElementById("sesionId").value;
-                // var now = new Date();
-                // var year = now.getFullYear();
-                // var month = now.getMonth() + 1;
-                // var day = now.getDate();
 
                 setInterval(function () {
                     var massegeReload = document.getElementById("ma");

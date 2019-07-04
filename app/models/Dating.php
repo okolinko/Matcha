@@ -90,9 +90,7 @@ class Dating
 		return $acaunt;
 	}
 
-	/*
-	 * Доделать поиск по радиусу
-	 */
+
 	public static function searchIm($acaunt, $id){
 
 		foreach($acaunt as $key => &$acaunt_list) {
@@ -106,6 +104,80 @@ class Dating
 		return $acaunt;
 	}
 
+
+	/*
+	 * Доделать поиск по интересам
+	 */
+
+	public static function searchInterests($acaunt, $interests) {
+		$m = false;
+		$i = 1;
+		$sizeArray = count($acaunt);
+
+		foreach($interests as $slovo) {
+
+			if (strpos($acaunt[$i]['info'], $slovo) !== false) {
+				$m = true;
+				dd(1);
+			}
+			else{
+				dd(2);
+				unset($acaunt[$i]);
+			}
+			while($i < $sizeArray){
+				$i++;
+			}
+		}
+		if ($m) { //если истина то выполняю условие
+			echo 'в тексте есть совпадения';
+		}
+		else{
+			echo "нету совпадений";
+		}
+		return $acaunt;
+	}
+
+//	public static function searchInterests($acaunt, $interests) {
+//		$i = 0;
+//		$j = 0;
+//		$sizeArray = count($acaunt);
+//		$interes = array_values($interests);
+//		$acaunt = array_values($acaunt);
+//
+//		while ($i < $sizeArray)
+//		{
+//			$res = self::serchainteresting($acaunt[$i]['info'], $interes);
+//
+//			if (($res == true)) {
+//				$j++;
+//				dd(2);
+//			}
+//			else {
+//				dd(1);
+//				unset($acaunt[$i]);
+//			}
+//			$i++;
+//		}
+//		return $acaunt;
+//	}
+//
+//	private static function serchainteresting($arr1, $arr2) {
+//		$text = explode("#", $arr1);
+//		$new_array = array_diff($text, array(''));
+//		$text = array_values($new_array);
+//
+//		$res = array_intersect($arr2, $text);
+//
+//return true;
+//
+////		if (empty($res)){
+////			return "false";
+////		}
+////		else{
+////			return "true";
+////		}
+//	}
+//
 
 	public static function searchLocation($radius, $acaunt, $user_location) {
 		if ($radius == "Без разницы") {
@@ -156,6 +228,7 @@ class Dating
 
 	public static function searchLiked($userId, $userLikeId) {
 		$result = array();
+
 		foreach($userLikeId as $key => &$list) {
 			$id = User::LikedUserInfo($list);
 			if (Dating::helpSearch($id, $userId) == 1)

@@ -1,16 +1,31 @@
-
+<?php $structure = 'public/img/'."$userId";
+$fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+$fileCount = iterator_count($fi);
+if ($fileCount < 1) {
+	return ;
+}
+$res =  \App\Models\User::LikedUserInfo($userId);
+$res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
+$key = array_search($_SESSION['userId'], $res);
+$key2 = array_search($userId, $res2);
+if ($key == false  or  $key2 == false){
+    return ;
+};?>
+<div class="container">
+    <a id="open" class="open">Открыть чат</a>
+</div>
 <div class="backpopup"></div>
 <div class="popup-window">
-	<p class="close">x</p>
-	<div class="shoutbox">
-		<h1>Matcha chat <img src='../../../public/img/refresh.png'/></h1>
-		<ul class="shoutbox-content"></ul>
-		<div class="shoutbox-form">
-			<h2 class="hh2">Написать сообщение <span>×</span></h2>
-			<form action="/sendMassage" method="post">
-				<textarea placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240'></textarea>
-				<input type="submit" value="Отправить!"/>
-			</form>
-		</div>
-	</div>
+    <p class="close">x</p>
+    <div class="shoutbox">
+        <h1>Matcha chat</h1>
+        <ul id="ma" class="shoutbox-content">
+        </ul>
+        <div class="shoutbox-form">
+            <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
+            <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
+            <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
+            <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
+        </div>
+    </div>
 </div>

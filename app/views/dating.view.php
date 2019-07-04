@@ -14,7 +14,7 @@
        <center><div class="form_container">
             <form action="/searchUser" method="post">
                 <div><h2>Анкета</h2></div>
-                <fieldset style="height: 180px">
+                <fieldset style="height: 285px">
                     <div class="search_row">
                         <div>
                             <label class="seeking">Ищу</label>
@@ -62,6 +62,11 @@
                                 <option>&#9733; &#9733; &#9733;</option>
                             </select>
                         </div>
+                        <div>
+                            <label>Интересы</label>
+                           <textarea type="text" name="interesting" cols="22" rows="2"  placeholder=" # " class="interesting"></textarea>
+                        </div>
+<!--                        </div>-->
                     </div>
 
                     <div class="top">

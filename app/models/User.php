@@ -191,8 +191,6 @@ class User {
 		$img = $response->img;
 		unlink('public/img/'.$_SESSION['userId'].'/'."$img");
 		$sql->db->delete('photo', $id);
-//		$sql->db->delete2('like_photo', $id);
-//		$sql->db->delete2('comment', $id);
 
 		return true;
 	}
@@ -426,7 +424,6 @@ class User {
 		}
 		else {
 			$res = explode(",", $response->likeUsers);
-//			dd($res);
 			foreach ($res as $key => &$r) {
 				var_dump($userLikeId);
 				if(intval($r) == $userLikeId) {
@@ -511,13 +508,13 @@ class User {
 			}
 			$i++;
 		}
-		if ($j >= 0 and $j <= 1){
+		if ($j >= 0 and $j <= 10){
 			return 1;
 		}
-		elseif($j > 1 and $j <= 2){
+		elseif($j > 10 and $j <= 25){
 			return 2;
 		}
-		elseif($j > 2){
+		elseif($j > 25){
 			return 3;
 		}
 	}

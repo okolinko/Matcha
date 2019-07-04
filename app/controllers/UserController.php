@@ -120,7 +120,8 @@ class UserController{
 
 	public function usergeolocation() {
 		$location = explode(" ", strval($_POST['location']));
-//		file_put_contents("/Users/akolinko/lol", $location, FILE_APPEND);
+//		$res = file_get_contents("https://ip-api.io/json");
+//		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
 

@@ -41,8 +41,9 @@ class DatingController
 			$orientation = $_POST['orientation'];
 			$radius = $_POST['radius'];
 			$glory = $_POST['glory'];
+			$interests = $_POST['interesting'];
 
-//			file_put_contents("/Users/akolinko/lol", $glory, FILE_APPEND);
+//			file_put_contents("/Users/akolinko/lol", $interests, FILE_APPEND);
 			if (empty($acaunt)) {
 				$this->errors[] = 'Нету зарегистрированых пользователей';
 
@@ -83,11 +84,33 @@ class DatingController
 				return view('dating', ['errors' => $this->errors]);
 			}
 
-			$acaunt = Dating::searchIm($dating_glory, $_SESSION['userId']);
+			$acauntIm = Dating::searchIm($dating_glory, $_SESSION['userId']);
 			if (empty($acaunt)) {
 				$this->errors[] = "Пользователей в данной категории не найдено";
 
 				return view('dating', ['errors' => $this->errors]);
+			}
+			if (empty($interests)) {
+				$acaunt = $acauntIm;
+			}
+			else {
+				if (strlen($interests) > 120) {
+					$this->errors[] = "Количество символов в поле с интересами может быть максимум 120";
+					return view('dating', ['errors' => $this->errors]);
+				}
+				$array = explode("#", $interests);
+				$new_array = array_diff($array, array(''));
+				$count = count($new_array);
+				if ($count > 6) {
+					$this->errors[] = "Может быть до 6 выбранных интересов максимум";
+					return view('dating', ['errors' => $this->errors]);
+				}
+				$acaunt = Dating::searchInterests($acauntIm, $new_array);
+//				$acaunt = Dating::searchInterests($acauntIm, $interests);
+				if (empty($acaunt)){
+					$this->errors[] = "Пользователей с данными интересами не найдено";
+					return view('dating', ['errors' => $this->errors]);
+				}
 			}
 
 		}

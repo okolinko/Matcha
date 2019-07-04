@@ -31,3 +31,22 @@ window.onload = function() {
     }
 
 };
+// window.onload = function() {
+//
+//     // $(document).ready(function () {
+//     //     $.ajax({
+//     //         type: 'GET',
+//     //         url: 'http://ip-api.io/json/',
+//     //         dataType: 'jsonp',
+//     //         success: function (data) {
+//     //             console.log(data);
+//     //         }
+//     //     });
+//     // })
+//
+//
+//     $.getJSON("http://ip-api.io/json/",
+//         function(result) {
+//             console.log(result);
+//         });
+// };
