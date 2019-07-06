@@ -440,6 +440,7 @@ class User {
 		}
 	}
 
+
 	public static function dellLikeUser($userLikeId, $userId) {
 		$sql = new self();
 
@@ -517,6 +518,74 @@ class User {
 		elseif($j > 25){
 			return 3;
 		}
+	}
+
+//	public static function iliked($userId) {
+//		$sql = new self();
+//		$response = $sql->db->selectAll('like_users');
+//
+//		$acaunt = json_decode(json_encode($response),TRUE);
+//
+//		foreach($acaunt as $key => &$acaunt_list) {
+//			$text = explode(",", $acaunt_list['likeUsers']);
+//			dd($text);
+//			if(strval($acaunt_list['likeUsers']) != strval($userId)) {
+//				;
+//			}
+//			else {
+//				unset($acaunt[$key]);
+//			}
+//		}
+//		return $acaunt;
+//	}
+
+
+	public static function iliked($userId) {
+		$sql = new self();
+		$response = $sql->db->selectAll('like_users');
+		$acaunt = json_decode(json_encode($response),TRUE);
+
+		$i = 0;
+		$j = 0;
+		$sizeArray = count($acaunt);
+
+		while ($i < $sizeArray)
+		{
+			$res = self::serchliked($acaunt[$i]['likeUsers'], $userId);
+
+			if (($res == true)) {
+				$j++;
+			}
+			else {
+				unset($acaunt[$i]);
+			}
+			$i++;
+		}
+		return $acaunt;
+	}
+
+	private static function serchliked($arr1, $userId)
+	{
+//		dd($arr1);
+		$text = explode(",", $arr1);
+		dd($text);
+//		$new_array = array_diff($text, array(''));
+//		$text = array_values($new_array);
+		$sizeArray1 = count($text);
+		$i = 0;
+		while($i < $sizeArray1) {
+			$j = 0;
+			while($j < $sizeArray2) {
+				$ar1 = trim($text[$i]);
+				$ar2 = trim($arr2[$j]);
+				if($ar1 == $ar2) {
+					return true;
+				}
+				$j++;
+			}
+			$i++;
+		}
+		return false;
 	}
 
 }

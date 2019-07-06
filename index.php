@@ -10,6 +10,8 @@ use App\Core\Router;
 
 session_start();
 
+error_reporting(E_ALL, 1);
+
 Router::load('app/routes.php')
 	->direct(Request::uri(), Request::method());
 

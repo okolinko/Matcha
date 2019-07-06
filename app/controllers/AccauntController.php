@@ -24,9 +24,6 @@ class AccountController
 		{
 			redirect('login');
 		}
-		$res = file_get_contents("https://ip-api.io/json");
-		dd($res);
-		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
 
 		return view('accaunt');
 	}

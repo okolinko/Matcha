@@ -105,79 +105,52 @@ class Dating
 	}
 
 
-	/*
-	 * Доделать поиск по интересам
-	 */
-
 	public static function searchInterests($acaunt, $interests) {
-		$m = false;
-		$i = 1;
+		$i = 0;
+		$j = 0;
 		$sizeArray = count($acaunt);
+		$interes = array_values($interests);
+		$acaunt = array_values($acaunt);
 
-		foreach($interests as $slovo) {
+		while ($i < $sizeArray)
+		{
+			$res = self::serchainteresting($acaunt[$i]['info'], $interes);
 
-			if (strpos($acaunt[$i]['info'], $slovo) !== false) {
-				$m = true;
-				dd(1);
+			if (($res == true)) {
+				$j++;
 			}
-			else{
-				dd(2);
+			else {
 				unset($acaunt[$i]);
 			}
-			while($i < $sizeArray){
-				$i++;
-			}
-		}
-		if ($m) { //если истина то выполняю условие
-			echo 'в тексте есть совпадения';
-		}
-		else{
-			echo "нету совпадений";
+			$i++;
 		}
 		return $acaunt;
 	}
 
-//	public static function searchInterests($acaunt, $interests) {
-//		$i = 0;
-//		$j = 0;
-//		$sizeArray = count($acaunt);
-//		$interes = array_values($interests);
-//		$acaunt = array_values($acaunt);
-//
-//		while ($i < $sizeArray)
-//		{
-//			$res = self::serchainteresting($acaunt[$i]['info'], $interes);
-//
-//			if (($res == true)) {
-//				$j++;
-//				dd(2);
-//			}
-//			else {
-//				dd(1);
-//				unset($acaunt[$i]);
-//			}
-//			$i++;
-//		}
-//		return $acaunt;
-//	}
-//
-//	private static function serchainteresting($arr1, $arr2) {
-//		$text = explode("#", $arr1);
-//		$new_array = array_diff($text, array(''));
-//		$text = array_values($new_array);
-//
-//		$res = array_intersect($arr2, $text);
-//
-//return true;
-//
-////		if (empty($res)){
-////			return "false";
-////		}
-////		else{
-////			return "true";
-////		}
-//	}
-//
+	private static function serchainteresting($arr1, $arr2)
+	{
+		$text = explode("#", $arr1);
+		$new_array = array_diff($text, array(''));
+		$text = array_values($new_array);
+		$sizeArray1 = count($text);
+		$sizeArray2 = count($arr2);
+		$i = 0;
+		while($i < $sizeArray1) {
+			$j = 0;
+			while($j < $sizeArray2) {
+				$ar1 = trim($text[$i]);
+				$ar2 = trim($arr2[$j]);
+				if($ar1 == $ar2) {
+					return true;
+				}
+				$j++;
+			}
+			$i++;
+		}
+		return false;
+	}
+
+
 
 	public static function searchLocation($radius, $acaunt, $user_location) {
 		if ($radius == "Без разницы") {

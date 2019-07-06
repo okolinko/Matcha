@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
 	<IfModule mod_negotiation.c>
 		Options -MultiViews -Indexes
+		 Header set Access-Control-Allow-Origin "https://ip-api.io/json/"
+#		 Header set Access-Control-Allow-Origin "%{HTTP_ORIGIN}e" env=HTTP_ORIGIN
 	</IfModule>
 
 	RewriteEngine On

@@ -121,7 +121,16 @@ class UserController{
 	public function usergeolocation() {
 		$location = explode(" ", strval($_POST['location']));
 //		$res = file_get_contents("https://ip-api.io/json");
-//		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
+		file_put_contents("/Users/akolinko/lol", "1", FILE_APPEND);
+		if ($_SERVER['REQUEST_METHOD'] == "POST"){
+			$inputJSON = file_get_contents('php://input');
+			$res = json_decode($inputJSON, TRUE);
+		}
+		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
+		$res = file_get_contents("https://ip-api.io/json");
+		$res = json_decode($res);
+
+		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
 
@@ -148,4 +157,12 @@ class UserController{
 		require_once('app/views/likedUser.view.php');
 	}
 
+	public static function iliked() {
+		if (!$_SESSION['userId'])
+		{
+			redirect('login');
+		}
+		$userId = $_SESSION['userId'];
+		$arrayILiked = User::Iliked($userId);
+	}
 }

@@ -20,6 +20,7 @@ class ComposerStaticInita91edb2983d61d85c8275d27f786119d
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
+        'App\\Core\\Pagination' => __DIR__ . '/../..' . '/core/Pagination.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'App\\Models\\Auth' => __DIR__ . '/../..' . '/app/models/Auth.php',

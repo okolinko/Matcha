@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Core\Pagination;
 use App\Models\User;
 use App\Models\Dating;
 
@@ -18,9 +19,17 @@ class DatingController
 	public function dating()
 	{
 
+
 		$acaunt = array();
 		$acaunt = User::loadUserForm();
 		$acaunt = Dating::searchIm($acaunt, $_SESSION['userId']);
+
+		$len = count($acaunt);
+$len =  45;
+		$pagination = new Pagination('datingUser', $len);
+
+		$pag = $pagination->get();
+
 		require_once('app/views/dating.view.php');
 	}
 

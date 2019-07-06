@@ -1,4 +1,5 @@
 window.onload = function() {
+
     function position(pos){
         var latitude = pos.coords.latitude;
         var longitude = pos.coords.longitude;
@@ -21,8 +22,8 @@ window.onload = function() {
 
         navigator.geolocation.getCurrentPosition(position, function(e){
 
-                alert('Error.code: '+e.code+' Error.message: '+e.message);
-
+                // alert('Error.code: '+e.code+' Error.message: '+e.message);
+                ;
             }
         );
 
@@ -31,22 +32,35 @@ window.onload = function() {
     }
 
 };
+// $.getJSON("https://ip-api.io/json/",
+//     function(result) {
+//         console.log(result);
+//     });
 // window.onload = function() {
-//
-//     // $(document).ready(function () {
-//     //     $.ajax({
-//     //         type: 'GET',
-//     //         url: 'http://ip-api.io/json/',
-//     //         dataType: 'jsonp',
-//     //         success: function (data) {
-//     //             console.log(data);
-//     //         }
-//     //     });
-//     // })
-//
-//
-//     $.getJSON("http://ip-api.io/json/",
-//         function(result) {
-//             console.log(result);
-//         });
+
+    // $.getJSON("https://ip-api.io/json/",
+    //     function(result) {
+    //         $.ajax({
+    //             type:'POST',
+    //             url: "/geolocation",
+    //             data: result,
+    //         });
+    //     });
+
+
+
+    // $.ajax({
+    //     type: "GET",
+    //     dataType: "json",
+    //     url: 'https://ip-api.io/json',
+    //     success: function(data) {
+    //         console.log(
+    //             'Your ip address is ' + data.ip
+    //             + ' city: ' + data.city
+    //             + ' region: ' + data.region_name
+    //             + ' country: ' + data.country_name
+    //         );
+    //
+    //     }
+    // });
 // };

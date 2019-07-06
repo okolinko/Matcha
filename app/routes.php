@@ -30,6 +30,7 @@ $router->get('accauntUser', 'AccountController@userAccaunt');
  $router->get('reloadMassage', 'MassegeController@reloadMassage');
 
  $router->get('checkNewMassege', 'MassegeController@checkNewMassege');
+ $router->get('iliked', 'UserController@iliked');
 
 $router->post('login', 'AuthController@login');
 $router->post('login/restore', 'AuthController@restoreLogin');
@@ -52,7 +53,7 @@ $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('reloadMassage', 'MassegeController@reloadMassage');
  $router->post('statusMassage', 'MassegeController@statusMassage');
  $router->post('checkNewMassege', 'MassegeController@checkNewMassege');
-
+ $router->post('iliked', 'UserController@iliked');
 
 
 

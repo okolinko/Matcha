@@ -86,6 +86,11 @@
     </div>
 		<?php endforeach; ?>
 	<?php endif; ?>
-
+<?php //echo $pag; ?>
 </div>
+
+<div class="pagination_centr">
+    <?php echo $pag; ?>
+</div>
+
 <?php //require('partials/footer.php'); ?>
