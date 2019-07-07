@@ -6,11 +6,14 @@ if ($fileCount < 1) {
 }
 $res =  \App\Models\User::LikedUserInfo($userId);
 $res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
-$key = array_search($_SESSION['userId'], $res);
-$key2 = array_search($userId, $res2);
+
+$key = in_array($_SESSION['userId'], $res);
+$key2 = in_array($userId, $res2);
+
 if ($key == false  or  $key2 == false){
     return ;
-};?>
+}
+;?>
 <div class="container">
     <a id="open" class="open">Открыть чат</a>
 </div>

@@ -25,7 +25,7 @@ class DatingController
 		$acaunt = Dating::searchIm($acaunt, $_SESSION['userId']);
 
 		$len = count($acaunt);
-$len =  45;
+
 		$pagination = new Pagination('datingUser', $len);
 
 		$pag = $pagination->get();
@@ -124,6 +124,14 @@ $len =  45;
 
 		}
 		require_once('app/views/dating.view.php');
+	}
+
+	public function trackvisits(){
+		echo "Hello";
+		$id = json_decode($_POST['id']);
+		$idVisit = intval(htmlentities($id));
+		$myId = $_SESSION['userId'];
+
 	}
 
 }

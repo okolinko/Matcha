@@ -12,12 +12,12 @@ var test = [];
                 if (xhr.responseText) {
                     var chat = new Object();
                     chat = JSON.parse(xhr.responseText);
-                    console.log(chat);
+                    // console.log(chat);
                     // alert();
                     var i = 0;
                     var len  = chat.length;
 
-                    console.log(test);
+                    // console.log(test);
                     if (test.length === 0) {
                         while (i < len) {
                             test[i] = chat[i]['count'];
@@ -31,12 +31,12 @@ var test = [];
                             i++;
                             continue ;
                         }
-                        alert("Mesage of char_id = " + chat[i]['chat_id']);
+                        alert("Mesage of chat_id = " + chat[i]['chat_id']);
                         test[i] = chat[i]['count'];
                         i++;
                     }
 
-                    console.log(test);
+                    // console.log(test);
                     // if (test == 0){
                     //     test = chat[0]['count'];
                     //     // alert(test);

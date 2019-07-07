@@ -201,9 +201,9 @@ class Dating
 
 	public static function searchLiked($userId, $userLikeId) {
 		$result = array();
-
 		foreach($userLikeId as $key => &$list) {
 			$id = User::LikedUserInfo($list);
+
 			if (Dating::helpSearch($id, $userId) == 1)
 			{
 				array_push($result, $userLikeId[$key]);
