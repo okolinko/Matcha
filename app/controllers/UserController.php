@@ -121,7 +121,7 @@ class UserController{
 	public function usergeolocation() {
 		$location = explode(" ", strval($_POST['location']));
 //		$res = file_get_contents("https://ip-api.io/json");
-//		file_put_contents("/Users/akolinko/lol", "1", FILE_APPEND);
+		file_put_contents("/Users/akolinko/lol", $location, FILE_APPEND);
 		if ($_SERVER['REQUEST_METHOD'] == "POST"){
 			$inputJSON = file_get_contents('php://input');
 			$res = json_decode($inputJSON, TRUE);
@@ -138,7 +138,7 @@ class UserController{
 //		file_put_contents("/Users/akolinko/lol", $location[1], FILE_APPEND);
 	}
 
-	public static function likedUser() {
+	public  function likedUser() {
 		if (!$_SESSION['userId'])
 		{
 			redirect('login');
@@ -158,21 +158,30 @@ class UserController{
 		require_once('app/views/likedUser.view.php');
 	}
 
-	public static function iliked() {
+	public  function iliked() {
 		if (!$_SESSION['userId'])
 		{
 			redirect('login');
 		}
 		$userId = $_SESSION['userId'];
 		$arrayILikedId = User::Iliked($userId);
-//		dd($arrayILikedId);
+
 		sort($arrayILikedId);
 		reset($arrayILikedId);
-//		dd($arrayILikedId);
 		$array = Dating::viewLikedUser($arrayILikedId);
-//dd($array);
 		$acaunt = json_decode(json_encode($array), True);
-//dd($acaunt);
+
 		require_once('app/views/iLiked.view.php');
 	}
+
+	public function  visitors() {
+		$arrayId = Dating::searchVisit($_SESSION['userId']);
+		sort($arrayId);
+		reset($arrayId);
+		$array = Dating::viewLikedUser($arrayId);
+		$acaunt = json_decode(json_encode($array), True);
+
+		require_once('app/views/visitors.view.php');
+	}
+
 }

@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $('.form-help').click(function(e){
         // console.log(e.target.hash);
-
         let id = e.target.hash.split('=');
 
-        console.log(id[1]);
+        // console.log(id[1]);
+        document.location.href = "/accauntUser?id="+id[1];
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "trackvisits", false);
         xhr.onreadystatechange = function () {

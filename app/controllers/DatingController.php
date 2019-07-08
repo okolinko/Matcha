@@ -22,9 +22,16 @@ class DatingController
 
 		$acaunt = array();
 		$acaunt = User::loadUserForm();
-		$acaunt = Dating::searchIm($acaunt, $_SESSION['userId']);
-
-		$len = count($acaunt);
+		$acauntarr = Dating::searchIm($acaunt, $_SESSION['userId']);
+		if ($_GET['page'] == null){
+			$page = 1;
+		}
+		else{
+			$page =  $_GET['page'];
+		}
+		$test = array_chunk($acauntarr, 3);
+		$acaunt = $test[$page - 1];
+		$len = count($acauntarr);
 
 		$pagination = new Pagination('datingUser', $len);
 
@@ -127,11 +134,12 @@ class DatingController
 	}
 
 	public function trackvisits(){
-		echo "Hello";
 		$id = json_decode($_POST['id']);
+
 		$idVisit = intval(htmlentities($id));
 		$myId = $_SESSION['userId'];
 
+		Dating::visit($idVisit, $myId);
 	}
 
 }

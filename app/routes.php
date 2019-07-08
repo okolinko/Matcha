@@ -32,7 +32,7 @@ $router->get('accauntUser', 'AccountController@userAccaunt');
  $router->get('checkNewMassege', 'MassegeController@checkNewMassege');
  $router->get('iliked', 'UserController@iliked');
  $router->get('trackvisits', 'DatingController@trackvisits');
-
+ $router->get('visitors', 'UserController@visitors');
 $router->post('login', 'AuthController@login');
 $router->post('login/restore', 'AuthController@restoreLogin');
 
@@ -56,9 +56,6 @@ $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('checkNewMassege', 'MassegeController@checkNewMassege');
  $router->post('iliked', 'UserController@iliked');
  $router->post('trackvisits', 'DatingController@trackvisits');
-
-
-
 
 
 $router->get('page-not-found', 'MainController@page404');

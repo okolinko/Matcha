@@ -18,8 +18,6 @@ class AuthController {
 	public function register()
 	{
 
-
-
 		if (isset($_POST['submit'])) {
 			$name = $_POST['name'];
 			$email = $_POST['email'];

@@ -1,6 +1,6 @@
 <?php require('partials/head.php'); ?>
 <?php require('partials/downloadFoto.php'); ?>
-
+    <script type="text/javascript" src="../../../public/js/navigation.js"></script>
     <div id="error">
 		<?php if (isset($errors) && !empty($errors)): ?>
             <ul>
@@ -99,6 +99,14 @@
                 <form action="/personalArea/delete/" method="post">
                     <input class="dell_acc" type="submit" value="Удалить аккаунт!" />
                 </form>
+            </div>
+            <div class="geo">
+<!--                <form action="#" method="post">-->
+                    <input class="btn1" type="submit" value="Отобразить текущую геолокацию!" />
+<!--                </form>-->
+            </div>
+            <div class="geo">
+                <input class="cord"  type="text" placeholder="Изменить кординаты в ручную" style="width: 327px" />
             </div>
 
         </div>

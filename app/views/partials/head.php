@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
         <script type="text/javascript" src="../../../public/js/checkNewMassege.js"></script>
         <script type="text/javascript" src="../../../public/js/chat.js"></script>
-        <script type="text/javascript" src="../../../public/js/navigation.js"></script>
+<!--        <script type="text/javascript" src="../../../public/js/navigation.js"></script>-->
 	</head>
 	<body>
 		<?php require('avatar.php'); ?>
@@ -23,8 +23,10 @@
 	<header>
 		<div class="flex-top">
 			<div class="avatar">
+				<?php if ($_SESSION['userId']): ?>
 				<img class="avat" userId="<?php echo $_SESSION['userId'] ?>" src="../../../public/img/avatar/<?php echo $avatar ?>" alt="">
-			</div>
+				<?php endif; ?>
+            </div>
 			<?php if (isset($_SESSION['userId'])): ?>
 				<div><span style="padding-left: 5%;" class="com"> Приветствуем вас,</span> <span class="user"> <?php echo ' '.$_SESSION['userName'].'!';?></span></div>
 			<?php else: ?>
@@ -40,7 +42,7 @@
 				<li><a href="/datingUser">Поиск анкет</a></li>
 				<li><a href="/likedUser">Взаимные симпатии</a></li>
                     <li><a href="/iliked">Я понравился</a></li>
-<!--                <li><a href="#">####</a></li>-->
+                <li><a href="/visitors">Мои посетили</a></li>
 <!--				--><?php //if ($_SESSION['userId']): ?>
 					<li><a href="/logout">Выход</a></li>
 					<li><a href="/personalArea">Кабинет</a> </li>

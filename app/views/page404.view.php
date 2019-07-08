@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Login Form</title>
+	<title>404</title>
 	<link rel="stylesheet" href="../../public/css/style_reg.css" media="all"/>
 
 </head>

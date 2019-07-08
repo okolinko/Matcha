@@ -244,7 +244,41 @@ class Dating
 			$i++;
 		}
 		return $acaunt;
-
-
 	}
+
+	public static function visit($id, $myId){
+
+		$sql = new self();
+		$table = "trackvisit";
+		$param = "user_visit = ".$myId." and user_id = ".$id;
+		$response = $sql->db->selectAllParam('trackvisit', '*', $param);
+		$response = json_decode(json_encode($response),TRUE);
+
+		if (!$response) {
+			$sql->db->insert('trackvisit', [
+				'user_id' => $id,
+				'user_visit' => $myId,
+
+			]);
+		}
+	}
+
+	public static function searchVisit($myId){
+
+		$sql = new self();
+		$table = "trackvisit";
+		$param = "user_id = ".$myId;
+		$response = $sql->db->selectAllParam('trackvisit', '*', $param);
+		$response = json_decode(json_encode($response),TRUE);
+		$size = count($response);
+		$i = 0;
+		$res = array();
+		while ($i < $size){
+			array_push($res, $response[$i]['user_visit']);
+
+			$i++;
+		}
+		return $res;
+	}
+
 }
