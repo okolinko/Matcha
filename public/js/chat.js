@@ -24,15 +24,49 @@ $.fn.popup = function() { 	//функция для открытия всплыв
 
 $(document).ready(function () {
     var el = document.getElementById('submit-massage');
+    $('#shoutbox-comment').click(function(t){
+        $(this).keypress(function (ev) {
+            var keycode = (ev.keyCode ? ev.keyCode : ev.which);
+            if (keycode == '13') {
+                var text = document.getElementById("shoutbox-comment").value;
+                if (text.length > 0 && text.length < 100) {
+                    var userId = document.getElementById("userId").value;
+                    var mass = document.getElementById("ma");
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "sendMassage", false);
+                    xhr.onreadystatechange = function () {
+                         if (xhr.readyState == 4 && xhr.status == 200) {
+                             if (xhr.responseText) {
+                            // console.log(xhr.responseText);
+
+                            var li = document.createElement('li');
+                            li.className = "massage";
+                            li.innerHTML = text;
+                            mass.appendChild(li);
+                                 document.getElementById("shoutbox-comment").value = "";
+                        }
+                    }
+                }
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                if (xhr.send('massage=' + JSON.stringify(text) + '&id=' + userId)) {
+                    alert("Коментарий оставлен! Оповещение выслано владельцу фото :)");
+                }
+            }
+                else{
+                    alert("Коментарий не может быть пустым, или быть длинее 240 символов")
+                }
+            }
+
+        });
+
+    });
     if (el) {
         document.getElementById('submit-massage').addEventListener('click', function () {
             var text = document.getElementById('shoutbox-comment').value;
-
             if (text.length > 0 && text.length < 100) {
                 var userId = document.getElementById("userId").value;
                 var mass = document.getElementById("ma");
                 var xhr = new XMLHttpRequest();
-
                 xhr.open("POST", "sendMassage", false);
                 xhr.onreadystatechange = function () {
                     if (xhr.readyState == 4 && xhr.status == 200) {
@@ -43,6 +77,7 @@ $(document).ready(function () {
                             li.className = "massage";
                             li.innerHTML = text;
                             mass.appendChild(li);
+                            document.getElementById("shoutbox-comment").value = "";
                         }
                     }
                 }

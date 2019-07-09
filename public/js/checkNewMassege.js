@@ -32,6 +32,14 @@ var test = [];
                             continue ;
                         }
                         alert("Mesage of chat_id = " + chat[i]['chat_id']);
+                        jQuery('<img/>', {
+                            class: 'open',
+                            src: '../../../public/img/Chat.png',
+                            alt: 'Открыть чат',
+                            title: 'Открыть чат'
+
+
+                        }).appendTo('.test555');
                         test[i] = chat[i]['count'];
                         i++;
                     }
