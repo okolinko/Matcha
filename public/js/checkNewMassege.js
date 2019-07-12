@@ -36,7 +36,8 @@ var test = [];
                             class: 'open',
                             src: '../../../public/img/Chat.png',
                             alt: 'Открыть чат',
-                            title: 'Открыть чат'
+                            title: 'Открыть чат',
+                            chatId: chat[i]['chat_id']
 
 
                         }).appendTo('.test555');

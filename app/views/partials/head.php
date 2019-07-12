@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
         <script type="text/javascript" src="../../../public/js/checkNewMassege.js"></script>
         <script type="text/javascript" src="../../../public/js/chat.js"></script>
-<!--        <script type="text/javascript" src="../../../public/js/navigation.js"></script>-->
+        <script type="text/javascript" src="../../../public/js/ramdomMassege.js"></script>
 	</head>
 	<body>
 		<?php require('avatar.php'); ?>
@@ -52,8 +52,8 @@
 				<?php endif; ?>
 			</ul>
 		</nav>
-        <nav>
-            <ul>
+        <nav class="not">
+            <ul class="not">
                 <li class="test555"></li>
             </ul>
         </nav>

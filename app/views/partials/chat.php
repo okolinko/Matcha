@@ -15,7 +15,8 @@ if ($key == false  or  $key2 == false){
 }
 ;?>
 <div class="container">
-    <a id="open" class="open">Открыть чат</a>
+<!--    <a id="open" class="open">Открыть чат</a>-->
+    <img id="open" class="open" src="../../../public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
 <div class="popup-window">
@@ -29,6 +30,11 @@ if ($key == false  or  $key2 == false){
             <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
             <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
             <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
+        </div>
+        <div>
+            <a id="link">Случайное сообщени для знакомства с девушкой</a>
+            </BR>
+            <a id="link2">Случайное сообщени для знакомства с парнем</a>
         </div>
     </div>
 </div>
