@@ -56,7 +56,7 @@ $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('checkNewMassege', 'MassegeController@checkNewMassege');
  $router->post('iliked', 'UserController@iliked');
  $router->post('trackvisits', 'DatingController@trackvisits');
-
+ $router->post('newMassegeChat', 'MassegeController@newMassegeChat');
 
 $router->get('page-not-found', 'MainController@page404');
 

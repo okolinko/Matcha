@@ -150,7 +150,6 @@ class UserController{
 		$id = Dating::searchLiked($userId, $arrayUserLikeId);
 		sort($id);
 		reset($id);
-//dd($id);
 		$array = Dating::viewLikedUser($id);
 
 		$acaunt = json_decode(json_encode($array), True);

@@ -26,10 +26,19 @@ if ($key == false  or  $key2 == false){
         <ul id="ma" class="shoutbox-content">
         </ul>
         <div class="shoutbox-form">
+<!--            <div contenteditable="true" style="background: dimgrey; height: 250px" tabindex="5">Hello</div>-->
             <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
             <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
             <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
             <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
+        </div>
+        <div class="smiles" style="width: 350px">
+            <?php $i = 0;  while($i <= 59){
+				$img = "../../../public/img/smile/".$i.".png";
+				echo '<span>
+                <img class="emoji" alt='.$i.' src='.$img.'>
+             </span>'; $i++;
+            };?>
         </div>
         <div>
             <a id="link">Случайное сообщени для знакомства с девушкой</a>
