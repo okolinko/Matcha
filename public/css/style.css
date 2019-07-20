@@ -481,7 +481,7 @@ textarea:focus {
 .foto_us{
 	height: 5em;
 	width: 5em;
-	margin-left: -100%;
+	/*margin-left: -100%;*/
 }
 
 .foto_us:hover{

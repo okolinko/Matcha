@@ -20,11 +20,6 @@
         <script type="text/javascript" src="../../../public/js/chat.js"></script>
         <script type="text/javascript" src="../../../public/js/ramdomMassege.js"></script>
 
-<!--        <script type="text/javascript" src="../../../public/js/index.js"></script>-->
-
-<!--        <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>-->
-
-<!--        <link rel="stylesheet" href="../../../public/css/menu.css">-->
 	</head>
 	<body>
 
@@ -44,8 +39,6 @@
 			<?php endif; ?>
 		</div>
         <br>
-
-
         <br>
 
 		<nav class="menu">
@@ -57,7 +50,6 @@
 				<li><a href="/likedUser">Взаимные симпатии</a></li>
                     <li><a href="/iliked">Я понравился</a></li>
                 <li><a href="/visitors">Мои посетили</a></li>
-<!--				--><?php //if ($_SESSION['userId']): ?>
 					<li><a href="/logout">Выход</a></li>
 					<li><a href="/personalArea">Кабинет</a> </li>
 				<?php else: ?>
@@ -66,47 +58,11 @@
 				<?php endif; ?>
 			</ul>
 		</nav>
-
-
-
         <nav class="not">
             <ul class="not">
                 <li class="test555">
-                    <img class="open" id="newMassege" src="../../../public/img/Chat.png" alt="12" title="Открыть чат" chatid="12">
+<!--                    <img class="open" id="newMassege" src="../../../public/img/Chat.png" alt="12" title="Открыть чат" chatid="12">-->
                 </li>
             </ul>
         </nav>
-<!--        <div>-->
-        <div class="backpopup"></div>
-        <div class="popup-window">
-            <p class="close">x</p>
-            <div class="shoutbox">
-                <h1>Matcha chat</h1>
-                <ul id="ma" class="shoutbox-content">
-                </ul>
-                <div class="shoutbox-form">
-<!--                               <div contenteditable="true" style="background: dimgrey; height: 250px" tabindex="5">Hello</div>-->
-                    <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
-                    <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
-                    <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
-                    <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
-                </div>
-                <div class="smiles" style="width: 350px">
-					<?php $i = 0;  while($i <= 59){
-						$img = "../../../public/img/smile/".$i.".png";
-						echo '<span>
-                <img class="emoji" alt='.$i.' src='.$img.'>
-             </span>'; $i++;
-					};?>
-                </div>
-                <div>
-                    <a id="link">Случайное сообщени для знакомства с девушкой</a>
-                    </BR>
-                    <a id="link2">Случайное сообщени для знакомства с парнем</a>
-                </div>
-            </div>
-        </div>
-<!--        </div>-->
 	</header>
-
-

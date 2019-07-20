@@ -40,7 +40,7 @@ class Chat {
 				$com_arr[$i]['id'] = $response[$i]->id;
 				$com_arr[$i]['chat_id'] = $response[$i]->chat_id;
 				$com_arr[$i]['user_id'] = $response[$i]->user_id;
-				$com_arr[$i]['text'] = '<code>' . $response[$i]->text . '</code>';
+				$com_arr[$i]['text'] = htmlspecialchars_decode($response[$i]->text);
 				$com_arr[$i]['time'] = substr($response[$i]->time, 0,5);
 				$com_arr[$i]['date'] = $response[$i]->date;
 				$com_arr[$i]['status'] = $response[$i]->status;

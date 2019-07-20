@@ -87,8 +87,17 @@ $(document).ready(function () {
                         }
                     }
                 }
-                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                if (xhr.send('massage=' + JSON.stringify(text) + '&id=' + userId)) {
+                var data = {
+                    'message':text,
+                    'id':userId
+                };
+                data = JSON.stringify(data);
+                xhr.setRequestHeader('Content-type', 'application/json');
+                // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                // if (xhr.send('massage=' + JSON.stringify(text) + '&id=' + userId)) {
+                //     alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
+                // }
+            if (xhr.send(data)) {
                     alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
                 }
             }
@@ -136,7 +145,7 @@ $(document).ready(function () {
                                         li3.innerHTML = comment[0]['date'];
                                         massegeReload.appendChild(li3);
                                     }
-
+// var tmp = comment[i]['text'].split(" ");
                                     var cla;
                                     if (i > 0 ) {
                                         if (comment[i]['date'] != comment[i - 1]['date']) {
@@ -181,8 +190,10 @@ $(document).ready(function () {
     $('.emoji').click(function(m){
         var text = document.getElementById("shoutbox-comment").value;
 
-        var res = document.getElementById("shoutbox-comment").value = text +" :" + m.target.alt + ":";
-        console.log(res);
+        var res = document.getElementById("shoutbox-comment").value = text +" :" + m.target.alt + ": ";
+        var tmp = res.match();
+
+        console.log(tmp.input.split(" "));
     });
 
     $('#newMassege').click(function(e){

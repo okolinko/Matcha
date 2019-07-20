@@ -15,10 +15,25 @@ class MassegeController {
 
 	public static function sendMassage() {
 
-			$text =  json_decode($_POST['massage']);
-			$text = htmlentities($text);
-			$id = json_decode($_POST['id']);
-			$id = intval(htmlentities($id));
+//			$text =  json_decode($_POST['massage']);
+			$inputJSON = file_get_contents("php://input");
+
+			try {
+
+				$data = json_decode($inputJSON);
+
+				$data = (array)$data;
+
+				$text = $data['message'];
+				$id = $data['id'];
+//			dd($data);
+//				$text = htmlentities($text);
+				$text = htmlspecialchars($text);
+//			$id = json_decode($_POST['id']);
+				$id = intval(htmlentities($id));
+			}catch(\Error $error){
+				dd($error);
+			}
 
 			if (intval($_SESSION['userId']) < intval($id)) {
 				$chatID = $_SESSION['userId'] . $id;
