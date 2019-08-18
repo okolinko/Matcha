@@ -3,11 +3,78 @@
   <component name="ChangeListManager">
     <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/MassegeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MassegeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/chat2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/author" beforeDir="false" afterPath="$PROJECT_DIR$/author" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/cm.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/smile/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/accaunt.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/accaunt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/checkNewMassege.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkNewMassege.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/navigation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,64 +102,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/checkNewMassege.js">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/accaunt.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-764">
-              <caret line="22" column="43" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/accauntUser.view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/chat.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/partials/chat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/Chat.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="42" column="83" selection-start-line="42" selection-start-column="83" selection-end-line="42" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/MassegeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+            <state relative-caret-position="50">
+              <caret line="924" lean-forward="true" selection-start-line="924" selection-end-line="924" />
             </state>
           </provider>
         </entry>
@@ -100,29 +113,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="93" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/js/accaunt.js">
+        <entry file="file://$PROJECT_DIR$/public/css/menu.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="117" column="36" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
+            <state relative-caret-position="15">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style_reg.css">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/my.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+            <state relative-caret-position="105">
+              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="905">
+              <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -131,7 +155,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add</find>
       <find>info</find>
       <find>search_row</find>
       <find>search_column_2</find>
@@ -161,6 +184,7 @@
       <find>user</find>
       <find>foto_us</find>
       <find>&lt;code&gt;</find>
+      <find>emoji</find>
     </findStrings>
     <replaceStrings>
       <replace>$_SESSION['userId']</replace>
@@ -181,15 +205,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/deleteImg.js" />
-        <option value="$PROJECT_DIR$/app/views/partials/downloadFoto.php" />
         <option value="$PROJECT_DIR$/app/views/likedUser.view.php" />
         <option value="$PROJECT_DIR$/app/views/login.view.php" />
         <option value="$PROJECT_DIR$/app/views/userEdit.view.php" />
         <option value="$PROJECT_DIR$/app/views/restoreAccaunt.view.php" />
         <option value="$PROJECT_DIR$/app/views/EmailEdit.view.php" />
         <option value="$PROJECT_DIR$/app/controllers/ServerSocket.php" />
-        <option value="$PROJECT_DIR$/public/js/accaunt.js" />
         <option value="$PROJECT_DIR$/app/views/partials/userInfo.php" />
         <option value="$PROJECT_DIR$/public/js/test.js" />
         <option value="$PROJECT_DIR$/core/database/QueryBuilder.php" />
@@ -204,7 +225,6 @@
         <option value="$PROJECT_DIR$/app/views/visitors.view.php" />
         <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/app/views/register.view.php" />
-        <option value="$PROJECT_DIR$/public/js/navigation.js" />
         <option value="$PROJECT_DIR$/app/views/page404.view.php" />
         <option value="$PROJECT_DIR$/core/Pagination.php" />
         <option value="$PROJECT_DIR$/app/controllers/DatingController.php" />
@@ -213,25 +233,29 @@
         <option value="$PROJECT_DIR$/app/views/index.view.php" />
         <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/chat.php" />
         <option value="$PROJECT_DIR$/app/views/accauntUser.view.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/chat2.php" />
         <option value="$PROJECT_DIR$/public/js/menu/classie.js" />
         <option value="$PROJECT_DIR$/public/js/menu/menu.js" />
         <option value="$PROJECT_DIR$/public/js/menu/css/component.css" />
         <option value="$PROJECT_DIR$/public/js/menu/js/classie.js" />
         <option value="$PROJECT_DIR$/public/js/menu/js/menu.js" />
         <option value="$PROJECT_DIR$/app/views/partials/footer.php" />
-        <option value="$PROJECT_DIR$/public/js/index.js" />
-        <option value="$PROJECT_DIR$/public/css/menu.css" />
         <option value="$PROJECT_DIR$/app/views/accaunt.view.php" />
-        <option value="$PROJECT_DIR$/public/js/checkNewMassege.js" />
         <option value="$PROJECT_DIR$/public/js/ramdomMassege.js" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/app/views/partials/head.php" />
-        <option value="$PROJECT_DIR$/public/js/chat.js" />
         <option value="$PROJECT_DIR$/app/controllers/MassegeController.php" />
         <option value="$PROJECT_DIR$/app/models/Chat.php" />
+        <option value="$PROJECT_DIR$/author" />
+        <option value="$PROJECT_DIR$/public/js/accaunt.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/views/partials/chat.php" />
+        <option value="$PROJECT_DIR$/public/js/chat.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/chat2.php" />
+        <option value="$PROJECT_DIR$/public/js/index.js" />
+        <option value="$PROJECT_DIR$/public/js/my.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/head.php" />
+        <option value="$PROJECT_DIR$/public/css/menu.css" />
+        <option value="$PROJECT_DIR$/public/js/checkNewMassege.js" />
+        <option value="$PROJECT_DIR$/public/js/navigation.js" />
       </list>
     </option>
   </component>
@@ -244,7 +268,7 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="879" />
+    <option name="x" value="866" />
     <option name="y" value="23" />
     <option name="width" value="1566" />
     <option name="height" value="1337" />
@@ -279,6 +303,19 @@
               <item name="htdocs" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
@@ -414,18 +451,20 @@
       <workItem from="1563093697998" duration="139000" />
       <workItem from="1563094140029" duration="12798000" />
       <workItem from="1563607995501" duration="2321000" />
-      <workItem from="1563610855395" duration="5503000" />
+      <workItem from="1563610855395" duration="6060000" />
+      <workItem from="1565857417859" duration="5118000" />
+      <workItem from="1566116346330" duration="2618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="545567000" />
+    <option name="totallyTimeSpent" value="553860000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="879" y="23" width="1566" height="1337" extended-state="0" />
+    <frame x="866" y="23" width="1566" height="1337" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31299213" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.32086614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -438,7 +477,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.11865794" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.13502455" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -471,27 +510,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/matcha.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="150" lean-forward="true" selection-start-line="150" selection-end-line="150" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/database/QueryBuilder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="51" column="34" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/visitors.view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="58" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Auth.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1695">
@@ -549,23 +567,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/AccauntController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#35#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="559" column="20" selection-start-line="551" selection-start-column="8" selection-end-line="559" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -632,13 +633,6 @@
     <entry file="file://$PROJECT_DIR$/app/views/login.view.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="70" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/menu/modernizr.custom.25376.js" />
     <entry file="file://$PROJECT_DIR$/public/js/menu/menu.js" />
     <entry file="file://$PROJECT_DIR$/public/js/menu/css/normalize.css" />
@@ -647,20 +641,6 @@
     <entry file="file://$PROJECT_DIR$/public/js/menu/classie.js" />
     <entry file="file://$PROJECT_DIR$/public/js/menu/js/menu.js" />
     <entry file="file://$PROJECT_DIR$/public/js/menu/js/classie.js" />
-    <entry file="file://$PROJECT_DIR$/public/css/menu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="1" lean-forward="true" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -678,20 +658,6 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-544">
-          <caret line="498" column="6" selection-start-line="498" selection-start-column="6" selection-end-line="498" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/chat2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/trackVisits.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -703,13 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="17" lean-forward="true" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/checkNewMassege.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -727,41 +686,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/my.js">
+    <entry file="file://$PROJECT_DIR$/app/models/Chat.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/head.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="40" column="12" lean-forward="true" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#span#0;n#div#1;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/accaunt.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="117" column="36" lean-forward="true" selection-start-line="117" selection-start-column="36" selection-end-line="117" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="29" selection-end-line="99" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/chat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="11" lean-forward="true" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+        <state relative-caret-position="765">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -772,10 +700,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Chat.php">
+    <entry file="file://$PROJECT_DIR$/author">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="42" column="83" selection-start-line="42" selection-start-column="83" selection-end-line="42" selection-end-column="83" />
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="543" column="33" selection-start-line="543" selection-start-column="33" selection-end-line="543" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/accaunt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/chat2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2190">
+          <caret line="146" column="30" selection-start-line="146" selection-start-column="30" selection-end-line="146" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="14" selection-start-line="34" selection-start-column="7" selection-end-line="41" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style_reg.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="924" lean-forward="true" selection-start-line="924" selection-end-line="924" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="11" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/deleteImg.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/checkNewMassege.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="21" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AccauntController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#35#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="905">
+          <caret line="95" column="1" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
         </state>
       </provider>
     </entry>

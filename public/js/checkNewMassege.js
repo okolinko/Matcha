@@ -46,22 +46,6 @@ var test = [];
                         i++;
                     }
 
-                    // console.log(test);
-                    // if (test == 0){
-                    //     test = chat[0]['count'];
-                    //     // alert(test);
-                    // }
-                    // if (test !==  chat[0]['count']){
-                    //     test = chat[0]['count'];
-                    //     alert(chat[0]['chat_id']);
-                    // }
-
-                    // var a = chat[0]['count'];
-                    // if (a !== chat[0]['count']){
-                    //     alert(chat[0]['chat_id']);
-                    // }
-
-
                 }
             }
         }

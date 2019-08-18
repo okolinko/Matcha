@@ -23,9 +23,7 @@ $.fn.popup = function() { 	//функция для открытия всплыв
 
 }
 
-    // $('.emoji').click(function(e){
-    //     console.log(2222);
-    // });
+
 
 
 $(document).ready(function () {
@@ -122,8 +120,7 @@ $(document).ready(function () {
                 var sesionId = document.getElementById("sesionId").value;
 
                 setInterval(function () {
-                    // var massegeReload = document.getElementById("ma");
-                    // var userId = document.getElementById("userId").value;
+
                     var xhr = new XMLHttpRequest();
                     xhr.open("POST", "reloadMassage", true);
                     xhr.onreadystatechange = function () {
@@ -145,7 +142,6 @@ $(document).ready(function () {
                                         li3.innerHTML = comment[0]['date'];
                                         massegeReload.appendChild(li3);
                                     }
-// var tmp = comment[i]['text'].split(" ");
                                     var cla;
                                     if (i > 0 ) {
                                         if (comment[i]['date'] != comment[i - 1]['date']) {
@@ -187,13 +183,10 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 
-    $('.emoji').click(function(m){
+    $('.sm').click(function(m){
         var text = document.getElementById("shoutbox-comment").value;
-
-        var res = document.getElementById("shoutbox-comment").value = text +" :" + m.target.alt + ": ";
+        var res = document.getElementById("shoutbox-comment").value = text + m.target.text;
         var tmp = res.match();
-
-        console.log(tmp.input.split(" "));
     });
 
     $('#newMassege').click(function(e){
@@ -212,26 +205,6 @@ $(document).ready(function () {
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.send('chatid=' + chatid);
         console.log(chatid);
-        // let id = e.target.hash.split('=');
-        //
-        // // console.log(id[1]);
-        // document.location.href = "/accauntUser?id="+id[1];
-        // var xhr = new XMLHttpRequest();
-        // xhr.open("POST", "trackvisits", false);
-        // xhr.onreadystatechange = function () {
-        //     if (xhr.readyState == 4 && xhr.status == 200) {
-        //         if ( xhr.responseText.indexOf("true") == -1){
-        //             res = false;
-        //         }
-        //         else
-        //         {
-        //             res = true;
-        //         }
-        //     }
-        // }
-        //
-        // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        // xhr.send('id=' + id[1]);
     });
 
 });

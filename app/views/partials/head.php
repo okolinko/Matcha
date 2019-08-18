@@ -19,6 +19,9 @@
         <script type="text/javascript" src="../../../public/js/checkNewMassege.js"></script>
         <script type="text/javascript" src="../../../public/js/chat.js"></script>
         <script type="text/javascript" src="../../../public/js/ramdomMassege.js"></script>
+        <script type="text/javascript" src="../../../public/js/accaunt.js"></script>
+
+
 
 	</head>
 	<body>
