@@ -209,6 +209,12 @@ class QueryBuilder
 		$statement = $this->pdo->prepare($sql);
 		$statement->execute(['id' => $id]);
 	}
+    public function deleteSN($table, $id)
+    {
+        $sql = "DELETE FROM {$table} WHERE sn_id =  :id";
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute(['id' => $id]);
+    }
 	public function delete2($table, $id)
 	{
 		$sql = "DELETE FROM {$table} WHERE foto_id =  :id";

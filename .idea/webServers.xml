@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="2dfcf936-d720-41d0-84a2-516c33113a79" name="matcha" url="http://lite.camagru.website/">
+        <fileTransfer host="camagru.ftp.tools" port="21" rootFolder="/camagru.website/lite">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,3 +1,20 @@
+<?php
+$client_id = '624678039195-hli1h1c4bu2kgfoktu8qq6s1oo2da4i7.apps.googleusercontent.com'; // Client ID
+$client_secret = 'pekbuetluogaQocBbqNibVOX'; // Client secret
+$redirect_uri = 'https://lite.camagru.website/signupSocialNetwork'; // Redirect URI
+
+$url = 'https://accounts.google.com/o/oauth2/auth';
+$params = array(
+'redirect_uri'  => $redirect_uri,
+'response_type' => 'code',
+'client_id'     => $client_id,
+'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
+);
+
+$link = '<p ><a href="' . $url . '?' . urldecode(http_build_query($params)) . '"><img  style="width: 100%" src="/public/google.png" alt=""></a></p>';
+
+
+?>
 <!DOCTYPE html>
 <html>
 
@@ -28,6 +45,7 @@
 		<input type="email" name="email" placeholder="Введите email" required="required" value=""/>
 		<input type="submit" name="submit" class="btn1" value="Регистрация" />
 		</form>
+        <?php echo $link; ?>
 </div>
 </body>
 </html>

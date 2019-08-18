@@ -36,9 +36,10 @@ class UserController{
 		$user = User::userNameExists($userName);
 
 		if ($user->admin != 1) {
-			if (User::userDelete($user))
+			if (User::userDelete($user)) {
 
-			redirect('');
+                redirect('');
+            }
 		}
 		else{
 			echo "<script>alert(\"Админа удалить нельзя!\");</script>";

@@ -94,6 +94,31 @@ class Auth {
 		return true;
 	}
 
+	public static function getSocialNetwork($param, $value){
+        $sql = new self();
+
+        $response = $sql->db->selectOne("social_network",$param, $value);
+
+        return $response;
+    }
+
+    public static function deleteSocialNetwork($id){
+        $sql = new self();
+
+        Auth::logout();
+        $sql->db->deleteSN('social_network', $id);
+
+//        return $response;
+    }
+
+    public static function createSocialNetwork($insert){
+        $sql = new self();
+
+        $response = $sql->db->insert('social_network', $insert);
+
+        return $response;
+    }
+
 	public static function restoreName(string $name){
 		$sql = new self();
 

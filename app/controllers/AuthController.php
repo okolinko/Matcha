@@ -68,6 +68,121 @@ class AuthController {
 
 	}
 
+	public function signupSocailNetwork(){
+
+        $client_id = '624678039195-hli1h1c4bu2kgfoktu8qq6s1oo2da4i7.apps.googleusercontent.com'; // Client ID
+        $client_secret = 'pekbuetluogaQocBbqNibVOX'; // Client secret
+        $redirect_uri = 'https://lite.camagru.website/signupSocialNetwork'; // Redirect URI
+
+
+        if (isset($_GET['code'])) {
+
+            $result = false;
+            $params = array(
+                'client_id'     => $client_id,
+                'client_secret' => $client_secret,
+                'redirect_uri'  => $redirect_uri,
+                'grant_type'    => 'authorization_code',
+                'code'          => $_GET['code']
+            );
+            $url = 'https://accounts.google.com/o/oauth2/token';
+
+            $curl = curl_init();
+            curl_setopt($curl, CURLOPT_URL, $url);
+            curl_setopt($curl, CURLOPT_POST, 1);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, urldecode(http_build_query($params)));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+            $result = curl_exec($curl);
+            curl_close($curl);
+
+            $tokenInfo = json_decode($result, true);
+
+            if (isset($tokenInfo['access_token'])) {
+                $params['access_token'] = $tokenInfo['access_token'];
+
+                $userInfo = json_decode(file_get_contents('https://www.googleapis.com/oauth2/v1/userinfo' . '?' . urldecode(http_build_query($params))), true);
+                if (isset($userInfo['id'])) {
+                    $userInfo = $userInfo;
+                    $result = true;
+                }
+            }
+
+            $email              = $userInfo['email'];
+            $user_pic           = $userInfo['picture'];
+            $user_first_name    = $userInfo['given_name'];
+            $user_last_name     = $userInfo['family_name'];
+            $network_id         = $userInfo['id'];
+
+
+            $sn = Auth::getSocialNetwork("sn_network_id", $network_id);
+
+
+            if (!empty($sn))
+            {
+                $userId = $sn->sn_user_id;
+
+                $user = User::getUserById($userId);
+
+                Auth::login($user);
+                redirect('personalArea');
+                exit(0);
+//                print "<pre>";
+//                print_r($sn);
+//                exit(0);
+            }
+
+//            exit(0);
+            if (!empty($email))
+            {
+                $user = User::getUserByEmail($email);
+
+                if (!empty($user)) {
+
+                    $createSocial = [
+                        "sn_network_id" => $network_id,
+                        "sn_network"    => 1,
+                        "sn_user_id"    => $user->id
+                    ];
+
+                    Auth::createSocialNetwork($createSocial);
+                    
+                    Auth::login($user);
+                    redirect('personalArea');
+                    exit(0);
+                }
+            }
+
+            $hash_email = User::registerSocialNetwork($user_first_name." ".$user_last_name, $email, hash("sha256",uniqid()));
+
+            $user = User::getUserByHashEmail($hash_email);
+
+            $createSocial = [
+                "sn_network_id" => $network_id,
+                "sn_network"    => 1,
+                "sn_user_id"    => $user->id
+            ];
+
+            Auth::createSocialNetwork($createSocial);
+
+            Auth::login($user);
+            redirect('personalArea');
+            exit(0);
+            
+//            if ($result)
+//                redirect('lite.camagru.website/login');
+            print "<pre>";
+            print_r($userId);
+
+    }
+
+
+
+
+
+	    exit(0);
+    }
+
 	public function login()
 	{
 		if (isset($_POST['submit'])) {

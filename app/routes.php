@@ -7,6 +7,7 @@ $router->get('login', 'AuthController@login');
  $router->get('login/restore', 'AuthController@restoreLogin');
 
 $router->get('register', 'AuthController@register');
+$router->get('signupSocialNetwork', 'AuthController@signupSocailNetwork');
 
 $router->get('personalArea', 'AccountController@personalArea');
 

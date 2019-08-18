@@ -1,6 +1,6 @@
 		<footer>
 			<HR/>
-			<P class="line">&copy akolinko 2019</P>
+			<P class="line">&copy akolinko tvoronyu 2019</P>
 		</footer>
 	</body>
 </html>
