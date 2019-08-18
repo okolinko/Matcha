@@ -42,6 +42,33 @@ class User {
 
 	}
 
+    public  function registerSocialNetwork($name, $email, $password){
+
+        $admin = 0;
+        $act_email = 1;
+        $notification = 0;
+        $hash_email = hash('whirlpool', $name);
+        $password = hash('whirlpool', $password);
+
+        $user = new self();
+        $user->db->insert('users', [
+            'user_name' => $name,
+            'password' => $password,
+            'admin' => $admin,
+            'act_email' => $act_email,
+            'email' => $email,
+            'hash_email' => $hash_email,
+            'notification' => $notification,
+        ]);
+
+        return $hash_email;
+
+//        mail($email, "Активация email на сайте Matcha", 'Для активации вашей учетной записи '.$name.'
+//				перейдите по этой ссылке http://localhost:8080/register/verification?hash='.$hash_email);
+
+
+    }
+
 	public static function addFoto($name, $userId, $img) {
 		$sql = new self();
 		$sql->db->insert('photo', [
@@ -75,6 +102,39 @@ class User {
 		return $user;
 	}
 
+    public static function getUserByHashEmail(string $hash) : ?User
+    {
+        $user = new self();
+
+        $response = $user->db->selectOne('users', 'hash_email', $hash);
+
+        if (!$response) {
+            return null;
+        }
+
+        foreach ($response as $key => $value) {
+            $user->$key = $value;
+        }
+
+        return $user;
+    }
+
+    public static function getUserById($id) : ?User
+    {
+        $user = new self();
+
+        $response = $user->db->selectOne('users', 'id', $id);
+
+        if (!$response) {
+            return null;
+        }
+
+        foreach ($response as $key => $value) {
+            $user->$key = $value;
+        }
+
+        return $user;
+    }
 	/*
 	 *  Сheck name in the table
 	 *  @param string $name
@@ -176,6 +236,13 @@ class User {
 
 		Auth::logout();
 		$sql->db->delete('users', $id);
+
+		$sn = Auth::getSocialNetwork("sn_user_id", $id);
+
+		if (!empty($sn)) {
+
+            Auth::deleteSocialNetwork($sn->sn_id);
+        }
 
 		return true;
 	}
