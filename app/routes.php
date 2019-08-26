@@ -13,6 +13,13 @@ $router->get('personalArea', 'AccountController@personalArea');
 
 $router->get('register/verification', 'AuthController@verification');
 
+$router->get('messenger', 'MessengerController@getView');
+$router->get('messenger/getNew', 'MessengerController@getNew');
+$router->get('messenger/getNewGroup', 'MessengerController@getNewGroup');
+$router->post('messenger/createNewMessage', 'MessengerController@createNewMessage');
+$router->get('messenger/isGroup', 'MessengerController@isGroup');
+$router->get('messenger/getListMessages', 'MessengerController@getListMessagesForJson');
+
 $router->get('personalArea/edit', 'AuthController@editAccaunt');
 $router->get('personalArea/edit/email', 'AuthController@editEmail');
 $router->get('personalArea/delete', 'UserController@deleteAccaunt');

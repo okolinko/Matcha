@@ -222,6 +222,10 @@ class QueryBuilder
 		$statement->execute(['id' => $id]);
 	}
 
+	public function query(){
+
+    }
+
 	/**
 	 * Insert a record into a table.
 	 *

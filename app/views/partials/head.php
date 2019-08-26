@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="height: 100%">
 	<head>
 		<meta http-equiv="Cache-Control" content="no-cache">
 		<meta charset="UTF-8">
@@ -17,11 +17,23 @@
 
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
         <script type="text/javascript" src="../../../public/js/checkNewMassege.js"></script>
-        <script type="text/javascript" src="../../../public/js/chat.js"></script>
+<!--        <script type="text/javascript" src="../../../public/js/chat.js"></script>-->
         <script type="text/javascript" src="../../../public/js/ramdomMassege.js"></script>
+        <script type="text/javascript" src="../../../public/js/accaunt.js"></script>
+
+
+        <style>
+            header{
+                height: 220px;
+            }
+
+            .flex-top{
+                height: 120px;
+            }
+        </style>
 
 	</head>
-	<body>
+	<body style="height: 100%">
 
 		<?php require('avatar.php'); ?>
 
@@ -50,9 +62,10 @@
 				<li><a href="/likedUser">Взаимные симпатии</a></li>
                     <li><a href="/iliked">Я понравился</a></li>
                 <li><a href="/visitors">Мои посетили</a></li>
-					<li><a href="/logout">Выход</a></li>
 					<li><a href="/personalArea">Кабинет</a> </li>
-				<?php else: ?>
+					<li><a id="msg" href="/messenger">Сообщения</a> </li>
+                    <li><a href="/logout">Выход</a></li>
+                <?php else: ?>
 					<li><a href="/login">Вход</a></li>
 					<li><a href="/register">Регистрация</a></li>
 				<?php endif; ?>

@@ -17,14 +17,14 @@
 			<li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
 			<li> <input id="submit-massage" type="submit" value="Отправить!"></li>
 		</div>
-		<div class="smiles" style="width: 350px">
-			<?php $i = 0;  while($i <= 59){
-				$img = "../../../public/img/smile/".$i.".png";
-				echo '<span>
-                <img class="emoji" alt='.$i.' src='.$img.'>
-             </span>'; $i++;
-			};?>
-		</div>
+<!--        <div class="smiles" style="width: 350px">-->
+<!--			--><?php //$i = 0; $smile = 128512;  while($i <= 59){
+//				echo '<a class="sm">&#'.$smile.'</a>';
+//				$smile++;
+//				$i++;
+//
+//			};?>
+<!--        </div>-->
 		<div>
 			<a id="link">Случайное сообщени для знакомства с девушкой</a>
 			</BR>

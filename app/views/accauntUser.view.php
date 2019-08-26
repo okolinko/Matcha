@@ -7,7 +7,7 @@
 		<?php if (!empty($userFoto)): ?>
 		<?php $i = 1; foreach ($userFoto as $foto_list): ?>
 
-		<div id="<?php $i; echo "min".$i;?>" class="flex-itm"><img class="foto_us" src="/public/img/<?php $i += 1; echo $userId.'/'.$foto_list['img']?>"></div>
+<!--		<div id="--><?php //$i; echo "min".$i;?><!--" class="flex-itm"><img class="foto_us" src="/public/img/--><?php //$i += 1; echo $userId.'/'.$foto_list['img']?><!--"></div>-->
 			<?php endforeach; ?>
 		<?php endif; ?>
 	</div>
@@ -16,7 +16,7 @@
     <div class="map">
         <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
-    <?php require('../views/partials/chat2.php'); ?>
+<!--    --><?php //require('../views/partials/chat2.php'); ?>
 </div>
 
 

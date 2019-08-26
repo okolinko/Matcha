@@ -1,22 +1,25 @@
-<?php $structure = 'public/img/'."$userId";
-$fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
-$fileCount = iterator_count($fi);
-if ($fileCount < 1) {
-	return ;
-}
-$res =  \App\Models\User::LikedUserInfo($userId);
-$res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
+<?php
+if (file_exists( 'public/img/'."$userId")) {
+    $structure = 'public/img/' . "$userId";
+    $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+    $fileCount = iterator_count($fi);
+    if ($fileCount < 1) {
+        return;
+    }
+    $res = \App\Models\User::LikedUserInfo($userId);
+    $res2 = \App\Models\User::LikedUserInfo($_SESSION['userId']);
 
-$key = in_array($_SESSION['userId'], $res);
-$key2 = in_array($userId, $res2);
+    $key = in_array($_SESSION['userId'], $res);
+    $key2 = in_array($userId, $res2);
 
-if ($key == false  or  $key2 == false){
-    return ;
+    if ($key == false or $key2 == false) {
+        return;
+    }
 }
 ;?>
 <div class="container">
 <!--    <a id="open" class="open">Открыть чат</a>-->
-    <img id="open" class="open" src="../../../public/img/Chat.png" title="Открыть чат">
+    <img data-id="<?php print $_GET['id']?>" id="open" class="open" src="../../../public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
 <div class="popup-window">
@@ -30,14 +33,14 @@ if ($key == false  or  $key2 == false){
             <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
             <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
             <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
-            <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
+            <li> <input style="cursor: pointer" id="submit-massage" type="submit" value="Отправить!"></li>
         </div>
         <div class="smiles" style="width: 350px">
-            <?php $i = 0;  while($i <= 59){
-				$img = "../../../public/img/smile/".$i.".png";
-				echo '<span>
-                <img class="emoji" alt='.$i.' src='.$img.'>
-             </span>'; $i++;
+            <?php $i = 0; $smile = 128512;  while($i <= 59){
+                echo '<a class="sm" style="cursor: pointer">&#'.$smile.'</a>';
+                $smile++;
+                $i++;
+
             };?>
         </div>
         <div>
@@ -47,3 +50,7 @@ if ($key == false  or  $key2 == false){
         </div>
     </div>
 </div>
+
+<script type="text/javascript" src="/public/js/chat.js"></script>
+
+<!--<script type="application/javascript" src="public/js/chat2.js"></script>-->

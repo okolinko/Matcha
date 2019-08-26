@@ -82,8 +82,8 @@
         <img class="foto-form"  src="../../public/img/avatar/avatar<?php echo $acaunt_list['userId']?>.png">
         <div class="name-form"><a><?php echo $acaunt_list['name'].', '.$acaunt_list['age']?></a></div>
         <div class="city-form"><a><?php echo $acaunt_list['city']?></a></div>
-<!--        <div class="form-help"><a id="id-user" user_id="--><?php //echo $acaunt_list['userId'] ?><!--" href="/accauntUser?id=--><?php //echo $acaunt_list['userId'] ?><!--" class="button"/>В профиль</a></div>-->
-        <div class="form-help"><a id="id-user" user_id="<?php echo $acaunt_list['userId'] ?>" href="#accauntUser?id=<?php echo $acaunt_list['userId'] ?>" class="button"/>В профиль</a></div>
+        <div class="form-help"><a id="id-user" user_id="<?php echo $acaunt_list['userId'] ?>" href="/accauntUser?id=<?php echo $acaunt_list['userId'] ?>" class="button"/>В профиль</a></div>
+<!--        <div class="form-help"><a id="id-user" user_id="--><?php //echo $acaunt_list['userId'] ?><!--" href="#accauntUser?id=--><?php //echo $acaunt_list['userId'] ?><!--" class="button"/>В профиль</a></div>-->
     </div>
 		<?php endforeach; ?>
 	<?php endif; ?>
