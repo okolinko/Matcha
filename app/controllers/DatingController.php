@@ -37,6 +37,8 @@ class DatingController
 
 		$pag = $pagination->get();
 
+//		dd($acaunt);
+
 		require_once('app/views/dating.view.php');
 	}
 

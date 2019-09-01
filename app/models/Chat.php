@@ -103,4 +103,9 @@ class Chat {
 		$response = json_decode(json_encode($response),TRUE);
 		return  count($response);
 	}
+
+	public static function getNewMessageAll($where){
+        $sql = new self();
+
+    }
 }

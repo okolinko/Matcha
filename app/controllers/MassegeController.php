@@ -72,7 +72,14 @@ class MassegeController {
 			array_push($mass, $massege);
 		}
 
-		print json_encode($mass);
+//		dd($mass);
+
+//        print_r($mass);
+//		exit(0);
+//
+//		print json_encode($mass);
+//		exit(0);
+        json_encode($mass);
 	}
 
 	public static function checkNewMassege() {

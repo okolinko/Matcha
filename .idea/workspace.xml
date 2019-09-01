@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea2/beejee.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea2/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/MessengerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Misc/Clear.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Misc/Misc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Misc/Request.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Misc/Validate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Misc/VerifyEmail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/messenger.view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/database/DB.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.babelrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.browserslistrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/CODEOWNERS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/ISSUE_TEMPLATE/bug.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/ISSUE_TEMPLATE/feature.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.github/SUPPORT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.stylelintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.stylelintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/CNAME" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/CODE_OF_CONDUCT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/Gemfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/Gemfile.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/banner.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/build-plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/change-version.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/generate-sri.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/rollup.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/ship.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/svgo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/build/vnu-jar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/alert.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/button.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/carousel.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/collapse.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/dropdown.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/index.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/modal.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/popover.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/scrollspy.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/tab.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/toast.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/tooltip.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/dist/util.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/tools/sanitizer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/src/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/browsers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/integration/bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/integration/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/integration/rollup.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/popover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/toast.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/unit/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/carousel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/collapse.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/dropdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/popover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/scrollspy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/toast.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/js/tests/visual/tooltip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/nuget/MyGet.ps1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/nuget/bootstrap.nuspec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/nuget/bootstrap.sass.nuspec" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/package.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_custom-forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_media.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_background-variant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_grid-framework.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_hover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_nav-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_screen-reader.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_table-row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_text-emphasis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_text-hide.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/mixins/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_align.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_background.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_borders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_display.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_flex.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_float.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_overflow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_screenreaders.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_shadows.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_sizing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_spacing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/utilities/_visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/breakpoints.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/browser-bugs.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/browser-features.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/colors.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/core-team.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/docs-versions.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/examples.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/grays.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/nav.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/theme-colors.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_data/translations.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/ads.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/analytics.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/bugify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/callout-danger-async-methods.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/callout-info-mediaqueries-breakpoints.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/callout-info-prefersreducedmotion.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/callout-warning-color-assistive-technologies.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/callout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/docs-navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/docs-sidebar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/example.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/favicons.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/bootstrap-stack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/bootstrap.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/download.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/import.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/lightning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/menu.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/opencollective.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/placeholder.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/slack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/icons/twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/scripts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/skippy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/social.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_includes/stylesheet.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_layouts/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_layouts/docs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_layouts/examples.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_layouts/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/_layouts/simple.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/about/brand.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/about/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/about/overview.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/about/team.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/about/translations.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/brand/bootstrap-outline.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/brand/bootstrap-punchout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/brand/bootstrap-social-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/brand/bootstrap-social.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/brand/bootstrap-solid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/css/docs.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/css/docs.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/bootstrap-themes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/bootstrap-themes@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/album.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/album@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/blog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/blog@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/carousel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/carousel@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/checkout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/checkout@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/cover.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/cover@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/dashboard.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/dashboard@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/floating-labels.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/floating-labels@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/grid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/grid@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/jumbotron.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/jumbotron@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-bottom.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-bottom@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-fixed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-fixed@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-static.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbar-static@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbars.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/navbars@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/offcanvas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/offcanvas@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/pricing.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/pricing@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/product.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/product@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sign-in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sign-in@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/starter-template.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/starter-template@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sticky-footer-navbar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sticky-footer-navbar@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sticky-footer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/examples/sticky-footer@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/android-chrome-192x192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/android-chrome-512x512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/browserconfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/mstile-144x144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/mstile-310x310.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/img/favicons/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/docs.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/src/application.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/src/ie-emulation-modes-warning.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/src/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/vendor/anchor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/vendor/bs-custom-file-input.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/vendor/clipboard.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/js/vendor/jquery-slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_ads.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_algolia.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_anchor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_brand.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_browser-bugs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_callouts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_clipboard-js.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_colors.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_component-examples.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_content.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_masthead.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_placeholder-img.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_skippy.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_syntax.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/assets/scss/docs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/browser-bugs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/alerts.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/badge.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/breadcrumb.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/button-group.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/buttons.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/card.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/carousel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/collapse.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/dropdowns.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/forms.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/input-group.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/jumbotron.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/list-group.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/media-object.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/modal.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/navbar.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/navs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/pagination.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/popovers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/progress.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/scrollspy.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/spinners.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/toasts.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/components/tooltips.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/code.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/figures.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/images.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/reboot.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/tables.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/content/typography.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/.stylelintrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/album/album.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/album/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/blog/blog.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/blog/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/carousel/carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/carousel/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/checkout/form-validation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/checkout/form-validation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/checkout/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/cover/cover.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/cover/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/dashboard/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/dashboard/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/dashboard/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/floating-labels/floating-labels.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/floating-labels/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/grid/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/grid/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/jumbotron/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/jumbotron/jumbotron.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbar-bottom/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbar-fixed/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbar-fixed/navbar-top-fixed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbar-static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbar-static/navbar-top.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbars/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/navbars/navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/offcanvas/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/offcanvas/offcanvas.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/offcanvas/offcanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/pricing/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/pricing/pricing.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/product/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/product/product.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sign-in/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sign-in/signin.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/starter-template/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/starter-template/starter-template.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sticky-footer-navbar/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sticky-footer-navbar/sticky-footer-navbar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sticky-footer/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/examples/sticky-footer/sticky-footer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/extend/approach.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/extend/icons.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/accessibility.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/best-practices.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/browsers-devices.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/build-tools.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/contents.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/download.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/introduction.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/javascript.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/theming.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/getting-started/webpack.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/layout/grid.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/layout/overview.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/layout/utilities-for-layout.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/migration.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/borders.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/clearfix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/close-icon.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/colors.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/display.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/embed.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/flex.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/float.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/image-replacement.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/overflow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/position.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/screen-readers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/shadows.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/sizing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/spacing.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/stretched-link.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/text.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/vertical-align.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/4.3/utilities/visibility.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/docs/versions.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bootstrap-4.3.1/site/sw.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/30/foto30_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/30/foto30_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/31/foto31_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/31/foto31_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/31/foto31_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/8/foto8_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/avatar/avatar30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/avatar/avatar31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/avatar/avatar32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/avatar/avatar36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/avatar/avatar8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/chat2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AccauntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AccountController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/DatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/DatingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MassegeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MassegeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/accauntUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/accauntUser.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dating.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dating.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/chat2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/database/QueryBuilder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/checkNewMassege.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkNewMassege.js" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Misc/Clear.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/checkNewMassege.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/App.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/setup.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/database/QueryBuilder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/helpers.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/helpers2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>search_column</find>
+      <find>ul</find>
+      <find>.form_container fieldset</find>
+      <find>container</find>
+      <find>notif</find>
+      <find>sendEmailActiv</find>
+      <find>user_foto</find>
+      <find>img</find>
+      <find>#</find>
+      <find>$_SESSION['</find>
+      <find>userComparePassword</find>
+      <find>flex</find>
+      <find>flex-form</find>
+      <find>config</find>
+      <find>setCurrentPage</find>
+      <find>route</find>
+      <find>file_put_contents</find>
+      <find>com</find>
+      <find>button</find>
+      <find>fa-cog]</find>
+      <find>user</find>
+      <find>foto_us</find>
+      <find>&lt;code&gt;</find>
+      <find>AccountController</find>
+      <find>usera</find>
+      <find>textare</find>
+      <find>text</find>
+      <find>f</find>
+      <find>min</find>
+      <find>userA</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>$_SESSION['userId']</replace>
+      <replace>$_SESSION['userName']</replace>
+      <replace>foto_id</replace>
+      <replace>statusLike</replace>
+      <replace>photoFlag</replace>
+      <replace>matcha</replace>
+      <replace />
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/app/controllers</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/js/navigation.js" />
+        <option value="$PROJECT_DIR$/app/views/page404.view.php" />
+        <option value="$PROJECT_DIR$/core/Pagination.php" />
+        <option value="$PROJECT_DIR$/public/js/trackVisits.js" />
+        <option value="$PROJECT_DIR$/app/views/index.view.php" />
+        <option value="$PROJECT_DIR$/public/js/menu/classie.js" />
+        <option value="$PROJECT_DIR$/public/js/menu/menu.js" />
+        <option value="$PROJECT_DIR$/public/js/menu/css/component.css" />
+        <option value="$PROJECT_DIR$/public/js/menu/js/classie.js" />
+        <option value="$PROJECT_DIR$/public/js/menu/js/menu.js" />
+        <option value="$PROJECT_DIR$/public/js/index.js" />
+        <option value="$PROJECT_DIR$/public/css/menu.css" />
+        <option value="$PROJECT_DIR$/app/views/accaunt.view.php" />
+        <option value="$PROJECT_DIR$/public/js/ramdomMassege.js" />
+        <option value="$PROJECT_DIR$/app/controllers/MassegeController.php" />
+        <option value="&lt;2dfcf936-d720-41d0-84a2-516c33113a79&gt;/index.html" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/footer.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/app/views/likedUser.view.php" />
+        <option value="$PROJECT_DIR$/app/views/login.view.php" />
+        <option value="$PROJECT_DIR$/app/views/register.view.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/models/User.php" />
+        <option value="$PROJECT_DIR$/app/models/Auth.php" />
+        <option value="$PROJECT_DIR$/app/models/SocialNetwork.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DatingController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AccauntController.php" />
+        <option value="$PROJECT_DIR$/core/Router.php" />
+        <option value="$PROJECT_DIR$/app/views/accauntUser.view.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Misc/Misc.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Controller.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/models/Chat.php" />
+        <option value="$PROJECT_DIR$/core/database/QueryBuilder.php" />
+        <option value="$PROJECT_DIR$/config/config.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/chat2.php" />
+        <option value="$PROJECT_DIR$/app/controllers/AccountController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/core/database/DB.php" />
+        <option value="$PROJECT_DIR$/app/views/dating.view.php" />
+        <option value="$PROJECT_DIR$/app/views/messenger.view.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/head.php" />
+        <option value="$PROJECT_DIR$/public/js/chat2.js" />
+        <option value="$PROJECT_DIR$/app/views/partials/chat.php" />
+        <option value="$PROJECT_DIR$/app/controllers/MessengerController.php" />
+        <option value="$PROJECT_DIR$/public/js/chat.js" />
+        <option value="$PROJECT_DIR$/public/js/checkNewMassege.js" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="1913" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="htdocs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="htdocs" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Taras\Desktop\Matcha\app" />
+      <recent name="C:\Users\Taras\Desktop\Matcha\app\views" />
+      <recent name="C:\Users\Taras\Desktop\Matcha\public\img\avatar" />
+      <recent name="$PROJECT_DIR$/app/views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Taras\Desktop\Matcha\app\controllers" />
+      <recent name="$PROJECT_DIR$/public/js/menu/js" />
+      <recent name="$PROJECT_DIR$/core" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="" />
+      <created>1551464658957</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551464658957</updated>
+      <workItem from="1551464660237" duration="11320000" />
+      <workItem from="1551513207278" duration="6436000" />
+      <workItem from="1551567026732" duration="16994000" />
+      <workItem from="1557228341371" duration="23288000" />
+      <workItem from="1557308686396" duration="24113000" />
+      <workItem from="1557381105884" duration="8856000" />
+      <workItem from="1557392823531" duration="2967000" />
+      <workItem from="1557467707835" duration="18680000" />
+      <workItem from="1557559850162" duration="5762000" />
+      <workItem from="1557650388896" duration="8722000" />
+      <workItem from="1557675006087" duration="7450000" />
+      <workItem from="1557822831131" duration="6219000" />
+      <workItem from="1557997324264" duration="5741000" />
+      <workItem from="1558005042679" duration="2124000" />
+      <workItem from="1558007647382" duration="480000" />
+      <workItem from="1558447959777" duration="3515000" />
+      <workItem from="1558775471925" duration="3946000" />
+      <workItem from="1558783153972" duration="473000" />
+      <workItem from="1558784332674" duration="10000" />
+      <workItem from="1558784525320" duration="281000" />
+      <workItem from="1558953002052" duration="590000" />
+      <workItem from="1558956478286" duration="8000" />
+      <workItem from="1558956509634" duration="9000" />
+      <workItem from="1558956630504" duration="69000" />
+      <workItem from="1558956712410" duration="13000" />
+      <workItem from="1558956741566" duration="65000" />
+      <workItem from="1558956821721" duration="12719000" />
+      <workItem from="1559216216179" duration="8724000" />
+      <workItem from="1559373151978" duration="10029000" />
+      <workItem from="1559462813195" duration="26283000" />
+      <workItem from="1559567311014" duration="12487000" />
+      <workItem from="1559735554123" duration="12267000" />
+      <workItem from="1559807212277" duration="8778000" />
+      <workItem from="1559897220010" duration="9404000" />
+      <workItem from="1560160027538" duration="15212000" />
+      <workItem from="1560336350643" duration="12356000" />
+      <workItem from="1560496606766" duration="8371000" />
+      <workItem from="1560933196462" duration="26931000" />
+      <workItem from="1561022346524" duration="8247000" />
+      <workItem from="1561039343240" duration="7285000" />
+      <workItem from="1561105255792" duration="3384000" />
+      <workItem from="1561111635874" duration="1000" />
+      <workItem from="1561116400184" duration="10365000" />
+      <workItem from="1561191763859" duration="17171000" />
+      <workItem from="1561469414741" duration="4483000" />
+      <workItem from="1561477984659" duration="2002000" />
+      <workItem from="1561543412618" duration="17776000" />
+      <workItem from="1561626786651" duration="14477000" />
+      <workItem from="1561655150204" duration="1108000" />
+      <workItem from="1561799661069" duration="1386000" />
+      <workItem from="1561964480104" duration="170000" />
+      <workItem from="1561966456728" duration="5571000" />
+      <workItem from="1562231201661" duration="20325000" />
+      <workItem from="1562314031009" duration="7960000" />
+      <workItem from="1562330370971" duration="5838000" />
+      <workItem from="1562399503541" duration="6000" />
+      <workItem from="1562411602814" duration="11291000" />
+      <workItem from="1562485397402" duration="9333000" />
+      <workItem from="1562593484405" duration="12187000" />
+      <workItem from="1562677693749" duration="5030000" />
+      <workItem from="1562919549072" duration="7298000" />
+      <workItem from="1563000822053" duration="11685000" />
+      <workItem from="1563093593531" duration="78000" />
+      <workItem from="1563093697998" duration="139000" />
+      <workItem from="1563094140029" duration="12798000" />
+      <workItem from="1563607995501" duration="2321000" />
+      <workItem from="1563610855395" duration="5503000" />
+      <workItem from="1565506760667" duration="3822000" />
+      <workItem from="1565636850781" duration="14000" />
+      <workItem from="1566027244199" duration="14479000" />
+      <workItem from="1566313968883" duration="98000" />
+      <workItem from="1566627815036" duration="54888000" />
+      <workItem from="1567334347570" duration="176000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="619176000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="2560" height="1440" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0782367" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32815057" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.25474453" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="12" weight="0.32822758" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.24507658" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.256088" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32932332" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32932332" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/register.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="542">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#a#0;n#p#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/SocialNetwork.php" />
+    <entry file="file://$PROJECT_DIR$/app/models/Auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1853">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4131">
+          <caret line="243" column="26" selection-start-line="243" selection-start-column="26" selection-end-line="243" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="38" column="29" selection-start-line="38" selection-start-column="29" selection-end-line="38" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DatingController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="716">
+          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/userEdit.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/restoreAccaunt.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/iLiked.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Misc/Request.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/menu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style_reg.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="24" column="8" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="432" column="5" selection-start-line="432" selection-start-column="4" selection-end-line="432" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/Chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="26" lean-forward="true" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Misc/Misc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="87" column="38" lean-forward="true" selection-start-line="87" selection-start-column="38" selection-end-line="87" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+          <folding>
+            <element signature="e#172#193#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/userInfo.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/visitors.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="4369" column="4" selection-start-line="4369" selection-start-column="4" selection-end-line="4369" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AccountController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#35#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="60" selection-start-line="23" selection-start-column="60" selection-end-line="23" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/chat2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding>
+            <element signature="e#1012#1056#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="173" column="22" selection-start-line="173" selection-start-column="22" selection-end-line="173" selection-end-column="22" />
+          <folding>
+            <element signature="e#118#156#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/accaunt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/accauntUser.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="42" selection-start-line="14" selection-start-column="42" selection-end-line="14" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/dating.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="86" column="10" lean-forward="true" selection-start-line="86" selection-start-column="10" selection-end-line="86" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/messenger.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="181" column="34" selection-start-line="181" selection-start-column="28" selection-end-line="181" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/footer.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/head.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/accaunt.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1038">
+          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="56" selection-end-line="34" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/chat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="35" column="46" selection-start-line="35" selection-start-column="46" selection-end-line="35" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#li#3;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/MessengerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1257">
+          <caret line="259" column="22" selection-start-line="259" selection-start-column="22" selection-end-line="259" selection-end-column="22" />
+          <folding>
+            <element signature="e#36#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chat2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="47" column="19" lean-forward="true" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/Connection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#37#45#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/App.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/setup.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/helpers2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Misc/Clear.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/chat.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="43" column="37" lean-forward="true" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/checkNewMassege.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

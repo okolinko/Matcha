@@ -17,6 +17,7 @@
 			<li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
 			<li> <input id="submit-massage" type="submit" value="Отправить!"></li>
 		</div>
+<<<<<<< HEAD
         <div class="smiles" style="width: 350px">
 			<?php $i = 0; $smile = 128512;  while($i <= 59){
 				echo '<a class="sm">&#'.$smile.'</a>';
@@ -25,6 +26,16 @@
 
 			};?>
         </div>
+=======
+<!--        <div class="smiles" style="width: 350px">-->
+<!--			--><?php //$i = 0; $smile = 128512;  while($i <= 59){
+//				echo '<a class="sm">&#'.$smile.'</a>';
+//				$smile++;
+//				$i++;
+//
+//			};?>
+<!--        </div>-->
+>>>>>>> 24b37b8485de924204fcc195971a97ad5ff83779
 		<div>
 			<a id="link">Случайное сообщени для знакомства с девушкой</a>
 			</BR>
