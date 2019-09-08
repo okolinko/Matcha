@@ -171,13 +171,14 @@
         <div class="text-message">
             <div class="smile">
                 <?php $i = 0; $smile = 128512;  while($i <= 59){
-                    echo '<a class="sm" style="cursor: pointer">&#'.$smile.'</a>';
+                    echo '<a class="sm" data-code='.$smile.' style="cursor: pointer">&#'.$smile.'</a>';
                     $smile++;
                     $i++;
 
                 };?>
             </div>
             <textarea id="text"></textarea>
+            <textarea style="display: none" id="text2"></textarea>
             <div class="bottom-send">
                 <button id="sendqw" class="btn btn-primary btn-group" type="button">Отправить</button>
             </div>

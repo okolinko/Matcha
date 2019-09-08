@@ -25,7 +25,7 @@ window.onload=function() {
 
     document.getElementById("user_like").addEventListener("click", like);
 
-    test1();
+    // test1();
 
 
     function test1() {

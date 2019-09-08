@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Require a view.
  *
@@ -22,5 +21,5 @@ function view($name, $data = [])
  */
 function redirect($path)
 {
-	header("Location: /{$path}");
+	header("location:/{$path}");
 }

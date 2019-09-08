@@ -17,9 +17,9 @@ class config
     public $DB_PASSWORD;
     public function __construct()
     {
-        $this->DB_HOST = "camagru.mysql.tools";
-        $this->DB_DSN = "camagru_matcha";
-        $this->DB_USER = "camagru_matcha";
-        $this->DB_PASSWORD = "j(7*cJ01gM";
+        $this->DB_HOST = "localhost";
+        $this->DB_DSN = "matcha";
+        $this->DB_USER = "root";
+        $this->DB_PASSWORD = "";
     }
 }

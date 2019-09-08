@@ -6,14 +6,22 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Controllers\\AccountController' => $baseDir . '/app/controllers/AccauntController.php',
+    'App\\Controllers\\AccountController' => $baseDir . '/app/controllers/AccountController.php',
     'App\\Controllers\\AuthController' => $baseDir . '/app/controllers/AuthController.php',
+    'App\\Controllers\\Controller' => $baseDir . '/app/controllers/Controller.php',
     'App\\Controllers\\DatingController' => $baseDir . '/app/controllers/DatingController.php',
     'App\\Controllers\\MainController' => $baseDir . '/app/controllers/MainController.php',
     'App\\Controllers\\MassegeController' => $baseDir . '/app/controllers/MassegeController.php',
+    'App\\Controllers\\MessengerController' => $baseDir . '/app/controllers/MessengerController.php',
+    'App\\Controllers\\Misc\\Clear' => $baseDir . '/app/controllers/Misc/Clear.php',
+    'App\\Controllers\\Misc\\Misc' => $baseDir . '/app/controllers/Misc/Misc.php',
+    'App\\Controllers\\Misc\\Request' => $baseDir . '/app/controllers/Misc/Request.php',
+    'App\\Controllers\\Misc\\Validate' => $baseDir . '/app/controllers/Misc/Validate.php',
+    'App\\Controllers\\Misc\\VerifyEmail' => $baseDir . '/app/controllers/Misc/VerifyEmail.php',
     'App\\Controllers\\UserController' => $baseDir . '/app/controllers/UserController.php',
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Database\\Connection' => $baseDir . '/core/database/Connection.php',
+    'App\\Core\\Database\\DB' => $baseDir . '/core/database/DB.php',
     'App\\Core\\Database\\QueryBuilder' => $baseDir . '/core/database/QueryBuilder.php',
     'App\\Core\\Pagination' => $baseDir . '/core/Pagination.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
@@ -25,4 +33,5 @@ return array(
     'ComposerAutoloaderInita91edb2983d61d85c8275d27f786119d' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',
     'Composer\\Autoload\\ComposerStaticInita91edb2983d61d85c8275d27f786119d' => $vendorDir . '/composer/autoload_static.php',
+    'Config\\config' => $baseDir . '/config/config.php',
 );

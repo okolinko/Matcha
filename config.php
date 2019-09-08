@@ -2,10 +2,10 @@
 
 return [
 	'database' => [
-		'name' => 'camagru_matcha',
-		'username' => 'camagru_matcha',
-		'password' => 'j(7*cJ01gM',
-		'connection' => 'mysql:host=camagru.mysql.tools',
+		'name' => 'matcha',
+		'username' => 'root',
+		'password' => '',
+		'connection' => 'mysql:host=localhost',
 		'options' => [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
 		]

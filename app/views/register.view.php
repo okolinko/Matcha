@@ -1,15 +1,14 @@
 <?php
-$client_id = '624678039195-hli1h1c4bu2kgfoktu8qq6s1oo2da4i7.apps.googleusercontent.com'; // Client ID
-$client_secret = 'pekbuetluogaQocBbqNibVOX'; // Client secret
-$redirect_uri = 'https://lite.camagru.website/signupSocialNetwork'; // Redirect URI
+$client_id = '6166045e4efb40469480d510832814d2'; // Client ID
+//$client_secret = '798d32386b464a56a8878344bb8c06c9 '; // Client secret
+$redirect_uri = 'http://localhost/signupSocialNetwork'; // Redirect URI
 
-$url = 'https://accounts.google.com/o/oauth2/auth';
-$params = array(
-'redirect_uri'  => $redirect_uri,
-'response_type' => 'code',
-'client_id'     => $client_id,
-'scope'         => 'https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile'
-);
+$url = 'https://api.instagram.com/oauth/authorize/';
+$params = [
+    'client_id'     => $client_id,
+    'redirect_uri'  => $redirect_uri,
+    'response_type' => 'code'
+];
 
 $link = '<p ><a href="' . $url . '?' . urldecode(http_build_query($params)) . '"><img  style="width: 100%" src="/public/google.png" alt=""></a></p>';
 

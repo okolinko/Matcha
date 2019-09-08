@@ -17,7 +17,9 @@ if (file_exists( 'public/img/'."$userId")) {
     }
 }
 ;?>
+
 <div class="container">
+
 <!--    <a id="open" class="open">Открыть чат</a>-->
     <img data-id="<?php print $_GET['id']?>" id="open" class="open" src="../../../public/img/Chat.png" title="Открыть чат">
 </div>
@@ -26,18 +28,19 @@ if (file_exists( 'public/img/'."$userId")) {
     <p class="close">x</p>
     <div class="shoutbox">
         <h1>Matcha chat</h1>
-        <ul id="ma" class="shoutbox-content">
+        <ul id="ma" class="shoutbox-content" style="width: 40rem;">
         </ul>
         <div class="shoutbox-form">
 <!--            <div contenteditable="true" style="background: dimgrey; height: 250px" tabindex="5">Hello</div>-->
-            <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
+            <li><textarea  class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
             <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
-            <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
-            <li> <input style="cursor: pointer" id="submit-massage" type="submit" value="Отправить!"></li>
+            <li><textarea style="width: 35rem" type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
+            <li><textarea class="none" type="text" placeholder="Сообщение" id="shoutbox-comment2" name="comment" maxlength='240' required="required"></textarea></li>
+            <li> <input style="cursor: pointer;width: 35rem" id="submit-massage" type="submit" value="Отправить!"></li>
         </div>
-        <div class="smiles" style="width: 350px">
+        <div class="smiles" style="width: 35rem">
             <?php $i = 0; $smile = 128512;  while($i <= 59){
-                echo '<a class="sm" style="cursor: pointer">&#'.$smile.'</a>';
+                echo '<a class="sm" data-code='.$smile.' style="cursor: pointer">&#'.$smile.'</a>';
                 $smile++;
                 $i++;
 

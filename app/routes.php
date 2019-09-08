@@ -1,10 +1,9 @@
- <?php
-
+<?php
 $router->get('', 'MainController@index');
 
 $router->get('logout', 'AuthController@logout');
 $router->get('login', 'AuthController@login');
- $router->get('login/restore', 'AuthController@restoreLogin');
+$router->get('login/restore', 'AuthController@restoreLogin');
 
 $router->get('register', 'AuthController@register');
 $router->get('signupSocialNetwork', 'AuthController@signupSocailNetwork');
@@ -19,6 +18,7 @@ $router->get('messenger/getNewGroup', 'MessengerController@getNewGroup');
 $router->post('messenger/createNewMessage', 'MessengerController@createNewMessage');
 $router->get('messenger/isGroup', 'MessengerController@isGroup');
 $router->get('messenger/getListMessages', 'MessengerController@getListMessagesForJson');
+$router->get('messenger/getListMessages2', 'MessengerController@getListMessagesForJson2');
 
 $router->get('personalArea/edit', 'AuthController@editAccaunt');
 $router->get('personalArea/edit/email', 'AuthController@editEmail');

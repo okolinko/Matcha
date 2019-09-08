@@ -11,14 +11,22 @@ class ComposerStaticInita91edb2983d61d85c8275d27f786119d
     );
 
     public static $classMap = array (
-        'App\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/controllers/AccauntController.php',
+        'App\\Controllers\\AccountController' => __DIR__ . '/../..' . '/app/controllers/AccountController.php',
         'App\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/controllers/AuthController.php',
+        'App\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/controllers/Controller.php',
         'App\\Controllers\\DatingController' => __DIR__ . '/../..' . '/app/controllers/DatingController.php',
         'App\\Controllers\\MainController' => __DIR__ . '/../..' . '/app/controllers/MainController.php',
         'App\\Controllers\\MassegeController' => __DIR__ . '/../..' . '/app/controllers/MassegeController.php',
+        'App\\Controllers\\MessengerController' => __DIR__ . '/../..' . '/app/controllers/MessengerController.php',
+        'App\\Controllers\\Misc\\Clear' => __DIR__ . '/../..' . '/app/controllers/Misc/Clear.php',
+        'App\\Controllers\\Misc\\Misc' => __DIR__ . '/../..' . '/app/controllers/Misc/Misc.php',
+        'App\\Controllers\\Misc\\Request' => __DIR__ . '/../..' . '/app/controllers/Misc/Request.php',
+        'App\\Controllers\\Misc\\Validate' => __DIR__ . '/../..' . '/app/controllers/Misc/Validate.php',
+        'App\\Controllers\\Misc\\VerifyEmail' => __DIR__ . '/../..' . '/app/controllers/Misc/VerifyEmail.php',
         'App\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/controllers/UserController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
+        'App\\Core\\Database\\DB' => __DIR__ . '/../..' . '/core/database/DB.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
         'App\\Core\\Pagination' => __DIR__ . '/../..' . '/core/Pagination.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
@@ -30,6 +38,7 @@ class ComposerStaticInita91edb2983d61d85c8275d27f786119d
         'ComposerAutoloaderInita91edb2983d61d85c8275d27f786119d' => __DIR__ . '/..' . '/composer/autoload_real.php',
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInita91edb2983d61d85c8275d27f786119d' => __DIR__ . '/..' . '/composer/autoload_static.php',
+        'Config\\config' => __DIR__ . '/../..' . '/config/config.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

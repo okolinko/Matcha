@@ -116,7 +116,7 @@ class MessengerController extends  Controller
     }
 
     public function getAllGroups($idUser){
-        $grId = array_column((new DB())->table('message_group')->where(['gr_user_id' => $idUser])->get(),'gr_gr_id');
+//        $grId = array_column((new DB())->table('message_group')->where(['gr_user_id' => $idUser])->get(),'gr_gr_id');
 
         $allGr = (new DB())->table('message_group')
             ->leftJoin('message_group_insert','message_group.gr_id','=','message_group_insert.gr_in_gr_id')
@@ -159,24 +159,59 @@ class MessengerController extends  Controller
 //            'm_user_id' => $_SESSION['userId'],
             'm_del'     => 0,
         ];
-//misc::trace($where);
-//        $temp = (new DB())->table('messages_2')
-//            ->leftJoin('users','messages_2.m_user_id','=','users.id')
-//            ->select('m_id, m_gr_id, m_view, m_text, user_name, id as user_id, m_created_at')
-//            ->where($where)
-//            ->get();
-//        foreach ($temp as &$item) {
-//            $item = (array)$item;
-//        }
-//
-//        misc::trace(json_encode($temp));
-       print json_encode(['status'=>1,'msg'=>'success','record'=>(new DB())->table('messages_2')
-           ->leftJoin('users','messages_2.m_owner_id','=','users.id')
-           ->select('m_id, m_gr_id, m_view, m_text, user_name, id as user_id, m_created_at')
-           ->where($where)
-           ->sortBy('m_created_at', 'desc')
-           ->get()]);
+
+        $records = (new DB())->table('messages_2')
+            ->leftJoin('users','messages_2.m_owner_id','=','users.id')
+            ->select('m_id, m_gr_id, m_view, m_text, user_name, id as user_id, m_created_at')
+            ->where($where)
+            ->sortBy('m_created_at', 'desc')
+            ->get();
+       print json_encode(['status'=>1,'msg'=>'success','record'=>$records]);
        return ;
+
+    }
+
+    public function getListMessagesForJson2(){
+        header('content-type:application/json');
+
+        $userIdOwner = $_SESSION['userId'];
+        $user_id = intval($this->request->get('user_id'));
+
+        $grOne = array_column((new DB())->table('message_group_insert')->where('gr_in_user_id='.$userIdOwner)->get(),'gr_in_gr_id');
+        $grTwo = array_column((new DB())->table('message_group_insert')
+            ->where('gr_in_user_id='.$user_id)
+            ->where(['gr_in_gr_id' => $grOne])
+            ->get(),'gr_in_gr_id');
+
+//        misc::trace($grOne);
+        if (empty($grTwo))
+        {
+            $grId = $this->createNewGroup2($user_id);
+//            misc::trace($grId);
+            print $grId;
+            exit(0);
+            return ;
+        }
+
+        foreach ($grTwo as &$item) {
+            $item = (array)$item;
+        }
+        $grId = $grTwo[0];
+
+        $where = [
+            'm_gr_id'   => $grId,
+//            'm_user_id' => $_SESSION['userId'],
+            'm_del'     => 0,
+        ];
+
+        $records = (new DB())->table('messages_2')
+            ->leftJoin('users','messages_2.m_owner_id','=','users.id')
+            ->select('m_id, m_gr_id, m_view, m_text, user_name, id as user_id, m_created_at')
+            ->where($where)
+            ->sortBy('m_created_at', 'desc')
+            ->get();
+        print json_encode(['status'=>1,'msg'=>'success','record'=>$records]);
+        return ;
 
     }
 
@@ -262,11 +297,16 @@ class MessengerController extends  Controller
     }
 
     public function createNewMessage(){
+//        $request = new Request();
+//        misc::trace($request->all());
+
         header('content-type:application/json');
         $userIdOwner = $_SESSION['userId'];
         $grId = intval($this->request->get('gr_id'));
 //        $text = misc::strings_clear($this->request->get('text'));
-        $text = $this->request->get('text');
+        $text = addslashes($this->request->get('text'));
+
+
 
         if (!empty($group = (array)(new DB())->table('message_group')->where(['gr_gr_id'=>$grId,'gr_user_id'=>$userIdOwner])->get())) {
 

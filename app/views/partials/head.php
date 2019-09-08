@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../../../public/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
         <script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>
-
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 
 		<script type="text/javascript" src="../../../public/js/my.js"></script>
         <script type="text/javascript" src="../../../public/js/checkNewMassege.js"></script>
@@ -40,8 +40,8 @@
 	<header>
 		<div class="flex-top">
 			<div class="avatar">
-				<?php if ($_SESSION['userId']): ?>
-				<img class="avat" userId="<?php echo $_SESSION['userId'] ?>" src="../../../public/img/avatar/<?php echo $avatar ?>" alt="">
+				<?php if ($_SESSION['userId'] && file_exists("/public/img/avatar/$avatar")): ?>
+				    <img class="avat" userId="<?php echo $_SESSION['userId'] ?>" src="/public/img/avatar/<?php echo $avatar ?>" alt="">
 				<?php endif; ?>
             </div>
 			<?php if (isset($_SESSION['userId'])): ?>

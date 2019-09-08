@@ -22,6 +22,40 @@ $(document).ready(function(){	//при загрузке страницы:
 
         console.log(response);
 
+        var userId = $("#userId")[0].defaultValue;
+
+        // console.log(userId);
+        //
+        // if (e.path.length === 7) {
+        //     var idGr = e.path[0].id;
+        //     isNowGroup = idGr;
+        //     // console.log(isNowGroup);
+            response = qqqAjax('messenger/getListMessages2?user_id=' + userId, 2);
+
+            if (response['status'] == 1) {
+                var messages = document.getElementById('ma');
+                var i = 0;
+                messages.innerHTML = "";
+                while (response['record'][i]) {
+                    // console.log(response['record'][i]);
+                    var div = document.createElement('div');
+                    div.setAttribute('class', 'item-message');
+                    // div.innerHTML = " <p><strong>" + response['record'][i]['user_name']
+                    //     + "</strong> " + response['record'][i]['m_created_at'] + "</p>\n" +
+                    //     "                        <span>" + response['record'][i]['m_text'] + "</span>"
+                    // messages.append(div)
+                    div.innerHTML = " <p><strong>" + response['record'][i]['user_name']
+                        + "</strong> " + response['record'][i]['m_created_at'] + "</p>" +
+                        "<span style='white-space: nowrap;overflow: hidden;overflow-wrap: break-spaces;'>" +
+                        response['record'][i]['m_text'] + "</span>"
+                    messages.append(div)
+                    i++;
+                }
+            }
+        // }
+
+
+
     });
 
 
@@ -67,6 +101,7 @@ function qqqAjax(url, method, data) {
 document.getElementById('submit-massage').addEventListener('click', function (e) {
     // alert("fdfd");
 
+
     var idGr;
     var idUser =  document.getElementById('open').getAttribute('data-id');
 
@@ -80,6 +115,8 @@ document.getElementById('submit-massage').addEventListener('click', function (e)
                 return ;
             isNowGroup = e;
 
+            // text = encodeURI(text);
+
             var data = {
                 "gr_id":isNowGroup,
                 'text':text
@@ -88,32 +125,54 @@ document.getElementById('submit-massage').addEventListener('click', function (e)
             var response = qqqAjax('messenger/createNewMessage',1,data);
 
             if (response['status'] == 1){
-                var listMessages = qqqAjax('messenger/getListMessages?gr_id='+isNowGroup,2);
-//         if (listMessages['status'] == 1){
-//             var messages = document.getElementById('messages');
-//             var i = 0;
-//             messages.innerHTML = "";
-// //             while (listMessages['record'][i]){
-// //                 // console.log(response['record'][i]);
-// //                 var li = document.createElement('li');
-// // //                             li.className = "massage";
-// // //                             li.innerHTML = text;
-// // //                             mass.appendChild(li);
-// // //                                  document.getElementById("shoutbox-comment").value = "";
-// //                 var div = document.createElement('div');
-// //                 div.setAttribute('class', 'item-message');
-// //                 div.innerHTML = " <p><strong>"+listMessages['record'][i]['user_name']
-// //                     +"</strong> "+listMessages['record'][i]['m_created_at']+"</p>\n" +
-// //                     "                        <span>"+listMessages['record'][i]['m_text']+"</span>"
-// //                 messages.append(div)
-// //                 i++;
-// //             }
-//             document.getElementById('text').value = "";
-//
-//         }
+                var idUser =  document.getElementById('open').getAttribute('data-id');
+
+                response = $.ajax({
+                    url:"messenger/isGroup",
+                    data:{user_id:idUser},
+                    contentType:"application/json"
+                });
+
+                console.log(response);
+
+                var userId = $("#userId")[0].defaultValue;
+
+                // console.log(userId);
+                //
+                // if (e.path.length === 7) {
+                //     var idGr = e.path[0].id;
+                //     isNowGroup = idGr;
+                //     // console.log(isNowGroup);
+                response = qqqAjax('messenger/getListMessages2?user_id=' + userId, 2);
+
+                if (response['status'] == 1) {
+                    var messages = document.getElementById('ma');
+                    var i = 0;
+                    messages.innerHTML = "";
+                    while (response['record'][i]) {
+                        // console.log(response['record'][i]);
+                        var div = document.createElement('div');
+                        div.setAttribute('class', 'item-message');
+                        // div.innerHTML = " <p><strong>" + response['record'][i]['user_name']
+                        //     + "</strong> " + response['record'][i]['m_created_at'] + "</p>\n" +
+                        //     "                        <span>" + response['record'][i]['m_text'] + "</span>"
+                        // messages.append(div)
+                        div.innerHTML = " <p><strong>" + response['record'][i]['user_name']
+                            + "</strong> " + response['record'][i]['m_created_at'] + "</p>" +
+                            "<span style='white-space: nowrap;overflow: hidden;overflow-wrap: break-spaces;'>" +
+                            response['record'][i]['m_text'] + "</span>"
+                        messages.append(div)
+                        i++;
+                    }
+
+                    document.getElementById('shoutbox-comment').value = '';
+                }
             }
         }
     });
+
+
+
 
     // idGr = response;
 
@@ -165,8 +224,35 @@ document.getElementById('submit-massage').addEventListener('click', function (e)
 })
 
 
+$(".sm").click(function (e) {
+    console.log(e);
+    var text = document.getElementById('shoutbox-comment').value;
+    var text2 = document.getElementById('shoutbox-comment2').value;
+    // console.log($('#text').focus())
+    document.getElementById('shoutbox-comment').value = text + e.currentTarget.valueOf().text;
+    document.getElementById('shoutbox-comment2').value = text2 + '&#' + e.currentTarget.valueOf().getAttribute('data-code');
+    console.log(e.currentTarget.valueOf().getAttribute('data-code'))
+});
 
+onkeydown = function () {
+    if ($('#shoutbox-comment').is(':focus')) {
+        // var text = document.getElementById('text').value;
+        onkeyup = function (ev) {
+            console.log(ev);
 
+            if (ev.keyCode > 46) {
+                var text2 = document.getElementById('shoutbox-comment2').value;
+                //
+                // document.getElementById('text').value = text+e.currentTarget.valueOf().text;
+                document.getElementById('shoutbox-comment2').value = text2 + ev.key;
+            }
+            if (ev.keyCode === 13) {
+                send(e);
+            }
+        }
+
+    }
+}
 //
 //
 //

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controllers\Misc\Misc;
 use App\Models\Auth;
 use App\Models\User;
 
@@ -70,9 +71,9 @@ class AuthController {
 
 	public function signupSocailNetwork(){
 
-        $client_id = '624678039195-hli1h1c4bu2kgfoktu8qq6s1oo2da4i7.apps.googleusercontent.com'; // Client ID
-        $client_secret = 'pekbuetluogaQocBbqNibVOX'; // Client secret
-        $redirect_uri = 'https://lite.camagru.website/signupSocialNetwork'; // Redirect URI
+        $client_id = '6166045e4efb40469480d510832814d2'; // Client ID
+        $client_secret = '798d32386b464a56a8878344bb8c06c9'; // Client secret
+        $redirect_uri = 'http://localhost/signupSocialNetwork'; // Redirect URI
 
 
         if (isset($_GET['code'])) {
@@ -85,7 +86,7 @@ class AuthController {
                 'grant_type'    => 'authorization_code',
                 'code'          => $_GET['code']
             );
-            $url = 'https://accounts.google.com/o/oauth2/token';
+            $url = 'https://api.instagram.com/oauth/access_token';
 
             $curl = curl_init();
             curl_setopt($curl, CURLOPT_URL, $url);
@@ -96,23 +97,14 @@ class AuthController {
             $result = curl_exec($curl);
             curl_close($curl);
 
-            $tokenInfo = json_decode($result, true);
+            $userInfo = json_decode($result, true);
 
-            if (isset($tokenInfo['access_token'])) {
-                $params['access_token'] = $tokenInfo['access_token'];
 
-                $userInfo = json_decode(file_get_contents('https://www.googleapis.com/oauth2/v1/userinfo' . '?' . urldecode(http_build_query($params))), true);
-                if (isset($userInfo['id'])) {
-                    $userInfo = $userInfo;
-                    $result = true;
-                }
-            }
-
-            $email              = $userInfo['email'];
-            $user_pic           = $userInfo['picture'];
-            $user_first_name    = $userInfo['given_name'];
-            $user_last_name     = $userInfo['family_name'];
-            $network_id         = $userInfo['id'];
+//            Misc::trace2(1,$userInfo);
+            $email              = "matcha@mail.com";
+            $user_pic           = $userInfo['user']['profile_picture'];
+            $user_first_name    = $userInfo['user']['full_name'];
+            $network_id         = $userInfo['user']['id'];
 
 
             $sn = Auth::getSocialNetwork("sn_network_id", $network_id);
@@ -131,7 +123,7 @@ class AuthController {
 //                print_r($sn);
 //                exit(0);
             }
-
+//            Misc::trace("ddd");
 //            exit(0);
             if (!empty($email))
             {
@@ -146,14 +138,14 @@ class AuthController {
                     ];
 
                     Auth::createSocialNetwork($createSocial);
-                    
+//                    Misc::trace("ddd");
                     Auth::login($user);
                     redirect('personalArea');
                     exit(0);
                 }
             }
-
-            $hash_email = User::registerSocialNetwork($user_first_name." ".$user_last_name, $email, hash("sha256",uniqid()));
+//            Misc::trace2(1,$userInfo);
+            $hash_email = User::registerSocialNetwork($user_first_name, $email, hash("sha256",uniqid()));
 
             $user = User::getUserByHashEmail($hash_email);
 
@@ -166,6 +158,8 @@ class AuthController {
             Auth::createSocialNetwork($createSocial);
 
             Auth::login($user);
+
+//            header("location:http://localhost/personalArea");
             redirect('personalArea');
             exit(0);
             

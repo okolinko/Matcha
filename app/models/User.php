@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Controllers\Misc\Misc;
 use App\Core\App;
 
 class User {
@@ -42,8 +43,9 @@ class User {
 
 	}
 
-    public  function registerSocialNetwork($name, $email, $password){
-
+    public  function registerSocialNetwork($name = "", $email = "", $password = ""){
+//Misc::trace2(1,$name,  $email, $password);
+//exit(0);
         $admin = 0;
         $act_email = 1;
         $notification = 0;
