@@ -3,8 +3,8 @@
 return [
 	'database' => [
 		'name' => 'matcha',
-		'username' => 'akolinko',
-		'password' => 'kgdskk',
+		'username' => 'sania',
+		'password' => 'Im12011992',
 		'connection' => 'mysql:host=localhost',
 		'options' => [
 			PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

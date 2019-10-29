@@ -58,7 +58,7 @@ class User {
 	 * @param string $password
 	 * @return User | null
 	 */
-	public static function getUserByEmail(string $email) : ?User
+	public static function getUserByEmail(string $email)
 	{
 		$user = new self();
 
@@ -80,7 +80,7 @@ class User {
 	 *  @param string $name
 	 *  @return User | null
 	 */
-	public static function userNameExists(string $name) : ?User
+	public static function userNameExists(string $name)
 	{
 
 		$user = new self();
@@ -396,6 +396,7 @@ class User {
 		$sql = new self();
 
 		$response = $sql->db->selectOne('users', 'id', $userId);
+
 		if(!$response) {
 			return false;
 		}

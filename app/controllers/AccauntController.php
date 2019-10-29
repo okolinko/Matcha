@@ -66,6 +66,7 @@ class AccountController
 			redirect('login');
 		}
 
+
 		$userId	= intval($_GET['id']);
 
 		$questionary = User::loadUserInfo($userId, "questionary", "id_user");

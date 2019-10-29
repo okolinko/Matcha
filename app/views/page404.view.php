@@ -9,7 +9,7 @@
 
 </head>
 <body>
-<div class="reg_but"><p><a href="/" ><img id="button" src="../../../public/img/home.png" alt="На главную"></a></p></div>
-<div> <img style="padding-left: 21%; padding-top: 15%; width: 60%" src="../../../public/img/404.png"> </div>
+<div class="reg_but"><p><a href="/" ><img id="button" src="//matcha.loc/public/img/home.png" alt="На главную"></a></p></div>
+<div> <img style="padding-left: 21%; padding-top: 15%; width: 60%" src="//matcha.loc/public/img/404.png"> </div>
 </body>
 </html>

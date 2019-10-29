@@ -35,7 +35,7 @@ var test = [];
                         jQuery('<img/>', {
                             class: 'open',
                             id: 'newMassege',
-                            src: '../../../public/img/Chat.png',
+                            src: '//matcha.loc/public/img/Chat.png',
                             alt: chat[i]['chat_id'],
                             title: 'Открыть чат',
                             chatid: chat[i]['chat_id']

@@ -16,7 +16,7 @@ if ($key == false  or  $key2 == false){
 ;?>
 <div class="container">
 <!--    <a id="open" class="open">Открыть чат</a>-->
-    <img id="open" class="open" src="../../../public/img/Chat.png" title="Открыть чат">
+    <img id="open" class="open" src="//matcha.loc/public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
 <div class="popup-window">
@@ -33,7 +33,7 @@ if ($key == false  or  $key2 == false){
             <li> <input id="submit-massage" type="submit" value="Отправить!"></li>
         </div>
         <div class="smiles" style="width: 350px">
-            <?php $i = 0; $smile = 128512;  while($i <= 59){
+            <?php $i = 0; $smile = 128512;  while($i <= 79){
                 echo '<a class="sm">&#'.$smile.'</a>';
                 $smile++;
                 $i++;

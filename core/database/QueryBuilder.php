@@ -70,6 +70,7 @@ class QueryBuilder
 	{
 		$statement = $this->pdo->prepare("select * from " . '`' . "{$table}".'` '. "where ".'`'."{$param}". '`=\'' . "{$value}'");
 		$statement->execute();
+
 		return $statement->fetchObject();
 	}
 

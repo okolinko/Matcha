@@ -32,7 +32,7 @@ class MassegeController {
 //			$id = json_decode($_POST['id']);
 				$id = intval(htmlentities($id));
 			}catch(\Error $error){
-				dd($error);
+				echo ($error);
 			}
 
 			if (intval($_SESSION['userId']) < intval($id)) {

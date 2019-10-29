@@ -1,6 +1,6 @@
 <?php require('partials/head.php'); ?>
 <?php require('partials/downloadFoto.php'); ?>
-    <script type="text/javascript" src="../../../public/js/navigation.js"></script>
+    <script type="text/javascript" src="//matcha.loc/public/js/navigation.js"></script>
     <div id="error">
 		<?php if (isset($errors) && !empty($errors)): ?>
             <ul>
@@ -137,5 +137,5 @@
 			<?php endif; ?>
             </div></center>
     </section>
-    <script type="text/javascript" src="../../../public/js/deleteImg.js"></script>
+    <script type="text/javascript" src="//matcha.loc/public/js/deleteImg.js"></script>
 <?php //require('partials/footer.php'); ?>

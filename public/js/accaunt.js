@@ -96,8 +96,8 @@ window.onload=function() {
         var text = like.getAttribute("src");
 
 
-        var inactive_like = '../../../public/img/like.png';
-        var active_like = '../../../public/img/like_activ.png';
+        var inactive_like = '//matcha.loc/public/img/like.png';
+        var active_like = '//matcha.loc/public/img/like_activ.png';
 
         var userId = document.getElementById("img").getAttribute("userId");
 

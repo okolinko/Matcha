@@ -28,6 +28,7 @@ window.onload = function() {
     });
 
     $('.btn1').click(function(e){
+        console.log(navigator.geolocation);
         function position(pos){
             var latitude = pos.coords.latitude;
             var longitude = pos.coords.longitude;
@@ -50,8 +51,8 @@ window.onload = function() {
 
             navigator.geolocation.getCurrentPosition(position, function(e){
 
-                    // alert('Error.code: '+e.code+' Error.message: '+e.message);
-                    alert("Дурацкая мозила!");
+                    alert('Error.code: '+e.code+' Error.message: '+e.message);
+                    // alert("Дурацкая мозила!");
                 }
             );
 
