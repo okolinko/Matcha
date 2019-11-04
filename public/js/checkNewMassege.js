@@ -32,19 +32,22 @@ var test = [];
                             continue ;
                         }
                         // alert("Mesage of chat_id = " + chat[i]['chat_id']);
-                        jQuery('<a>', {
-                            href: userId
-                        }).appendTo('.test555');
-                        jQuery('<img/>', {
-                            class: 'open',
-                            id: 'newMassege',
-                            src: '//matcha.loc/public/img/Chat.png',
-                            alt: chat[i]['chat_id'],
-                            title: 'Открыть чат',
-                            chatid: chat[i]['chat_id']
-
-
-                        }).appendTo('.test555');
+                        var htm = "href";
+                        var code = '<a href="//matcha.loc/accauntUser?id='+userId+'"><img id="newMassege" src="//matcha.loc/public/img/Chat.png" /></a>';
+                        $('.test555').append(code);
+                        // jQuery('<a>', {
+                        //     href: userId
+                        // }).appendTo('.test555');
+                        // jQuery('<img/>', {
+                        //     class: 'open',
+                        //     id: 'newMassege',
+                        //     src: '//matcha.loc/public/img/Chat.png',
+                        //     alt: chat[i]['chat_id'],
+                        //     title: 'Открыть чат',
+                        //     chatid: chat[i]['chat_id']
+                        //
+                        //
+                        // }).appendTo('.test555');
                         test[i] = chat[i]['count'];
                         i++;
                     }

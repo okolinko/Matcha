@@ -2,33 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/ban.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/AccauntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AccauntController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/DatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/DatingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Dating.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Dating.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/accaunt.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/accaunt.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/accauntUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/accauntUser.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/dating.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dating.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/iLiked.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/iLiked.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/likedUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/likedUser.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/chat2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/visitors.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visitors.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/database/QueryBuilder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/1/foto1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/1/foto1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/accaunt.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/accaunt.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/checkNewMassege.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkNewMassege.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/my.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/navigation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +161,7 @@
       <workItem from="1572517705769" duration="11869000" />
       <workItem from="1572535404587" duration="5796000" />
       <workItem from="1572623004249" duration="2054000" />
-      <workItem from="1572625996340" duration="23569000" />
+      <workItem from="1572625996340" duration="25304000" />
     </task>
     <servers />
   </component>
