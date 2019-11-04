@@ -216,6 +216,13 @@ class QueryBuilder
 		$statement = $this->pdo->prepare($sql);
 		$statement->execute(['id' => $id]);
 	}
+    public function deleteUniversal($table, $param)
+    {
+        $sql = "DELETE FROM {$table} WHERE {$param}";
+//        dd($sql);
+        $statement = $this->pdo->prepare($sql);
+        $statement->execute();
+    }
 
 	/**
 	 * Insert a record into a table.

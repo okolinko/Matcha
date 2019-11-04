@@ -2,78 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/ban.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/AccauntController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AccauntController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/DatingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/DatingController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Dating.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Dating.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/accaunt.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/accaunt.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/accauntUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/accauntUser.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/dating.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/dating.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/iLiked.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/iLiked.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/likedUser.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/likedUser.view.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/chat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/chat2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/chat2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/partials/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/head.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/author" beforeDir="false" afterPath="$PROJECT_DIR$/author" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/visitors.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/visitors.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/database/QueryBuilder.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/database/QueryBuilder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/cm.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/41.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/42.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/44.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/45.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/46.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/47.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/48.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/49.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/51.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/53.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/54.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/55.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/56.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/57.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/58.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/59.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/img/smile/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/1/foto1_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/img/1/foto1_5.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/accaunt.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/accaunt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/checkNewMassege.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkNewMassege.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/my.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/my.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/navigation.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -113,12 +67,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="866" />
-    <option name="y" value="23" />
-    <option name="width" value="1566" />
-    <option name="height" value="1337" />
-  </component>
+  <component name="ProjectId" id="1Sxujek6dSWoo0S5wnuY4pqWs6r" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -234,11 +183,28 @@
       <workItem from="1563610855395" duration="6060000" />
       <workItem from="1565857417859" duration="5118000" />
       <workItem from="1566116346330" duration="2618000" />
+      <workItem from="1572517705769" duration="11869000" />
+      <workItem from="1572535404587" duration="5796000" />
+      <workItem from="1572623004249" duration="2054000" />
+      <workItem from="1572625996340" duration="23569000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="masterDetails">
     <states>

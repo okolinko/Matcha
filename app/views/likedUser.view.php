@@ -13,3 +13,4 @@
 		<?php endforeach; ?>
 	<?php endif; ?>
 </div>
+<?php //require('partials/footer.php'); ?>

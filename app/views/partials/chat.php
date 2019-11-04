@@ -26,7 +26,6 @@ if ($key == false  or  $key2 == false){
         <ul id="ma" class="shoutbox-content">
         </ul>
         <div class="shoutbox-form">
-<!--            <div contenteditable="true" style="background: dimgrey; height: 250px" tabindex="5">Hello</div>-->
             <li><textarea class="none" id="userId" name="id"><?php echo $userId?></textarea></li>
             <li><textarea class="none" id="sesionId" name="sesionId"><?php echo $_SESSION['userId']?></textarea></li>
             <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
@@ -40,10 +39,10 @@ if ($key == false  or  $key2 == false){
 
             };?>
         </div>
-        <div>
-            <a id="link">Случайное сообщени для знакомства с девушкой</a>
-            </BR>
-            <a id="link2">Случайное сообщени для знакомства с парнем</a>
+        <div class="ramdom_massage">
+            <a class="ramdom_female" id="link">Случайное сообщени для знакомства с девушкой</a>
+            <BR>
+            <a class="ramdom_male" id="link2">Случайное сообщени для знакомства с парнем</a>
         </div>
     </div>
 </div>

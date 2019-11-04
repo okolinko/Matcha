@@ -39,13 +39,13 @@
                 </div>
                 <br>
                     <div class="search_column_2">
-                        <input type="data" placeholder="Полный возраст" name="age" value="" />
+                        <input class="wid5s" type="data" placeholder="Полный возраст" name="age" value="" />
                     </div>
                     <div class="search_column_2">
-                        <input type="text" placeholder="Ваше имя" name="name" value="" />
+                        <input class="wid5s" type="text" placeholder="Ваше имя" name="name" value="" />
                     </div>
                         <div class="search_column_2">
-                            <input type="text" placeholder="Место проживания" name="city" value="" />
+                            <input class="wid5s" type="text" placeholder="Место проживания" name="city" value="" />
                         </div>
                             <div id="addComment">
                                 <center><textarea type="text" name="info" cols="22" rows="3"   id="comment" placeholder="О себе  # " class="textbox"></textarea></center>
@@ -81,22 +81,22 @@
         </div>
         <div class="change">
             <div class="passw">
-                <form action="/personalArea/edit/" method="post">
+                <form action="//matcha.loc/personalArea/edit/" method="post">
                     <input class="edit_password" type="submit" value="Изменить пароль" />
                 </form>
             </div>
             <div class="email">
-                <form action="/personalArea/edit/email" method="post">
+                <form action="//matcha.loc/personalArea/edit/email" method="post">
                     <input class="edit_password" type="submit" value="Изменить email" />
                 </form>
             </div>
             <div class="notif">
-                <form action="personalArea/notifications" method="post">
+                <form action="//matcha.loc/personalArea/notifications" method="post">
                     <input class="<?php if(checkStatus($_SESSION['userId']) == 1) {echo "sendEmailActiv";} ?>" type="submit" value="Уведомления на email" />
                 </form>
             </div>
             <div class="dell">
-                <form action="/personalArea/delete/" method="post">
+                <form action="//matcha.loc/personalArea/delete/" method="post">
                     <input class="dell_acc" type="submit" value="Удалить аккаунт!" />
                 </form>
             </div>
@@ -106,7 +106,7 @@
 <!--                </form>-->
             </div>
             <div class="geo">
-                <input class="cord"  type="text" placeholder="Изменить кординаты в ручную" style="width: 327px" />
+                <input class="cord"  type="text" placeholder="Изменить кординаты в ручную" />
             </div>
 
         </div>
@@ -115,7 +115,7 @@
         <iframe id="inlineFrameExample"
                 title="Inline Frame Example"
                 width="100%"
-                height="230"  src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
+                height="230"  src="https://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=12&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
 
     <section class="wrap">

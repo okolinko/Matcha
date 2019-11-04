@@ -33,11 +33,15 @@ $router->get('accauntUser', 'AccountController@userAccaunt');
  $router->get('iliked', 'UserController@iliked');
  $router->get('trackvisits', 'DatingController@trackvisits');
  $router->get('visitors', 'UserController@visitors');
+
+ $router->post('userbanadd', 'UserController@userBanAdd');
+ $router->post('userbandell', 'UserController@userBanDell');
+
 $router->post('login', 'AuthController@login');
 $router->post('login/restore', 'AuthController@restoreLogin');
 
 $router->post('register', 'AuthController@register');
-
+ $router->post('personalArea/delete', 'UserController@deleteAccaunt');
 $router->post('personalArea', 'AccountController@personalArea');
 $router->post('personalArea/edit', 'AuthController@editAccaunt');
 $router->post('personalArea/edit/email', 'AuthController@editEmail');
@@ -48,6 +52,7 @@ $router->post('profile', 'UserController@userProfile');
 $router->post('geolocation', 'UserController@usergeolocation');
 $router->post('searchUser', 'DatingController@searchUser');
 $router->post('accauntUser', 'AccountController@userAccaunt');
+
 $router->post('acauntLike/add', 'AccountController@acauntLikeAdd');
  $router->post('acauntLike/del', 'AccountController@acauntLikeDel');
  $router->post('sendMassage', 'MassegeController@sendMassage');

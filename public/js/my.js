@@ -1,14 +1,14 @@
-window.onload = function () {
+$(document).ready(function(){
 	var menuStyle = getComputedStyle(menu);
 	openMenu.onclick = function () {
 		if (menuStyle.display == "none"){
 			menu.classList.add("active");
-			this.innerHTML = "Закрыть меню";
+			this.innerHTML = "Close";
 		}
 		else {
 			menu.classList.remove("active");
-			this.innerHTML = "Открыть меню"
+			this.innerHTML = "Open"
 		}
 	}
 
-}
+});

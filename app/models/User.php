@@ -376,6 +376,7 @@ class User {
 			$userAcaunt[$i]['age'] = $response[$i]->age;
 			$userAcaunt[$i]['city'] = $response[$i]->city;
 			$userAcaunt[$i]['info'] = $response[$i]->info;
+			$userAcaunt[$i]['ban'] = User::statusBan($response[$i]->id_user);
 			$i++;
 		}
 		return $userAcaunt;
@@ -574,6 +575,17 @@ class User {
 		}
 		return false;
 	}
+
+	public function statusBan($whoWasBanned){
+
+        $sql = new self();
+        $table = "userban";
+        $whoBanned = $_SESSION['userId'];
+        $response = $sql->db->selectAllParam($table, "*", "who_banned = ".$whoBanned." and who_was_banned = ".$whoWasBanned);
+	    if(empty($response))
+            return 0;
+	    return 1;
+    }
 
 }
 

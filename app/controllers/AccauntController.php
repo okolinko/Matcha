@@ -60,6 +60,7 @@ class AccountController
 		redirect('personalArea');
 	}
 
+
 	public function userAccaunt() {
 		if (!$_SESSION['userId'])
 		{

@@ -18,19 +18,22 @@ class DatingController
 
 	public function dating()
 	{
-
-
-		$acaunt = array();
+        if (!$_SESSION['userId'])
+        {
+            return redirect('login');
+        }
+        $acaunt = array();
 		$acaunt = User::loadUserForm();
 		$acauntarr = Dating::searchIm($acaunt, $_SESSION['userId']);
+
 		if ($_GET['page'] == null){
 			$page = 1;
 		}
 		else{
 			$page =  $_GET['page'];
 		}
-		$test = array_chunk($acauntarr, 3);
-		$acaunt = $test[$page - 1];
+		$acauntList = array_chunk($acauntarr, 3);
+		$acaunt = $acauntList[$page - 1];
 		$len = count($acauntarr);
 
 		$pagination = new Pagination('datingUser', $len);
@@ -59,13 +62,13 @@ class DatingController
 			$glory = $_POST['glory'];
 			$interests = $_POST['interesting'];
 
-//			file_put_contents("/Users/akolinko/lol", $interests, FILE_APPEND);
 			if (empty($acaunt)) {
 				$this->errors[] = 'Нету зарегистрированых пользователей';
 
 				return view('dating', ['errors' => $this->errors]);
 			}
-			$dating_age =  Dating::searchAge($age, $acaunt);
+			$acauntBan = Dating::searchBan($acaunt);
+			$dating_age =  Dating::searchAge($age, $acauntBan);
 			if (empty($dating_age)) {
 				$this->errors[] = 'Пользователей в данной возрастной категории не найдено';
 
@@ -134,6 +137,10 @@ class DatingController
 	}
 
 	public function trackvisits(){
+        if (!$_SESSION['userId'])
+        {
+            return redirect('login');
+        }
 		$id = json_decode($_POST['id']);
 
 		$idVisit = intval(htmlentities($id));

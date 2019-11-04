@@ -31,6 +31,20 @@ class Dating
 		return $acaunt;
 	}
 
+	public  function searchBan($acaunt){
+
+        foreach($acaunt as $key => &$res) {
+            if(strval($res['ban']) == 0) {
+                ;
+            }
+            else {
+                unset($acaunt[$key]);
+            }
+        }
+//        dd($acaunt);
+        return $acaunt;
+    }
+
 	public static function searchGender($gender, $acaunt) {
 		if($gender == "Парня") {
 			$gender = "male";
@@ -280,5 +294,31 @@ class Dating
 		}
 		return $res;
 	}
+
+	public static function userBanAdd($whoWasBanned){
+	    $sql = new self();
+	    $table = "userban";
+        $whoBanned = $_SESSION['userId'];
+        $test = ("who_banned = ".$whoBanned." and who_was_banned = ".$whoWasBanned);
+	    $response = $sql->db->selectAllParam($table, "*", "who_banned = ".$whoBanned." and who_was_banned = ".$whoWasBanned);
+	    if (empty($response)){
+
+            $sql->db->insert('userban', [
+                'who_banned' => $whoBanned,
+                'who_was_banned' => $whoWasBanned,
+            ]);
+        }
+    }
+
+    public static function userBanDellete($whoWasBanned){
+        $sql = new self();
+        $table = "userban";
+        $whoBanned = $_SESSION['userId'];
+        $response = $sql->db->selectAllParam($table, "*", "who_banned = ".$whoBanned." and who_was_banned = ".$whoWasBanned);
+        if ($response){
+        $param = "who_banned = ".$whoBanned." and who_was_banned = ".$whoWasBanned;
+            $sql->db->deleteUniversal($table, $param);
+        }
+    }
 
 }

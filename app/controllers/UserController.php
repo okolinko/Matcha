@@ -34,7 +34,6 @@ class UserController{
 		$userName = $_SESSION['userName'];
 
 		$user = User::userNameExists($userName);
-
 		if ($user->admin != 1) {
 			if (User::userDelete($user))
 
@@ -182,5 +181,15 @@ class UserController{
 
 		require_once('app/views/visitors.view.php');
 	}
+
+	public function userBanAdd(){
+        $id = intval($_POST["idUser"]);
+        Dating::userBanAdd($id);
+    }
+
+    public function userBanDell(){
+        $id = intval($_POST["idUser"]);
+        Dating::userBanDellete($id);
+    }
 
 }

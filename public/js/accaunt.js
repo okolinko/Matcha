@@ -22,11 +22,13 @@ window.onload=function() {
         document.getElementById("min5").addEventListener("click", test5);
     }
 
+    if (document.getElementById("user_like")){
+        document.getElementById("user_like").addEventListener("click", like);
+    }
 
-    document.getElementById("user_like").addEventListener("click", like);
-
-    test1();
-
+    if (document.getElementById("min1")){
+        test1();
+    }
 
     function test1() {
 

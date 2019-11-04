@@ -12,13 +12,16 @@
 		<?php endif; ?>
 	</div>
 	<?php require('partials/chat.php'); ?>
-    <div class="info"><span> О бо мне: <?php echo '<div class="info2">'.$questionary->info.'</div>' ?></span></div>
+    <div class="info"><span class="help-info"> О бо мне: <?php echo '<div class="info2">'.$questionary->info.'</div>' ?></span></div>
     <div class="map">
-        <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=0&amp;ie=UTF8&amp;t=m&amp;z=14&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
+        <iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q=<?php echo $location[0].",".$location[1]?>&amp;num=1&amp;vpsrc=5&amp;ie=UTF8&amp;t=m&amp;z=12&amp;ll=<?php echo $location[0].",".$location[1]?>&amp;output=embed"></iframe>
     </div>
-    <?php require('../views/partials/chat2.php'); ?>
+
+<!--    --><?php //require('../views/partials/chat2.php'); ?>
 </div>
 
 
 <script type="text/javascript" src="//matcha.loc/public/js/accaunt.js"></script>
-<?php require('partials/footer.php'); ?>
+<div  class="help-footer">
+<?php //require('partials/footer.php'); ?>
+</div>

@@ -15,7 +15,7 @@
 
 
 		<script type="text/javascript" src="//matcha.loc/public/js/my.js"></script>
-<!--        <script type="text/javascript" src="//matcha.loc/public/js/checkNewMassege.js"></script>-->
+        <script type="text/javascript" src="//matcha.loc/public/js/checkNewMassege.js"></script>
         <script type="text/javascript" src="//matcha.loc/public/js/chat.js"></script>
         <script type="text/javascript" src="//matcha.loc/public/js/ramdomMassege.js"></script>
         <script type="text/javascript" src="//matcha.loc/public/js/accaunt.js"></script>
@@ -61,10 +61,11 @@
 				<?php endif; ?>
 			</ul>
 		</nav>
+
         <nav class="not">
             <ul class="not">
                 <li class="test555">
-<!--                    <img class="open" id="newMassege" src="//matcha.loc/public/img/Chat.png" alt="12" title="Открыть чат" chatid="12">-->
+<!--                    <a href="/"><img class="open" id="newMassege" src="//matcha.loc/public/img/Chat.png" alt="12" title="Открыть чат" chatid="12"></a>-->
                 </li>
             </ul>
         </nav>

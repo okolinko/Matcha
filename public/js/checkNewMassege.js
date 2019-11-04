@@ -31,7 +31,10 @@ var test = [];
                             i++;
                             continue ;
                         }
-                        alert("Mesage of chat_id = " + chat[i]['chat_id']);
+                        // alert("Mesage of chat_id = " + chat[i]['chat_id']);
+                        jQuery('<a>', {
+                            href: userId
+                        }).appendTo('.test555');
                         jQuery('<img/>', {
                             class: 'open',
                             id: 'newMassege',

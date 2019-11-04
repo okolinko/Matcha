@@ -1,6 +1,6 @@
 <?php $userId = 2;?>
 <div class="container">
-	<!--    <a id="open" class="open">Открыть чат</a>-->
+	    <a id="open" class="open">Открыть чат</a>
 	<img id="open" class="open" src="//matcha.loc/public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
