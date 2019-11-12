@@ -29,10 +29,12 @@ $.fn.popup = function() { 	//функция для открытия всплыв
 $(document).ready(function () {
     var el = document.getElementById('submit-massage');
     $('#shoutbox-comment').click(function(t){
-        $(this).keypress(function (ev) {
-            var keycode = (ev.keyCode ? ev.keyCode : ev.which);
+        // $(this).keypress(function (ev) {
+        $(this).on('keyup', function (ev) {
+            var keycode = ev.keyCode;
             if (keycode == '13') {
-                var text = document.getElementById("shoutbox-comment").value;
+                var text = $('#shoutbox-comment').val();
+
                 if (text.length > 0 && text.length < 100) {
                     var userId = document.getElementById("userId").value;
                     var mass = document.getElementById("ma");
@@ -51,10 +53,15 @@ $(document).ready(function () {
                         }
                     }
                 }
-                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                if (xhr.send('massage=' + JSON.stringify(text) + '&id=' + userId)) {
-                    alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
-                }
+                    var data = {
+                        'message':text,
+                        'id':userId
+                    };
+                    data = JSON.stringify(data);
+                    xhr.setRequestHeader('Content-type', 'application/json');
+                    if (xhr.send(data)) {
+                        alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
+                    }
             }
                 else{
                     alert("Сообщение не может быть пустым, или быть длинее 240 символов")
@@ -91,10 +98,6 @@ $(document).ready(function () {
                 };
                 data = JSON.stringify(data);
                 xhr.setRequestHeader('Content-type', 'application/json');
-                // xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                // if (xhr.send('massage=' + JSON.stringify(text) + '&id=' + userId)) {
-                //     alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
-                // }
             if (xhr.send(data)) {
                     alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
                 }

@@ -1064,7 +1064,6 @@ ul li a:hover::before {
 	}
 }
 
-
 @media (max-width: 645px) {
 	nav ul li a {
 		background: gray;

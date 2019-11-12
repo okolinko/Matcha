@@ -111,6 +111,12 @@ input:focus {
 	text-shadow:#000 0px 1px 1px;
 }
 
+.errorMes{
+	color: #d94f5c;
+}
+.none{
+	/*display: none;*/
+}
 @media (max-width: 645px) {
 	#button{
 		width: 10%;

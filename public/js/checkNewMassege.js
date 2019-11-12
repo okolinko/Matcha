@@ -33,11 +33,8 @@ var test = [];
                         }
                         // alert("Mesage of chat_id = " + chat[i]['chat_id']);
                         var htm = "href";
-                        var code = '<a href="//matcha.loc/accauntUser?id='+userId+'"><img id="newMassege" src="//matcha.loc/public/img/Chat.png" /></a>';
+                        var code = '<a href="//matcha.loc/accauntUser?id='+userId+'"><img id="newMassege" class="open" title="Открыть чат" src="//matcha.loc/public/img/Chat.png" /></a>';
                         $('.test555').append(code);
-                        // jQuery('<a>', {
-                        //     href: userId
-                        // }).appendTo('.test555');
                         // jQuery('<img/>', {
                         //     class: 'open',
                         //     id: 'newMassege',

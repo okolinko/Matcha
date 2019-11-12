@@ -14,8 +14,8 @@ $(document).ready(function () {
                var id_user = (event.toElement.attributes.value.value);
                // alert(id_user);
                $.post("//matcha.loc/userbanadd", {
-                       idUser: id_user
-                },);
+                   idUser: id_user
+               },);
            }
        });
    }

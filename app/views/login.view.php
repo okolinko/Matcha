@@ -14,13 +14,13 @@
 	 <?php if (isset($errors) && !empty($errors)): ?>
 		 <ul>
 			 <?php foreach ($errors as $error): ?>
-				<?php echo "<script>alert(\"$error\");</script>"; ?>
+             <?php echo '<span class="errorMes">'.$error.'</span>';?>
 			 <?php endforeach; ?>
 		 </ul>
 	 <?php endif; ?>
  </div>
 	<form method="post">
-		<input type="email" name="email" placeholder="Email" required="required">
+        <input type="email" name="email" placeholder="Email" required="required" value="<?php echo $email?>">
 		<input type="password" name="password" placeholder="Пароль" required="required">
 		<input type="submit" name="submit" class="btn1" value="Войти" />
 	</form>

@@ -12,9 +12,6 @@ class MainController
 	 */
 	public function index()
 	{
-//	    $id  = 6;
-//	    Dating::userBanAdd($id);
-//	    Dating::userBanDellete($id);
 		return view('index');
 	}
 

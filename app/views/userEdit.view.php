@@ -13,7 +13,7 @@
 	<?php if (isset($errors) && !empty($errors)): ?>
 		<ul>
 			<?php foreach ($errors as $error): ?>
-				<?php echo "<script>alert(\"$error\");</script>"; ?>
+                <?php echo '<span class="errorMes">'.$error.'</span>';?>
 			<?php endforeach; ?>
 		</ul>
 	<?php endif; ?>

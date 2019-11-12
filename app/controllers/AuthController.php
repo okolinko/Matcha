@@ -23,43 +23,43 @@ class AuthController {
 			$email = $_POST['email'];
 			$password = $_POST['password'];
 			$password2 = $_POST['password2'];
-
+$nameUser = $name;
 			if (!$this->userInputValidate($email, $password)) {
 
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'email' => $email, 'nameUser' => $nameUser]);
 			}
 
 			if (!$this->userComparePassword($password, $password2)) {
 
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'email' => $email, 'nameUser' => $nameUser]);
 			}
 
 			if (!Auth::checkName($name)) {
 				$this->errors[] = 'Неправильное длина или формат имени';
 
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'email' => $email]);
 
 			}
 
 			if (!Auth::checkEmail($email)) {
 				$this->errors[] = 'Неправильный формат email';
 
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'nameUser' => $nameUser]);
 			}
 
 			if ($user = User::getUserByEmail($email)) {
 				$this->errors[] = 'Такой email уже используется';
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'nameUser' => $nameUser]);
 			}
 			if ($user = User::userNameExists($name)) {
 				$this->errors[] = 'Такое имя уже используется';
 
-				return view('register', ['errors' => $this->errors]);
+				return view('register', ['errors' => $this->errors, 'email' => $email]);
 			}
 
 
 			User::register($name, $email, $password);
-			echo "<div style=\"background-color: indigo; text-align:center; color: white\"> Аккаунт зарегистрирован. Код активации отправлен на почту $email</div>";
+			echo "<div style=\"background-color: indigo; text-align:center; color: white; z-index: 2; width: 70% \"><span> Аккаунт зарегистрирован. Код активации отправлен на почту $email </span></div>";
 
 
 		}
@@ -75,7 +75,7 @@ class AuthController {
 			$password = $_POST['password'];
 
 			if (!$this->userInputValidate($email, $password)) {
-				return view('login', ['errors' => $this->errors]);
+				return view('login', ['errors' => $this->errors, 'email' => $email]);
 			}
 
 			$user = User::getUserByEmail($email);
@@ -83,13 +83,13 @@ class AuthController {
 			if (!$user) {
 				$this->errors[] = 'Неправильные данные для входа на сайт';
 
-				return view('login', ['errors' => $this->errors]);
+				return view('login', ['errors' => $this->errors, 'email' => $email]);
 			}
 
 			if (!Auth::checkPassword($user, $password)) {
 				$this->errors[] = 'Неправильно введен пароль';
 
-				return view('login', ['errors' => $this->errors]);
+				return view('login', ['errors' => $this->errors, 'email' => $email]);
 			}
 
 //		  Подтверждение регистрации по почте
@@ -97,7 +97,7 @@ class AuthController {
 			if (!Auth::isEmailConfirm($user)) {
 				$this->errors[] = 'Для входа необходимо подтвердить email. Необходимо перейти по ссылке, которую вы получили на Ваш электронный ящик';
 
-				return view('login', ['errors' => $this->errors]);
+				return view('login', ['errors' => $this->errors, 'email' => $email]);
 			}
 
 
