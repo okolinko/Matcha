@@ -1,13 +1,18 @@
 <?php
 
-$wow = mysqli_connect("localhost", "sania", "Im12011992");
-$val = mysqli_query($wow, "show databases like 'matcha'");
-$res = mysqli_num_rows($val);
-if (!$res) {
+$paramPath = ROOT. "config.php";
 
-	$query = mysqli_query($wow, "CREATE DATABASE IF NOT EXISTS `matcha`");
-	$wow = mysqli_connect("localhost", "sania", "Im12011992", "matcha");
+if (file_exists($paramPath)) {
+    $params = include($paramPath);
+    $wow = mysqli_connect("localhost", $params['username'], $params['password']);
+    $val = mysqli_query($wow, "show databases like 'matcha'");
+    $res = mysqli_num_rows($val);
+    if (!$res) {
 
-	$queryBase = file_get_contents('matcha.sql');
-	$query = mysqli_multi_query($wow, $queryBase);
+        $query = mysqli_query($wow, "CREATE DATABASE IF NOT EXISTS `matcha`");
+        $wow = mysqli_connect("localhost", $params['username'], $params['password'], $params['name']);
+
+        $queryBase = file_get_contents('matcha.sql');
+        $query = mysqli_multi_query($wow, $queryBase);
+    }
 }
