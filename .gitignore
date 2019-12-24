@@ -1,0 +1,4 @@
+.idea/
+application/config/db.php
+application/config/database.php
+config.php
