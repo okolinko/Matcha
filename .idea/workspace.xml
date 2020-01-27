@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="949fcd76-ca69-4523-a166-10d3f90ab786" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AuthController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/EmailEdit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/EmailEdit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/index.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/index.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/register.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/restoreAccaunt.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/restoreAccaunt.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/userEdit.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/userEdit.view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style_reg.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style_reg.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/ban.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/ban.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/checkNewMassege.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/checkNewMassege.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +164,7 @@
       <workItem from="1572953359864" duration="209000" />
       <workItem from="1572964785756" duration="19563000" />
       <workItem from="1573467685062" duration="7736000" />
-      <workItem from="1573569918377" duration="5803000" />
+      <workItem from="1573569918377" duration="6460000" />
     </task>
     <servers />
   </component>
