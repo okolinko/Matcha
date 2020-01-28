@@ -8,6 +8,9 @@ require 'core/helpers2.php';
 use App\Core\Request;
 use App\Core\Router;
 
+define('ROOT', __DIR__ );
+define("BASE_URL", "http://".$_SERVER['SERVER_NAME']."/");
+
 session_start();
 
 error_reporting(E_ALL, 1);

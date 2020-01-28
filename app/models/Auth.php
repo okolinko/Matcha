@@ -15,7 +15,6 @@ class Auth {
 
 	public static function checkLogged()
 	{
-		// Если сессия есть, вернем идентификатор пользователя
 		if (isset($_SESSION['userId'])) {
 			return $_SESSION['userId'];
 		}
