@@ -80,22 +80,22 @@
         </div>
         <div class="change">
             <div class="passw">
-                <form action="//matcha.loc/personalArea/edit/" method="post">
+                <form action="<?php echo BASE_URL?>personalArea/edit/" method="post">
                     <input class="edit_password" type="submit" value="Изменить пароль" />
                 </form>
             </div>
             <div class="email">
-                <form action="//matcha.loc/personalArea/edit/email" method="post">
+                <form action="<?php echo BASE_URL?>personalArea/edit/email" method="post">
                     <input class="edit_password" type="submit" value="Изменить email" />
                 </form>
             </div>
             <div class="notif">
-                <form action="//matcha.loc/personalArea/notifications" method="post">
+                <form action="<?php echo BASE_URL?>personalArea/notifications" method="post">
                     <input class="<?php if(checkStatus($_SESSION['userId']) == 1) {echo "sendEmailActiv";} ?>" type="submit" value="Уведомления на email" />
                 </form>
             </div>
             <div class="dell">
-                <form action="//matcha.loc/personalArea/delete/" method="post">
+                <form action="<?php echo BASE_URL?>personalArea/delete/" method="post">
                     <input class="dell_acc" type="submit" value="Удалить аккаунт!" />
                 </form>
             </div>
@@ -136,5 +136,5 @@
 			<?php endif; ?>
             </div></center>
     </section>
-    <script type="text/javascript" src="//matcha.loc/public/js/deleteImg.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL?>public/js/deleteImg.js"></script>
 <?php //require('partials/footer.php'); ?>

@@ -9,7 +9,16 @@ use App\Core\Request;
 use App\Core\Router;
 
 define('ROOT', __DIR__ );
-define("BASE_URL", "http://".$_SERVER['SERVER_NAME']."/");
+$protocol = "http://";
+if (isset($_SERVER['HTTPS'])) {
+    $protocol = 'https://';
+}
+if (strpos($_SERVER['SERVER_NAME'], 'localhost') !== false) {
+    $hostName = "";
+} else {
+    $hostName = $_SERVER['SERVER_NAME'];
+}
+define("BASE_URL", $protocol.$hostName."/");
 
 session_start();
 

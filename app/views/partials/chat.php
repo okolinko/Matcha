@@ -16,7 +16,7 @@ if ($key == false  or  $key2 == false){
 ;?>
 <div class="container">
 <!--    <a id="open" class="open">Открыть чат</a>-->
-    <img id="open" class="open" src="//matcha.loc/public/img/Chat.png" title="Открыть чат">
+    <img id="open" class="open" src="<?php echo BASE_URL?>public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
 <div class="popup-window">

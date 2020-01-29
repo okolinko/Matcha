@@ -94,6 +94,6 @@
 <div class="pagination_centr">
     <?php echo $pag; ?>
 </div>
-<script type="text/javascript" src="//matcha.loc/public/js/trackVisits.js"></script>
-<script type="text/javascript" src="//matcha.loc/public/js/ban.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL?>public/js/trackVisits.js"></script>
+<script type="text/javascript" src="<?php echo BASE_URL?>public/js/ban.js"></script>
 <?php //require('partials/footer.php'); ?>

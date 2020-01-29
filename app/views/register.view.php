@@ -6,7 +6,7 @@
 	<title>Regist</title>
 	<link rel="stylesheet" href="../../public/css/style_reg.css" media="all"/>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
-    <script type="text/javascript" src="//matcha.loc/public/js/navigation.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL?>public/js/navigation.js"></script>
 </head>
 <body>
 	<div class="reg_but"><p><a href="/" ><img style="width: 60px; z-index: 1" src="/public/img/home.png" alt="На главную"></a></p></div>

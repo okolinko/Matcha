@@ -9,16 +9,16 @@
 
 		<link href='https://fonts.googleapis.com/css?family=Averia+Sans+Libre' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="//matcha.loc/public/css/style.css">
+        <link rel="stylesheet" href="<?php echo BASE_URL?>public/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <!--        <script src="http://cdn.jsdelivr.net/emojione/1.3.0/lib/js/emojione.min.js"></script>-->
 
 
-		<script type="text/javascript" src="//matcha.loc/public/js/my.js"></script>
-        <script type="text/javascript" src="//matcha.loc/public/js/checkNewMassege.js"></script>
-        <script type="text/javascript" src="//matcha.loc/public/js/chat.js"></script>
-        <script type="text/javascript" src="//matcha.loc/public/js/ramdomMassege.js"></script>
-        <script type="text/javascript" src="//matcha.loc/public/js/accaunt.js"></script>
+		<script type="text/javascript" src="<?php echo BASE_URL?>public/js/my.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL?>public/js/checkNewMassege.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL?>public/js/chat.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL?>public/js/ramdomMassege.js"></script>
+        <script type="text/javascript" src="<?php echo BASE_URL?>public/js/accaunt.js"></script>
 
 
 
@@ -32,7 +32,7 @@
 		<div class="flex-top">
 			<div class="avatar">
 				<?php if ($_SESSION['userId']): ?>
-				<img class="avat" userId="<?php echo $_SESSION['userId'] ?>" src="//matcha.loc/public/img/avatar/<?php echo $avatar ?>" alt="">
+				<img class="avat" userId="<?php echo $_SESSION['userId'] ?>" src="<?php echo BASE_URL?>public/img/avatar/<?php echo $avatar ?>" alt="">
 				<?php endif; ?>
             </div>
 			<?php if (isset($_SESSION['userId'])): ?>
