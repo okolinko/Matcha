@@ -166,8 +166,16 @@ class UserController{
 
 		sort($arrayILikedId);
 		reset($arrayILikedId);
+
 		$array = Dating::viewLikedUser($arrayILikedId);
 		$acaunt = json_decode(json_encode($array), True);
+		$acaunt = array_values($acaunt);
+	
+		$i = 0;
+		while($acaunt[$i]) {
+			$acaunt[$i]['ban'] = User::statusBan($acaunt[$i]['id_user']);
+			$i++;
+		}
 
 		require_once('app/views/iLiked.view.php');
 	}
@@ -178,6 +186,13 @@ class UserController{
 		reset($arrayId);
 		$array = Dating::viewLikedUser($arrayId);
 		$acaunt = json_decode(json_encode($array), True);
+		$acaunt = array_values($acaunt);
+		
+		$i = 0;
+		while($acaunt[$i]) {
+			$acaunt[$i]['ban'] = User::statusBan($acaunt[$i]['id_user']);
+			$i++;
+		}
 
 		require_once('app/views/visitors.view.php');
 	}
