@@ -79,8 +79,8 @@
 	<?php if (!empty($acaunt)): ?>
 	<?php foreach ($acaunt as $acaunt_list): ?>
     <div class="flex-elem">
-        <img class="foto-form"  src="../../public/img/avatar/avatar<?php echo $acaunt_list['userId']?>.png">
-        <img id="ban" class="ban" <?php if ($acaunt_list['ban'] == 1) echo 'src="../../public/img/ban.png"'; else  echo 'src="../../public/img/ban_n.png"' ?> value="<?php echo $acaunt_list['userId']?>">
+        <img class="foto-form"  src="<?php echo BASE_URL?>public/img/avatar/avatar<?php echo $acaunt_list['userId']?>.png">
+        <img id="ban" class="ban" <?php if ($acaunt_list['ban'] == 1) echo 'src="'. BASE_URL .'public/img/ban.png"'; else  echo 'src="'. BASE_URL .'public/img/ban_n.png"' ?> value="<?php echo $acaunt_list['userId']?>">
         <div class="name-form"><a><?php echo $acaunt_list['name'].', '.$acaunt_list['age']?></a></div>
         <div class="city-form"><a><?php echo $acaunt_list['city']?></a></div>
 <!--        <div class="form-help"><a id="id-user" user_id="--><?php //echo $acaunt_list['userId'] ?><!--" href="/accauntUser?id=--><?php //echo $acaunt_list['userId'] ?><!--" class="button"/>В профиль</a></div>-->

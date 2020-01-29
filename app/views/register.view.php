@@ -4,12 +4,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Regist</title>
-	<link rel="stylesheet" href="../../public/css/style_reg.css" media="all"/>
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/css/style_reg.css" media="all"/>
 <!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
     <script type="text/javascript" src="<?php echo BASE_URL?>public/js/navigation.js"></script>
 </head>
 <body>
-	<div class="reg_but"><p><a href="/" ><img style="width: 60px; z-index: 1" src="/public/img/home.png" alt="На главную"></a></p></div>
+	<div class="reg_but"><p><a href="/" ><img style="width: 60px; z-index: 1" src="<?php echo BASE_URL?>public/img/home.png" alt="На главную"></a></p></div>
 <div id="reg_h1"><h1>Пройдите форму регистрации</h1></div>
 	<div class="regist">
 		<div id="error">

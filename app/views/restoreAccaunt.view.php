@@ -4,10 +4,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Restore</title>
-	<link rel="stylesheet" href="../../public/css/style_reg.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/css/style_reg.css">
 </head>
 <body>
-<div class="reg_but"><p><a href="/" ><img style="width: 60px" src="/public/img/home.png" alt="На главную"></a></p></div>
+<div class="reg_but"><p><a href="/" ><img style="width: 60px" src="<?php echo BASE_URL?>public/img/home.png" alt="На главную"></a></p></div>
 <div class="login">
 	<h1>Востановление забытого пароля</h1>
 	<?php if (isset($errors) && !empty($errors)): ?>

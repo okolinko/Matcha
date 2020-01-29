@@ -1,6 +1,6 @@
 <?php require('partials/head.php'); ?>
 <?php require('partials/downloadFoto.php'); ?>
-    <script type="text/javascript" src="//matcha.loc/public/js/navigation.js"></script>
+    <script type="text/javascript" src="<?php echo BASE_URL ?>public/js/navigation.js"></script>
     <div id="error">
 		<?php if (isset($errors) && !empty($errors)): ?>
             <ul>
@@ -129,8 +129,8 @@
 				<?php foreach ($foto as $foto_list): ?>
 
                     <div class="flex_acc">
-                        <img class="accaunt_foto" src="/public/img/<?php echo $_SESSION['userId'].'/'.$foto_list['img']?>">
-                        <img name="delete"  class="delete" id="<?php echo $foto_list['id'] ?>" src="/public/img/dell_foto.png">
+                        <img class="accaunt_foto" src="<?php echo BASE_URL ?>public/img/<?php echo $_SESSION['userId'].'/'.$foto_list['img']?>">
+                        <img name="delete"  class="delete" id="<?php echo $foto_list['id'] ?>" src="<?php echo BASE_URL ?>public/img/dell_foto.png">
                     </div>
 				<?php endforeach; ?>
 			<?php endif; ?>

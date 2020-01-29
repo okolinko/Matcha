@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>404</title>
-	<link rel="stylesheet" href="../../public/css/style_reg.css" media="all"/>
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/css/style_reg.css" media="all"/>
 
 </head>
 <body>
