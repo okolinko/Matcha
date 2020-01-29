@@ -39,7 +39,8 @@ function make_upload($file, $userId){
 	}
 	$fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
 	$fileCount = iterator_count($fi);
-	if ($fileCount > 5) {
+
+	if ($fileCount >= 5) {
 		return 'Максимальное количество фотографий 5! Удалите одно из фото чтобы загрузить новое';
 	}
 	else {
@@ -66,6 +67,7 @@ function make_upload($file, $userId){
 
 //		$name2 = $foto.$_SESSION['userId']."_".($fileCount);
 		User::addFoto($name2, $userId, ($name2.'.png'));
+
 		copy($file['tmp_name'],  'public/img/'."$userId".'/'.$name2.'.png');
 		copy($file['tmp_name'],  'public/img/avatar/'.$name.'.png');
 	}

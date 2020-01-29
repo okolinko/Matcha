@@ -43,6 +43,7 @@ class User {
 	}
 
 	public static function addFoto($name, $userId, $img) {
+
 		$sql = new self();
 		$sql->db->insert('photo', [
 			'name' => $name,
