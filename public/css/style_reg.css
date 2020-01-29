@@ -1,5 +1,6 @@
 body{
 	background-color: #F5F5F5;
+    background: url("../img/oduvanchik.jpg");
 	font-family:Verdana, Tahoma;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -75,7 +76,7 @@ input:focus {
 	border:rgba(0,0,0,.3) 0px solid;
 	box-sizing:border-box;
 	padding:10px;
-	background: dimgrey;
+	background: rgba(65,73,123,0.73);
 	color:#FFF;
 	font-family: 'Open Sans', sans-serif;
 	font-weight:400;
