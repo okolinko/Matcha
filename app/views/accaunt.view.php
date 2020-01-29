@@ -70,7 +70,6 @@
 					// загружаем изображение на сервер
 					$res =  make_upload($_FILES['file'], $_SESSION['userId'] );
 					echo "<script>alert(\"$res!\");</script>";
-					echo "<script>alert(\"Файл успешно загружен!\");</script>";
 				}
 				else{
 					// выводим сообщение об ошибке
