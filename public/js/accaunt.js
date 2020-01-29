@@ -94,12 +94,13 @@ window.onload=function() {
 
     function like() {
         var like = document.getElementById("user_like");
+	var current_url = window.location.protocol + "//" + window.location.host;
 
         var text = like.getAttribute("src");
 
 
-        var inactive_like = '//matcha.loc/public/img/like.png';
-        var active_like = '//matcha.loc/public/img/like_activ.png';
+        var inactive_like = current_url + '/public/img/like.png';
+        var active_like = current_url + '/public/img/like_activ.png';
 
         var userId = document.getElementById("img").getAttribute("userId");
 
