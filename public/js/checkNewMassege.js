@@ -1,14 +1,13 @@
 $(document).ready(function () {
 
     var userId = $('.avat').length;
-var test = [];
+    var test = [];
     setInterval(function () {
         'use strinc';
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "checkNewMassege", true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-
                 if (xhr.responseText) {
                     var chat = new Object();
                     chat = JSON.parse(xhr.responseText);
@@ -26,12 +25,11 @@ var test = [];
                     }
 
                     i = 0;
-                    while (i < len){
+                    while (i < len) {
                         if (test[i] === chat[i]['count']) {
                             i++;
                             continue ;
                         }
-                        // alert("Mesage of chat_id = " + chat[i]['chat_id']);
                         var htm = "href";
                         var current_url = window.location.protocol + "//" + window.location.host;
                         var code = '<a href="' + current_url +'/accauntUser?id='+userId+'"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
@@ -56,5 +54,4 @@ var test = [];
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.send('id=' + userId);
     }, 2000);
-
 });

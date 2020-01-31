@@ -59,11 +59,9 @@ window.onload=function() {
         var min = document.getElementById("min4").lastChild;
         big.removeAttribute("src");
         big.setAttribute("src", min.getAttribute("src"));
-
     }
 
     function test5() {
-
         var big = (document.getElementById("user_avatar"));
         var min = document.getElementById("min5").lastChild;
         big.removeAttribute("src");
@@ -73,7 +71,6 @@ window.onload=function() {
 
     var AJAXLike = function (pathLine, id) {
         var res;
-
         var xhr = new XMLHttpRequest();
         xhr.open("POST", pathLine, false);
         xhr.onreadystatechange = function () {
@@ -84,7 +81,7 @@ window.onload=function() {
                     res = true;
                 }
             }
-        }
+        };
 
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xhr.send('id=' + id);
@@ -94,16 +91,11 @@ window.onload=function() {
 
     function like() {
         var like = document.getElementById("user_like");
-	var current_url = window.location.protocol + "//" + window.location.host;
-
+        var current_url = window.location.protocol + "//" + window.location.host;
         var text = like.getAttribute("src");
-
-
         var inactive_like = current_url + '/public/img/like.png';
         var active_like = current_url + '/public/img/like_activ.png';
-
         var userId = document.getElementById("img").getAttribute("userId");
-
         var path_php;
 
         if (text.indexOf(active_like) == -1) {
@@ -118,9 +110,9 @@ window.onload=function() {
             if (AJAXLike(path_php, userId) === true) {
                 like.setAttribute("src", inactive_like);
 
-            } else
+            } else {
                 alert("Войдите в аккаунт чтобы убрать лайк!");
+            }
         }
-
     }
 }

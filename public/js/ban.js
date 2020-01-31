@@ -7,9 +7,8 @@ $(document).ready(function () {
               var id_user = (event.toElement.attributes.value.value);
                $.post(current_url + "/userbandell", {
                    idUser: id_user
-                   },);
-           }
-           else if (event.toElement.src == current_url + "/public/img/ban_n.png"){
+               },);
+           } else if (event.toElement.src == current_url + "/public/img/ban_n.png") {
                event.toElement.src = current_url + "/public/img/ban.png";
                var id_user = (event.toElement.attributes.value.value);
                $.post(current_url + "/userbanadd", {
