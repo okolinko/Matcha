@@ -5,7 +5,6 @@ $(document).ready(function () {
            if (event.toElement.src == current_url + "/public/img/ban.png"){
                event.toElement.src = current_url + "/public/img/ban_n.png";
               var id_user = (event.toElement.attributes.value.value);
-               // alert(id_user);
                $.post(current_url + "/userbandell", {
                    idUser: id_user
                    },);
@@ -13,7 +12,6 @@ $(document).ready(function () {
            else if (event.toElement.src == current_url + "/public/img/ban_n.png"){
                event.toElement.src = current_url + "/public/img/ban.png";
                var id_user = (event.toElement.attributes.value.value);
-               // alert(id_user);
                $.post(current_url + "/userbanadd", {
                    idUser: id_user
                },);
