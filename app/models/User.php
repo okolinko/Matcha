@@ -321,7 +321,7 @@ class User {
 	public static function age(string $age) : bool {
 
 		$age = intval($age);
-		if ($age < 18 or $age > 80) {
+		if ($age < 18 || $age > 80) {
 			return false;
 		}
 		return true;
@@ -512,10 +512,10 @@ class User {
 			}
 			$i++;
 		}
-		if ($j >= 0 and $j <= 10){
+		if ($j >= 0 && $j <= 10){
 			return 1;
 		}
-		elseif($j > 10 and $j <= 25){
+		elseif($j > 10 && $j <= 25){
 			return 2;
 		}
 		elseif($j > 25){

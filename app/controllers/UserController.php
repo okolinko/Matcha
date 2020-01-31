@@ -67,7 +67,7 @@ class UserController{
             $city = ($_POST['city']);
             $info = ($_POST['info']);
 
-            if (empty($name) or empty($age) or empty($city)){
+            if (empty($name) || empty($age) || empty($city)){
 				$this->errors[] = 'Все поля должны быть заполнены!';
 
 				return view('accaunt', ['errors' => $this->errors]);

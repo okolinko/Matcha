@@ -9,12 +9,9 @@ try {
         }
     }
 } catch (\Exception $e) {
-    var_dump($e->getMessage());
+    reportLog($e->getMessage());
 }
 ?>
-<script>
-    console.log("KKKK");
-</script>
 
 <?php
 $res =  \App\Models\User::LikedUserInfo($userId);
@@ -23,7 +20,7 @@ $res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
 $key = in_array($_SESSION['userId'], $res);
 $key2 = in_array($userId, $res2);
 
-if ($key == false  or  $key2 == false){
+if ($key == false || $key2 == false){
     return ;
 }
 ;?>

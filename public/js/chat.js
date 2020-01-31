@@ -18,9 +18,6 @@ $.fn.popup = function() { 	//функция для открытия всплыв
     this.css('left', ($(window).width() - this.width()) / 2  + 'px');
     //открываем тень с эффектом:
     $('.backpopup').fadeIn();
-
-
-
 }
 
 
