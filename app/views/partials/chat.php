@@ -1,7 +1,11 @@
 <?php $structure = 'public/img/'."$userId";
+$structure2 = 'public/img/'.$_SESSION['userId'];
 $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+$fi2 = new FilesystemIterator($structure2, FilesystemIterator::SKIP_DOTS);
 $fileCount = iterator_count($fi);
-if ($fileCount < 1) {
+$fileCount2 = iterator_count($fi2);
+//echo $structure;
+if ($fileCount < 1 or $fileCount2 < 1) {
 	return ;
 }
 $res =  \App\Models\User::LikedUserInfo($userId);

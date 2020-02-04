@@ -47,17 +47,17 @@
 		<nav class="menu">
 			<div class="openMenu" id="openMenu">MENU</div>
 			<ul id="menu">
-				<li><a href="/">Главная</a></li>
+				<li><a class="cntr" href="/">Главная</a></li>
 				<?php if ($_SESSION['userId']): ?>
-				<li><a href="/datingUser">Поиск анкет</a></li>
-				<li><a href="/likedUser">Взаимные симпатии</a></li>
-                    <li><a href="/iliked">Я понравился</a></li>
-                <li><a href="/visitors">Мои посетили</a></li>
-					<li><a href="/logout">Выход</a></li>
-					<li><a href="/personalArea">Кабинет</a> </li>
+				<li><a class="cntr" href="/datingUser">Поиск анкет</a></li>
+				<li><a class="cntr" href="/likedUser">Взаимные симпатии</a></li>
+                    <li><a class="cntr" href="/iliked">Я понравился</a></li>
+                <li><a class="cntr" href="/visitors">Мои посетили</a></li>
+					<li><a class="cntr" href="/logout">Выход</a></li>
+					<li><a class="cntr" href="/personalArea">Кабинет</a> </li>
 				<?php else: ?>
-					<li><a href="/login">Вход</a></li>
-					<li><a href="/register">Регистрация</a></li>
+					<li><a class="cntr" href="/login">Вход</a></li>
+					<li><a class="cntr" href="/register">Регистрация</a></li>
 				<?php endif; ?>
 			</ul>
 		</nav>
