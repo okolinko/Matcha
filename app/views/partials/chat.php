@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php $structure = 'public/img/'."$userId";
 $structure2 = 'public/img/'.$_SESSION['userId'];
 $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
@@ -7,17 +8,35 @@ $fileCount2 = iterator_count($fi2);
 //echo $structure;
 if ($fileCount < 1 or $fileCount2 < 1) {
 	return ;
+=======
+<?php
+try {
+    $structure = ROOT.'/public/img/' . "$userId";
+    if (file_exists($structure)) {
+        $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+        $fileCount = iterator_count($fi);
+        if ($fileCount < 1) {
+            return;
+        }
+    }
+} catch (\Exception $e) {
+    reportLog($e->getMessage());
+>>>>>>> cbe35aea0f19a6d7c44e4f76807e16985ccfe6fb
 }
+?>
+
+<?php
 $res =  \App\Models\User::LikedUserInfo($userId);
 $res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
 
 $key = in_array($_SESSION['userId'], $res);
 $key2 = in_array($userId, $res2);
 
-if ($key == false  or  $key2 == false){
+if ($key == false || $key2 == false){
     return ;
 }
 ;?>
+
 <div class="container">
 <!--    <a id="open" class="open">Открыть чат</a>-->
     <img id="open" class="open" src="<?php echo BASE_URL?>public/img/Chat.png" title="Открыть чат">

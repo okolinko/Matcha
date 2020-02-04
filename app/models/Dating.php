@@ -21,7 +21,7 @@ class Dating
 		$ageMax = ($age[1]);
 
 		foreach ($acaunt as $key => &$res) {
-			if (($res['age']) >= $ageMin and  $res['age'] <= $ageMax) {
+			if (($res['age']) >= $ageMin &&  $res['age'] <= $ageMax) {
 				;
 			}
 			else {
@@ -203,7 +203,7 @@ class Dating
 			$metr = atan2(sqrt($y), $x) * 6372795;
 			$km = round(($metr / 1000), 4);
 		}
-			if ($km >= $radiusMin and  $km <= $radiusMax) {
+			if ($km >= $radiusMin &&  $km <= $radiusMax) {
 				;
 			}
 			else {
