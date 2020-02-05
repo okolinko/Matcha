@@ -34,8 +34,6 @@ $.fn.popup = function () {
 };
 
 $(document).on("click", function (event) {
-    event.preventDefault();
-
     setTimeout(function(){$("#error-message").text("");}, 3000);
 });
 
@@ -45,10 +43,13 @@ $(document).ready(function () {
             var keycode = ev.keyCode;
             if (keycode == '13') {
                 var text = $('#shoutbox-comment').val();
-                console.log((text.trim()).length);
                 if ((text.trim()).length > 0 && (text.trim()).length < 100) {
+
+                    console.log((text.trim()).length);
+                    console.log(text);
+
                     $("#submit-massage").attr("disabled", true);
-                    setTimeout(function(){ $("#submit-massage").attr("disabled", true);}, 2000);
+                    setTimeout(function(){ $("#submit-massage").attr("disabled", true);}, 3000);
                     var userId = document.getElementById("userId").value;
                     var mass = document.getElementById("ma");
                     var xhr = new XMLHttpRequest();
@@ -69,6 +70,7 @@ $(document).ready(function () {
                         'id':userId
                     };
                     data = JSON.stringify(data);
+                    console.log(data);
                     xhr.setRequestHeader('Content-type', 'application/json');
                     if (xhr.send(data)) {
                         alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
