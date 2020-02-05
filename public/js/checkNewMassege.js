@@ -11,12 +11,9 @@ $(document).ready(function () {
                 if (xhr.responseText) {
                     var chat = new Object();
                     chat = JSON.parse(xhr.responseText);
-                    // console.log(chat);
-                    // alert();
                     var i = 0;
                     var len = chat.length;
 
-                    // console.log(test);
                     if (test.length === 0) {
                         while (i < len) {
                             test[i] = chat[i]['count'];
@@ -41,9 +38,7 @@ $(document).ready(function () {
 
                         }
                         var current_url = window.location.protocol + "//" + window.location.host;
-                        var str = chat[i]['chat_id'].replace(userId,
-                            "");
-                        console.log(str);
+                        var str = chat[i]['chat_id'].replace(userId, "");
                         var code = '<a href="javascript:void(0);"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
                         // var code = '<a href="' + current_url +'/accauntUser?id='+str+'"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
                         var popUp = '\
@@ -71,16 +66,6 @@ $(document).ready(function () {
                             </div>';
                         $('.test555').append(code);
                         $('.test555').append(popUp);
-                        // jQuery('<img/>', {
-                        //     class: 'open',
-                        //     id: 'newMassege',
-                        //     src: '//matcha.loc/public/img/Chat.png',
-                        //     alt: chat[i]['chat_id'],
-                        //     title: 'Открыть чат',
-                        //     chatid: chat[i]['chat_id']
-                        //
-                        //
-                        // }).appendTo('.test555');
                         test[i] = chat[i]['count'];
                         i++;
                     }
