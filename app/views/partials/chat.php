@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<?php $structure = 'public/img/'."$userId";
-$structure2 = 'public/img/'.$_SESSION['userId'];
-$fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
-$fi2 = new FilesystemIterator($structure2, FilesystemIterator::SKIP_DOTS);
-$fileCount = iterator_count($fi);
-$fileCount2 = iterator_count($fi2);
-//echo $structure;
-if ($fileCount < 1 or $fileCount2 < 1) {
-	return ;
-=======
 <?php
 try {
     $structure = ROOT.'/public/img/' . "$userId";
@@ -21,7 +10,6 @@ try {
     }
 } catch (\Exception $e) {
     reportLog($e->getMessage());
->>>>>>> cbe35aea0f19a6d7c44e4f76807e16985ccfe6fb
 }
 ?>
 
