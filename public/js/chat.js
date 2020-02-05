@@ -33,14 +33,22 @@ $.fn.popup = function () {
     $('.backpopup').fadeIn();
 };
 
+$(document).on("click", function (event) {
+    event.preventDefault();
+
+    setTimeout(function(){$("#error-message").text("");}, 3000);
+});
+
 $(document).ready(function () {
-    var el = document.getElementById('submit-massage');
     $('#shoutbox-comment').click(function(t){
         $(this).on('keyup', function (ev) {
             var keycode = ev.keyCode;
             if (keycode == '13') {
                 var text = $('#shoutbox-comment').val();
-                if (text.length > 0 && text.length < 100) {
+                console.log((text.trim()).length);
+                if ((text.trim()).length > 0 && (text.trim()).length < 100) {
+                    $("#submit-massage").attr("disabled", true);
+                    setTimeout(function(){ $("#submit-massage").attr("disabled", true);}, 2000);
                     var userId = document.getElementById("userId").value;
                     var mass = document.getElementById("ma");
                     var xhr = new XMLHttpRequest();
@@ -66,11 +74,12 @@ $(document).ready(function () {
                         alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
                     }
                 } else {
-                    alert("Сообщение не может быть пустым, или быть длинее 240 символов");
+                    $("#error-message").text('Сообщение не может быть пустым, или быть длинее 240 символов');
                 }
             }
         });
     });
+    var el = document.getElementById('submit-massage');
     if (el) {
         document.getElementById('submit-massage').addEventListener('click', function () {
             var text = document.getElementById('shoutbox-comment').value;
@@ -100,7 +109,7 @@ $(document).ready(function () {
                     alert("Сообщение отправлено! Оповещение выслано владельцу фото :)");
                 }
             } else {
-                alert("Сообщение не может быть пустым, или быть длинее 240 символов");
+                $("#error-message").text('Сообщение не может быть пустым, или быть длинее 240 символов');
             }
         });
     }

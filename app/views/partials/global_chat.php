@@ -10,6 +10,7 @@
                 <li><textarea class="none" id="userId" name="id"></textarea></li>
                 <li><textarea class="none" id="sesionId" name="sesionId"></textarea></li>
                 <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength='240' required="required"></textarea></li>
+                <li id="error-message" style="width: 300px"></li>
                 <li> <input id="submit-massage" type="submit" value="Отправить!"/></li>
             </div>
             <div class="smiles" style="width: 350px">
