@@ -27,7 +27,6 @@ $(document).ready(function () {
                             i++;
                             continue;
                         }
-                        var htm = "href";
                         var j = 0;
                         var smile = 128512;
                         var kekSmile = Array();
@@ -40,35 +39,10 @@ $(document).ready(function () {
                         var current_url = window.location.protocol + "//" + window.location.host;
                         var str = chat[i]['chat_id'].replace(userId, "");
                         var code = '<a href="javascript:void(0);"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
-                        // var code = '<a href="' + current_url +'/accauntUser?id='+str+'"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
                         $("#userId").text(str);
                         $("#sesionId").text(userId);
-                        $("#smiles").append(kekSmile.join());
-                        // var popUp = '\
-                        //     <div class="backpopup"></div> \
-                        //     <div class="popup-window"> \
-                        //     <p class="close">x</p> \
-                        //     <div class="shoutbox">\
-                        //     <h1>Matcha chat</h1> \
-                        //     <ul id="ma" class="shoutbox-content"> \
-                        //     </ul> \
-                        //     <div class="shoutbox-form"> \
-                        //     <li><textarea class="none" id="userId" name="id">' + str + '</textarea></li> \
-                        //     <li><textarea class="none" id="sesionId" name="sesionId">' + userId + '</textarea></li> \
-                        //     <li><textarea type="text" placeholder="Сообщение" id="shoutbox-comment" name="comment" maxlength="240" required="required"></textarea></li> \
-                        //     <li> <input id="submit-massage" type="submit" value="Отправить!"></li> \
-                        //     </div> \
-                        //     <div class="smiles" style="width: 350px"> \
-                        //     ' + kekSmile.join() +' \
-                        //     </div> \
-                        //     <div class="ramdom_massage"> \
-                        //     <a class="ramdom_female" id="link">Случайное сообщени для знакомства с девушкой</a> \
-                        //     <BR> \
-                        //     <a class="ramdom_male" id="link2">Случайное сообщени для знакомства с парнем</a> \
-                        //     </div>\
-                        //     </div>';
+                        $(".smiles").append(kekSmile.join(''));
                         $('.test555').append(code);
-                        // $('.test555').append(popUp);
                         test[i] = chat[i]['count'];
                         i++;
                     }
