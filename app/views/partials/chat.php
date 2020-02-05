@@ -1,32 +1,25 @@
 <?php
-try {
-    $structure = ROOT.'/public/img/' . "$userId";
-    if (file_exists($structure)) {
-        $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
-        $fileCount = iterator_count($fi);
-        if ($fileCount < 1) {
-            return;
-        }
+    $structure = 'public/img/'."$userId";
+    $structure2 = 'public/img/'.$_SESSION['userId'];
+    $fi = new FilesystemIterator($structure, FilesystemIterator::SKIP_DOTS);
+    $fi2 = new FilesystemIterator($structure2, FilesystemIterator::SKIP_DOTS);
+    $fileCount = iterator_count($fi);
+    $fileCount2 = iterator_count($fi2);
+    if ($fileCount < 1 or $fileCount2 < 1) {
+        return ;
     }
-} catch (\Exception $e) {
-    reportLog($e->getMessage());
-}
+    $res =  \App\Models\User::LikedUserInfo($userId);
+    $res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
+
+    $key = in_array($_SESSION['userId'], $res);
+    $key2 = in_array($userId, $res2);
+
+    if ($key == false  or  $key2 == false){
+        return ;
+    }
 ?>
 
-<?php
-$res =  \App\Models\User::LikedUserInfo($userId);
-$res2 =  \App\Models\User::LikedUserInfo($_SESSION['userId']);
-
-$key = in_array($_SESSION['userId'], $res);
-$key2 = in_array($userId, $res2);
-
-if ($key == false || $key2 == false){
-    return ;
-}
-;?>
-
 <div class="container">
-<!--    <a id="open" class="open">Открыть чат</a>-->
     <img id="open" class="open" src="<?php echo BASE_URL?>public/img/Chat.png" title="Открыть чат">
 </div>
 <div class="backpopup"></div>
