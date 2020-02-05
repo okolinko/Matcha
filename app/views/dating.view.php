@@ -79,12 +79,12 @@
 	<?php if (!empty($acaunt)): ?>
 	<?php foreach ($acaunt as $acaunt_list): ?>
     <div class="flex-elem">
-        <img class="foto-form"  src="<?php if (file_exists(ROOT."public/img/avatar/avatar".$acaunt_list['id_user'].".png")): ?><?php echo BASE_URL ?>public/img/avatar/avatar<?php echo $acaunt_list['id_user']; ?><?php else: ?><?php echo BASE_URL."public/img/avatar/default"?><?php endif;?>.png">
+        <img class="foto-form"  src="<?php if (file_exists(ROOT."/public/img/avatar/avatar".$acaunt_list['userId'].".png")): ?><?php echo BASE_URL ?>public/img/avatar/avatar<?php echo $acaunt_list['userId']; ?><?php else: ?><?php echo BASE_URL."public/img/avatar/default"?><?php endif;?>.png">
         <img id="ban" class="ban" <?php if ($acaunt_list['ban'] == 1) echo 'src="'. BASE_URL .'public/img/ban.png"'; else  echo 'src="'. BASE_URL .'public/img/ban_n.png"' ?> value="<?php echo $acaunt_list['userId']?>">
         <div class="name-form"><a><?php echo $acaunt_list['name'].', '.$acaunt_list['age']?></a></div>
         <div class="city-form"><a><?php echo $acaunt_list['city']?></a></div>
-<!--        <div class="form-help"><a id="id-user" user_id="--><?php //echo $acaunt_list['userId'] ?><!--" href="/accauntUser?id=--><?php //echo $acaunt_list['userId'] ?><!--" class="button"/>В профиль</a></div>-->
-        <div class="form-help"><a id="id-user" user_id="<?php echo $acaunt_list['userId'] ?>" href="#accauntUser?id=<?php echo $acaunt_list['userId'] ?>" class="button"/>В профиль</a></div>
+        <div class="form-help"><a id="id-user" user_id="<?php echo $acaunt_list['userId'] ?>" href="/accauntUser?id=<?php echo $acaunt_list['userId'] ?>" class="button"/>В профиль</a></div>
+<!--        <div class="form-help"><a id="id-user" user_id="--><?php //echo $acaunt_list['userId'] ?><!--" href="#accauntUser?id=--><?php //echo $acaunt_list['userId'] ?><!--" class="button"/>В профиль</a></div>-->
     </div>
 		<?php endforeach; ?>
 	<?php endif; ?>
