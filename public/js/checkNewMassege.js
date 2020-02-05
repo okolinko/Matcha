@@ -27,21 +27,14 @@ $(document).ready(function () {
                             i++;
                             continue;
                         }
-                        var j = 0;
-                        var smile = 128512;
-                        var kekSmile = Array();
-                        while (j <= 79 ) {
-                            kekSmile.push("<a class='sm'>&#" + smile + "</a>");
-                            smile++;
-                            j++;
-
-                        }
                         var current_url = window.location.protocol + "//" + window.location.host;
                         var str = chat[i]['chat_id'].replace(userId, "");
-                        var code = '<a href="javascript:void(0);"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
+                        if ($('#open-popUp').length !== 0 || $(".global-chat").is(":visible")) {
+                            return ;
+                        }
+                        var code = '<a id="open-popUp" href="javascript:void(0);" style="z-index: 0"><img id="newMassege" class="open" title="Открыть чат" src="' + current_url + '/public/img/Chat.png" /></a>';
                         $("#userId").text(str);
                         $("#sesionId").text(userId);
-                        $(".smiles").append(kekSmile.join(''));
                         $('.test555').append(code);
                         test[i] = chat[i]['count'];
                         i++;
@@ -56,11 +49,14 @@ $(document).ready(function () {
 
     $(document).click(function (event) {
         if ($(event.target).closest('#newMassege').length) {
+            $(".global-chat").show();
             $('.popup-window').popup();
             checkMessage();
+            $('#open-popUp').remove();
         }
 
         if ($(event.target).closest('.backpopup,.close').length) {
+            $(".global-chat").hide();
             $('.popup-window').fadeOut();
             $('.backpopup').fadeOut();
         }
