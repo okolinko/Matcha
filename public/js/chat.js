@@ -1,11 +1,29 @@
-$(document).ready(function () {	//при загрузке страницы:
-    $('.open').click(function () {
-        $('.popup-window').popup();	//запускаем функцию на наш блок с формой
+$(document).ready(function () {
+     $('.open').click(function () {
+        $('.popup-window').popup();
     });
-    $('.backpopup,.close').click(function () { //событие клик на тень и крестик - закрываем окно и тень:
+    $('.backpopup,.close').click(function () {
         $('.popup-window').fadeOut();
         $('.backpopup').fadeOut();
     });
+
+    function findGetParameter(parameterName) {
+        var result = null,
+            tmp = [];
+        location.search
+            .substr(1)
+            .split("&")
+            .forEach(function (item) {
+                tmp = item.split("=");
+                if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+            });
+        return result;
+    }
+
+    if (findGetParameter("open") == 1) {
+        setTimeout(function(){$('#open').click();}, 100);
+    }
+
 });
 
 $.fn.popup = function () { 	//функция для открытия всплывающего окна:
