@@ -37,7 +37,7 @@ class User {
 		]);
 
 		mail($email, "Активация email на сайте Matcha", 'Для активации вашей учетной записи '.$name.' 
-				перейдите по этой ссылке http://localhost:8080/register/verification?hash='.$hash_email);
+				перейдите по этой ссылке '.BASE_URL.'/register/verification?hash='.$hash_email);
 
 
 	}
@@ -220,7 +220,7 @@ class User {
 		$sql = new self();
 		$response = $sql->db->selectOne('users', 'id', $idFotoUser);
 		$email = $response->email;
-		mail($email, "Новое действие", ' На сайте "Matcha" вашей фото был оставлен коментарий от пользователя '.$userName.". ".'  Перейдите по ссылке чтобы посмотреть http://localhost:8080');
+		mail($email, "Новое действие", ' На сайте "Matcha" вашей фото был оставлен коментарий от пользователя '.$userName.". ".'  Перейдите по ссылке чтобы посмотреть'.BASE_URL);
 		}
 	}
 
