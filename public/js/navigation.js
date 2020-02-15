@@ -38,8 +38,9 @@ window.onload = function() {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     if (xhr.responseText.indexOf("true") == -1)
                         res = false;
-                    else
+                    else {
                         res = true;
+                    }
                 }
             }
             xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
@@ -50,8 +51,23 @@ window.onload = function() {
 
             navigator.geolocation.getCurrentPosition(position, function (e) {
 
-                    alert('Error.code: ' + e.code + ' Error.message: ' + e.message);
-                    // alert("Дурацкая мозила!");
+                var latitude = 50.4705;
+                var longitude = 30.4642;
+                var res;
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "geolocation");
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        if (xhr.responseText.indexOf("true") == -1)
+                            res = false;
+                        else {
+                            res = true;
+                        }
+                    }
+                }
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.send('location=' + (latitude + ' ' + longitude));
+
                 }
             );
 

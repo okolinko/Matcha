@@ -79,7 +79,10 @@ class MassegeController {
             foreach($arrChat as $value) {
                 array_push($arr, $value);
             }
-            print json_encode($arr);
+
+            echo  json_encode($arr);
+            return true;
+
         } catch (\Exception $e) {
             reportLog($e->getMessage());
         }

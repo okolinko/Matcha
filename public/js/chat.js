@@ -83,7 +83,8 @@ $(document).ready(function () {
     });
     var el = document.getElementById('submit-massage');
     if (el) {
-        document.getElementById('submit-massage').addEventListener('click', function () {
+        $("#submit-massage").on("click", function () {
+
             var text = document.getElementById('shoutbox-comment').value;
             if (text.length > 0 && text.length < 100) {
                 var userId = document.getElementById("userId").value;

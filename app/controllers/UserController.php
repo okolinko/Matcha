@@ -119,22 +119,15 @@ class UserController{
 
 	public function usergeolocation() {
 		$location = explode(" ", strval($_POST['location']));
-//		$res = file_get_contents("https://ip-api.io/json");
-		file_put_contents("/Users/akolinko/lol", $location, FILE_APPEND);
+
 		if ($_SERVER['REQUEST_METHOD'] == "POST"){
 			$inputJSON = file_get_contents('php://input');
 			$res = json_decode($inputJSON, TRUE);
 		}
-//		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
-		$res = file_get_contents("https://ip-api.io/json");
-		$res = json_decode($res);
-
-//		file_put_contents("/Users/akolinko/lol", $res, FILE_APPEND);
 		$location[0] = substr($location[0], 0, 7)." ";
 		$location[1] = substr($location[1], 0, 7);
 
 		User::addGeolocation($_SESSION['userId'], $location);
-//		file_put_contents("/Users/akolinko/lol", $location[1], FILE_APPEND);
 	}
 
 	public  function likedUser() {
@@ -187,7 +180,7 @@ class UserController{
 		$array = Dating::viewLikedUser($arrayId);
 		$acaunt = json_decode(json_encode($array), True);
 		$acaunt = array_values($acaunt);
-		
+
 		$i = 0;
 		while($acaunt[$i]) {
 			$acaunt[$i]['ban'] = User::statusBan($acaunt[$i]['id_user']);

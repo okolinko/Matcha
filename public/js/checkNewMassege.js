@@ -3,24 +3,26 @@ $(document).ready(function () {
     var userId = $(".avat").attr('userid');
     var test = [];
     setInterval(function () {
-        'use strinc';
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", "checkNewMassege", true);
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-                if (xhr.responseText) {
+
+        $.ajax({
+            url: "checkNewMassege",
+            data: {"id": userId},
+            type: "POST",
+            success: function(data) {
+
+                if (data.errors === false) {
+                    alert("Error");
+                } else {
                     var chat = new Object();
-                    chat = JSON.parse(xhr.responseText);
+                    chat = JSON.parse(data);
                     var i = 0;
                     var len = chat.length;
-
                     if (test.length === 0) {
                         while (i < len) {
                             test[i] = chat[i]['count'];
                             i++;
                         }
                     }
-
                     i = 0;
                     while (i < len) {
                         if (test[i] === chat[i]['count']) {
@@ -39,13 +41,14 @@ $(document).ready(function () {
                         test[i] = chat[i]['count'];
                         i++;
                     }
-
                 }
+            },
+            error: function (request, status, error) {
+                alert("ERROR");
             }
-        }
-        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send('id=' + userId);
-    }, 2000);
+        });
+
+    }, 1000);
 
     $(document).click(function (event) {
         if ($(event.target).closest('#newMassege').length) {
