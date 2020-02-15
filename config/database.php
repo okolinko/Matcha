@@ -3,16 +3,29 @@
 $paramPath = ROOT. "/config.php";
 
 if (file_exists($paramPath)) {
-    $params = include($paramPath);
-    $wow = mysqli_connect("localhost", $params['username'], $params['password']);
-    $val = mysqli_query($wow, "show databases like 'matcha'");
-    $res = mysqli_num_rows($val);
-    if (!$res) {
 
-        $query = mysqli_query($wow, "CREATE DATABASE IF NOT EXISTS `matcha`");
-        $wow = mysqli_connect("localhost", $params['username'], $params['password'], $params['name']);
 
-        $queryBase = file_get_contents('matcha.sql');
-        $query = mysqli_multi_query($wow, $queryBase);
+    $params = include ($paramPath);
+    $dsn = $params['database']['connection'];
+    try {
+        $connect = new PDO($dsn, $params['database']['username'], $params['database']['password']);
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $checkExistSQL = "show databases like '" . $params['database']['name'] . "';";
+        $result = $connect->query($checkExistSQL);
+        if (!$result->fetchAll()) {
+            $sql = "CREATE DATABASE IF NOT EXISTS ".$params['database']['name'];
+            $result = $connect->exec($sql);
+            $connect = null;
+
+            $dsn = "{$dsn};dbname={$params['database']['name']}";
+            $connect = new PDO($dsn, $params['database']['username'], $params['database']['password']);
+            $generalSQL = file_get_contents(ROOT.'/matcha.sql');
+            $result = $connect->exec($generalSQL);
+            $connect = null;
+        }
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        exit ;
     }
 }

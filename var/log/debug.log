@@ -1,0 +1,7 @@
+[02/15/2020 04:31:27 pm] "SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\\xF0\\x9F\\x98\\x95' for column 'text' at row 1"
+[02/15/2020 04:31:33 pm] "SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\\xF0\\x9F\\x98\\xA1\\xF0\\x9F...' for column 'text' at row 1"
+[02/15/2020 04:35:37 pm] "SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\\xF0\\x9F\\x98\\x96' for column 'text' at row 1"
+[02/15/2020 04:35:42 pm] "SQLSTATE[HY000]: General error: 1366 Incorrect string value: '\\xF0\\x9F\\x98\\x93\\xF0\\x9F...' for column 'text' at row 1"
+[02/15/2020 04:51:59 pm] "SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `chat_id` = 111 AND `user_id` = 11' at line 1"
+[02/15/2020 04:52:00 pm] "SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `chat_id` = 111 AND `user_id` = 11' at line 1"
+[02/15/2020 04:52:01 pm] "SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND `chat_id` = 111 AND `user_id` = 11' at line 1"

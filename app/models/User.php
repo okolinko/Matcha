@@ -37,7 +37,7 @@ class User {
 		]);
 
 		mail($email, "Активация email на сайте Matcha", 'Для активации вашей учетной записи '.$name.' 
-				перейдите по этой ссылке '.BASE_URL.'/register/verification?hash='.$hash_email);
+				перейдите по этой ссылке '.BASE_URL.'register/verification?hash='.$hash_email);
 
 
 	}

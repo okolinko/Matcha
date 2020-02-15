@@ -32,7 +32,7 @@ class MassegeController {
             } else {
                 $chatID = $id . $_SESSION['userId'];
             }
-            $massage = "Вам пришло новое сообщение от пользователя с ником " . $_SESSION['userName'] . "!" . '  Перейдите по ссылке и зайдите в чат чтобы посмотреть ' . BASE_URL . '/accauntUser?id=' . $id;
+            $massage = "Вам пришло новое сообщение от пользователя с ником " . $_SESSION['userName'] . "!" . '  Перейдите по ссылке и зайдите в чат чтобы посмотреть ' . BASE_URL . 'accauntUser?id=' . $id;
             if (!Chat::insertMassegeDatabase($chatID, $id, $text, $_SESSION['userId'])) {
                 echo "False";
             } else {

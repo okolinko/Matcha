@@ -1,8 +1,11 @@
 $(document).ready(function () {
-    $('.form-help').click(function(e){
-        let id = e.target.hash.split('=');
+    $('.form-help').on("click", function(e){
 
-        document.location.href = "/accauntUser?id="+id[1];
+        // let id = e.target.hash.split('=');
+
+        let id = $(this).find("a").attr("user_id");
+
+        document.location.href = "/accauntUser?id="+id;
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "trackvisits", false);
         xhr.onreadystatechange = function () {
@@ -18,6 +21,6 @@ $(document).ready(function () {
         }
 
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-        xhr.send('id=' + id[1]);
+        xhr.send('id=' + id);
     });
 });
