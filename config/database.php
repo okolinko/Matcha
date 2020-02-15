@@ -1,6 +1,6 @@
 <?php
 
-$paramPath = ROOT. "config.php";
+$paramPath = ROOT. "/config.php";
 
 if (file_exists($paramPath)) {
     $params = include($paramPath);
