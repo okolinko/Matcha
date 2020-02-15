@@ -6,7 +6,7 @@ use App\Core\Request;
 use App\Core\Router;
 
 define('ROOT', __DIR__ );
-var_dump($paramPath = ROOT. "/config.php");
+
 $protocol = "http://";
 if (isset($_SERVER['HTTPS'])) {
     $protocol = 'https://';
